@@ -1,0 +1,21 @@
+Paste these URLs back into TARGET_PRODUCTS['url'] to skip searching next time
+Format: pair_id | gender | url
+
+DOVE-BARSOAP-HYD-01|female|https://www.amazon.in/dp/B0CP9MD1B6
+DOVE-BARSOAP-HYD-01|male|https://www.amazon.in/dp/B08BK1PD6W
+GILLET-RAZOR-HYD-01|female|https://www.amazon.in/dp/B07JKB1P6X
+GILLET-RAZOR-HYD-01|male|https://www.amazon.in/dp/B07VGXW717
+NIVEA-DEOSPRAY-HYD-01|female|https://www.amazon.in/dp/B0F8X8XM8R
+NIVEA-DEOSPRAY-HYD-01|male|https://www.amazon.in/dp/B0FS1WVR9J
+OLAY-FACECREAM-HYD-01|female|https://www.amazon.in/dp/B08P3GL98M
+OLAY-FACECREAM-HYD-01|male|https://www.amazon.in/dp/B0BDVG99J5
+HNS-SHAMP-HYD-01|female|https://www.amazon.in/dp/B08194PS69
+HNS-SHAMP-HYD-01|male|https://www.amazon.in/dp/B08194PS69
+GARNIER-FACEWASH-HYD-01|female|https://www.amazon.in/dp/B00CQ3WXFO
+GARNIER-FACEWASH-HYD-01|male|https://www.amazon.in/dp/B08XC833SM
+HIMALAYA-FACEWASH-HYD-01|female|https://www.amazon.in/dp/B08XC833SM
+HIMALAYA-FACEWASH-HYD-01|male|https://www.amazon.in/dp/B08XC833SM
+PANTENE-SHAMP-HYD-01|female|https://www.amazon.in/dp/B0F8R4Y8YF
+PANTENE-SHAMP-HYD-01|male|https://www.amazon.in/dp/B0DW47QTXG
+MAMA-FACEWASH-HYD-01|female|https://www.amazon.in/dp/B00CQ3WXFO
+MAMA-FACEWASH-HYD-01|male|https://www.amazon.in/dp/B08P3GL98M

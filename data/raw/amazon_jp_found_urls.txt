@@ -1,0 +1,20 @@
+pair_id | gender | url
+
+DOVE-BODYWASH-TKY-01|female|https://www.amazon.co.jp/dp/B0CD7BHBYG
+DOVE-BODYWASH-TKY-01|male|https://www.amazon.co.jp/dp/B0D7ZLQ8P7
+GILLET-RAZOR-TKY-01|female|https://www.amazon.co.jp/dp/B01A50N1EG
+GILLET-RAZOR-TKY-01|male|https://www.amazon.co.jp/dp/B0CTK23RJP
+BIORE-FACEWASH-TKY-01|female|https://www.amazon.co.jp/dp/B003G05K6K
+BIORE-FACEWASH-TKY-01|male|https://www.amazon.co.jp/dp/B00INRO4XG
+SHIS-SHAMP-TKY-01|female|https://www.amazon.co.jp/dp/B0DBHQZZC2
+SHIS-SHAMP-TKY-01|male|https://www.amazon.co.jp/dp/B00TWRX1RQ
+CUREL-LOTION-TKY-01|female|https://www.amazon.co.jp/dp/B01LX63OFI
+CUREL-LOTION-TKY-01|male|https://www.amazon.co.jp/dp/B001JF0MQC
+NIVEA-DEO-TKY-01|female|https://www.amazon.co.jp/dp/B087FBY884
+NIVEA-DEO-TKY-01|male|https://www.amazon.co.jp/dp/B088Q67WT6
+OLAY-FACECREAM-TKY-01|female|https://www.amazon.co.jp/dp/B00ENZTAEK
+OLAY-FACECREAM-TKY-01|male|https://www.amazon.co.jp/dp/B000PQJ0KK
+HNS-SHAMP-TKY-01|female|https://www.amazon.co.jp/dp/B0CGJ4Z7L4
+HNS-SHAMP-TKY-01|male|https://www.amazon.co.jp/dp/B0D9VXBJ4Y
+PANTENE-SHAMP-TKY-01|female|https://www.amazon.co.jp/dp/B09QSBNML9
+PANTENE-SHAMP-TKY-01|male|https://www.amazon.co.jp/dp/B09QSBNML9
