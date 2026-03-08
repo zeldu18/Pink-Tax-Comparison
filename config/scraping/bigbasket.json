@@ -1,0 +1,118 @@
+{
+  "output_path": "data/raw/bigbasket_raw.csv",
+  "city": "Hyderabad",
+  "currency": "INR",
+  "retailer": "BigBasket",
+  "target_products": [
+    {
+      "pair_id": "NIVEA-DEO-HYD-01",
+      "gender_label": "female",
+      "product_name": "Nivea Pearl & Beauty Roll-On",
+      "brand": "Nivea",
+      "category": "Deodorant Roll-On",
+      "size_ml_or_g": 50,
+      "match_quality": 5,
+      "url": "https://www.bigbasket.com/pd/40078905/nivea-deo-roll-on-pearl-beauty-50ml/",
+      "ingredients": "aluminum chlorohydrate,isopropyl myristate"
+    },
+    {
+      "pair_id": "NIVEA-DEO-HYD-01",
+      "gender_label": "male",
+      "product_name": "Nivea Men Deep Impact Roll-On",
+      "brand": "Nivea",
+      "category": "Deodorant Roll-On",
+      "size_ml_or_g": 50,
+      "match_quality": 5,
+      "url": "https://www.bigbasket.com/pd/40057551/nivea-men-deep-impact-fresh-deodorant-roll-on-50ml/",
+      "ingredients": "aluminum chlorohydrate,isopropyl myristate"
+    },
+    {
+      "pair_id": "PARACHUTE-LOTION-HYD-01",
+      "gender_label": "female",
+      "product_name": "Parachute Advansed Body Lotion",
+      "brand": "Parachute",
+      "category": "Body Lotion",
+      "size_ml_or_g": 250,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40052378/parachute-advansed-body-lotion-soft-touch-250ml/",
+      "ingredients": "coconut oil,glycerin"
+    },
+    {
+      "pair_id": "PARACHUTE-LOTION-HYD-01",
+      "gender_label": "male",
+      "product_name": "Parachute Men After Shower Lotion",
+      "brand": "Parachute",
+      "category": "Body Lotion",
+      "size_ml_or_g": 250,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40097843/parachute-advansed-men-body-lotion-250ml/",
+      "ingredients": "coconut oil,aloe vera"
+    },
+    {
+      "pair_id": "NIVEA-LOTION-HYD-01",
+      "gender_label": "female",
+      "product_name": "Nivea Soft Moisturizing Cream",
+      "brand": "Nivea",
+      "category": "Body Lotion",
+      "size_ml_or_g": 200,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40007671/nivea-soft-light-moisturizer-200ml/",
+      "ingredients": "glycerin,jojoba oil"
+    },
+    {
+      "pair_id": "NIVEA-LOTION-HYD-01",
+      "gender_label": "male",
+      "product_name": "Nivea Men Creme",
+      "brand": "Nivea",
+      "category": "Body Lotion",
+      "size_ml_or_g": 150,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40119452/nivea-men-creme-150ml/",
+      "ingredients": "glycerin,eucalyptus oil"
+    },
+    {
+      "pair_id": "PARACHUTE-HAIROIL-HYD-01",
+      "gender_label": "female",
+      "product_name": "Parachute Advansed Jasmine Hair Oil",
+      "brand": "Parachute",
+      "category": "Hair Oil",
+      "size_ml_or_g": 200,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40030534/parachute-advansed-jasmine-non-sticky-coconut-hair-oil-200ml/",
+      "ingredients": "coconut oil,jasmine"
+    },
+    {
+      "pair_id": "PARACHUTE-HAIROIL-HYD-01",
+      "gender_label": "male",
+      "product_name": "Parachute Advansed Men Hair Oil",
+      "brand": "Parachute",
+      "category": "Hair Oil",
+      "size_ml_or_g": 200,
+      "match_quality": 4,
+      "url": "https://www.bigbasket.com/pd/40131227/parachute-advansed-men-nourish-strengthen-hair-oil-200ml/",
+      "ingredients": "coconut oil,bhringraj"
+    },
+    {
+      "pair_id": "HIMALAYA-LOTION-HYD-01",
+      "gender_label": "female",
+      "product_name": "Himalaya Nourishing Skin Cream",
+      "brand": "Himalaya",
+      "category": "Body Lotion",
+      "size_ml_or_g": 150,
+      "match_quality": 3,
+      "url": "https://www.bigbasket.com/pd/40008059/himalaya-nourishing-skin-cream-150ml/",
+      "ingredients": "winter cherry,indian kino tree"
+    },
+    {
+      "pair_id": "HIMALAYA-LOTION-HYD-01",
+      "gender_label": "male",
+      "product_name": "Himalaya Men Intense Moisturizing Cream",
+      "brand": "Himalaya",
+      "category": "Body Lotion",
+      "size_ml_or_g": 150,
+      "match_quality": 3,
+      "url": "https://www.bigbasket.com/pd/40140293/himalaya-men-intense-moisturizing-cream-150ml/",
+      "ingredients": "cucumber,licorice"
+    }
+  ]
+}

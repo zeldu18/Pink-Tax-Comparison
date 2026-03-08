@@ -1,0 +1,3342 @@
+{
+  "Gillette Venus Smooth (handle + 2 cartridges)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.498076
+  },
+  "Gillette Mach3 (handle + 1 cartridge)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.869845
+  },
+  "Gillette Venus Smooth Cartridges 4-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.604424
+  },
+  "Gillette Mach3 Cartridges 4-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.852906
+  },
+  "Gillette Venus Smooth Cartridges 6-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.59859
+  },
+  "Gillette Mach3 Cartridges 6-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.856136
+  },
+  "Gillette Venus Simply 3 Disposable Razor 3-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.561482
+  },
+  "Gillette Blue3 Disposable Razor 3-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.866579
+  },
+  "Schick Intuition Razor Women": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989136
+  },
+  "Schick Xtreme3 Razor Men": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.967029
+  },
+  "Dove Deeply Nourishing Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.941411
+  },
+  "Dove Men+Care Extra Fresh Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978648
+  },
+  "Fiama Women Shower Gel Peach & Avocado": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.976885
+  },
+  "Fiama Men Refreshing Shower Gel": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.869788
+  },
+  "WOW Coconut Milk & Honey Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.896396
+  },
+  "WOW Men Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.766266
+  },
+  "Olay Natural White Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.928487
+  },
+  "Olay Men Solutions Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.929885
+  },
+  "Nivea Waterlily & Oil Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.84443
+  },
+  "Nivea Men Deep Black Charcoal Body Wash": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.918348
+  },
+  "Pears Soft & Fresh Shower Gel 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.892731
+  },
+  "Pears Men Power Shower Gel 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.953708
+  },
+  "Lux Velvet Touch Shower Gel 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.847448
+  },
+  "Lux Men Sport Fresh Shower Gel 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962201
+  },
+  "Mamaearth Ubtan Body Wash with Turmeric 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.862604
+  },
+  "Mamaearth Men Charcoal Body Wash 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959096
+  },
+  "Dove Beauty Bar": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.690918
+  },
+  "Dove Men+Care Clean Comfort Bar": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.973913
+  },
+  "Himalaya Neem & Turmeric Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.882463
+  },
+  "Himalaya Men Intense Oil Clear Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968319
+  },
+  "Biotique Bio Almond Oil Nourishing Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.884041
+  },
+  "Biotique Bio Neem Purifying Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.881159
+  },
+  "Fiama Women Gel Bar": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981155
+  },
+  "Fiama Men Gel Bar": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964075
+  },
+  "Lux Soft Touch Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.881062
+  },
+  "Lux Men Sport Fresh Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960063
+  },
+  "Pears Pure & Gentle Soap 125g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.93947
+  },
+  "Pears Men Power Soap 125g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.945124
+  },
+  "Mamaearth Ubtan Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.855186
+  },
+  "Mamaearth Activated Charcoal Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.845489
+  },
+  "Medimix Ayurvedic Natural Glycerine Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.798556
+  },
+  "Medimix Men Active Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962603
+  },
+  "Dove Intense Repair Shampoo 650ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.76755
+  },
+  "Dove Men+Care Strengthening Shampoo 650ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969523
+  },
+  "H&S Smooth & Silky Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.828703
+  },
+  "H&S Men Ultra Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.94687
+  },
+  "Pantene Silky Smooth Shampoo 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.677153
+  },
+  "Pantene Men Anti-Dandruff Shampoo 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.862274
+  },
+  "Mamaearth Onion Shampoo for Hair Growth": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.523918
+  },
+  "Mamaearth Men Anti-Dandruff Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.890855
+  },
+  "WOW Apple Cider Vinegar Shampoo 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.819701
+  },
+  "WOW Men Scalp Therapy Shampoo 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.931392
+  },
+  "Garnier Ultra Blends Soy Milk Shampoo 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.671646
+  },
+  "Garnier Men Anti-Dandruff Shampoo 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.878643
+  },
+  "Himalaya Anti-Dandruff Shampoo Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981724
+  },
+  "Himalaya Men Anti-Dandruff Shampoo 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.869384
+  },
+  "Biotique Bio Kelp Fresh Growth Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.837086
+  },
+  "Biotique Bio Green Apple Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.849749
+  },
+  "Indulekha Bringha Shampoo 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.5771
+  },
+  "Indulekha Men Hair Vitalizer 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985903
+  },
+  "TRESemmé Smooth & Shine Shampoo 580ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.701362
+  },
+  "TRESemmé Men Smooth & Clean Shampoo 580ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.859969
+  },
+  "L'Oreal Paris Total Repair 5 Shampoo 360ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.670464
+  },
+  "L'Oreal Men Expert Pure & Matte Shampoo 360ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.777387
+  },
+  "Dove Intense Repair Conditioner 175ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.841033
+  },
+  "Dove Men+Care Fortifying Conditioner 180ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985017
+  },
+  "Pantene Silky Smooth Conditioner 175ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.49668
+  },
+  "Pantene Men Conditioner 180ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.867859
+  },
+  "H&S Smooth & Silky Conditioner 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.822869
+  },
+  "H&S Men 2-in-1 Anti-Dandruff 340ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978604
+  },
+  "WOW Apple Cider Vinegar Conditioner 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.845203
+  },
+  "WOW Men Scalp Therapy Conditioner 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960171
+  },
+  "Himalaya Protein Conditioner 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.855733
+  },
+  "Himalaya Men Protein Conditioner 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.966422
+  },
+  "Garnier Ultra Blends 5 Precious Herbs Conditioner 175ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.663495
+  },
+  "Garnier Men Anti-Dandruff Conditioner 175ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.977831
+  },
+  "TRESemmé Smooth & Shine Conditioner 580ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.782674
+  },
+  "TRESemmé Men Smooth Conditioner 580ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.901805
+  },
+  "Nivea Pearl & Beauty Roll-On": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.722918
+  },
+  "Nivea Men Deep Impact Roll-On": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978423
+  },
+  "Dove Eventone Deodorant Roll-On": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.818405
+  },
+  "Dove Men+Care Dry Comfort Roll-On": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.975715
+  },
+  "Fogg Miss Dew Roll-On Women": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989139
+  },
+  "Fogg Master Roll-On Men": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.937073
+  },
+  "Rexona Women Cotton Dry Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982052
+  },
+  "Rexona Men Active Dry Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970732
+  },
+  "Fa Women Aqua Aqua Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987807
+  },
+  "Fa Men Xtreme Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.965486
+  },
+  "Nivea Whitening Talc-Free Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.951536
+  },
+  "Nivea Men Deep Ocean Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970178
+  },
+  "Fogg Royal Women Body Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.978284
+  },
+  "Fogg Macho Men Body Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985866
+  },
+  "Engage W1 Deodorant Spray Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983262
+  },
+  "Engage M1 Deodorant Spray Men 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.927171
+  },
+  "Rexona Women Shower Fresh Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986736
+  },
+  "Rexona Men Active Sport Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971117
+  },
+  "Yardley London English Lavender Deo Spray Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988185
+  },
+  "Yardley London Gold Deo Spray Men 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.947166
+  },
+  "Dove Eventone Body Spray Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990459
+  },
+  "Dove Men+Care Clean Comfort Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.945659
+  },
+  "Vaseline Healthy White SPF Lotion 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.899366
+  },
+  "Vaseline Men Active Body Lotion 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.963952
+  },
+  "Vaseline Intensive Care Deep Restore 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.858076
+  },
+  "Vaseline Men Extra Strength 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981072
+  },
+  "Parachute Advansed Body Lotion Soft Touch 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.876484
+  },
+  "Parachute Men After Shower Lotion 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.870643
+  },
+  "Parachute Advansed Deep Nourish Lotion 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.828937
+  },
+  "Parachute Men Extra Moisturising 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.974674
+  },
+  "Himalaya Nourishing Skin Cream 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.836313
+  },
+  "Himalaya Men Intense Moisturizing Cream 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981253
+  },
+  "Nivea Soft Moisturizing Cream 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.778697
+  },
+  "Nivea Men Creme 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.95092
+  },
+  "WOW Shea & Cocoa Butter Body Lotion 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.881747
+  },
+  "WOW Men Body Lotion 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.899753
+  },
+  "Biotique Bio Almond Oil Moisturizer 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.86259
+  },
+  "Biotique Bio Morning Nectar Moisturizer 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.753006
+  },
+  "Pond's Triple Vitamin Moisturising Lotion 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.910048
+  },
+  "Pond's Men Energy Bright Body Lotion 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971295
+  },
+  "L'Oreal Paris Body Expertise Revitalift Body Lotion 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.875555
+  },
+  "L'Oreal Men Expert Hydra Energetic Body Lotion 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.940894
+  },
+  "Olay Total Effects 7-in-1 Day Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.87337
+  },
+  "Olay Men Solutions Sensitive Moisturizer 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.98755
+  },
+  "Pond's Super Light Gel 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.842377
+  },
+  "Pond's Men Energy Bright Face Cream 55ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.979554
+  },
+  "Mamaearth Vitamin C Day Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.781601
+  },
+  "Mamaearth Men SPF 50 Day Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976596
+  },
+  "Biotique Bio Coconut Whitening Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.89162
+  },
+  "Biotique Bio Aloe Vera Fresh Cream Men 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.932302
+  },
+  "L'Oreal Paris Revitalift Day Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.772845
+  },
+  "L'Oreal Men Expert Hydra Energetic Moisturizer 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.975344
+  },
+  "Garnier Bright Complete Vitamin C Cream 45g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.88731
+  },
+  "Garnier Men PowerWhite Moisturizer 45g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.972883
+  },
+  "Himalaya Nourishing Skin Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.849398
+  },
+  "Himalaya Men Intense Moisturizing Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.980429
+  },
+  "Neutrogena Hydro Boost Water Gel 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.744777
+  },
+  "Neutrogena Men Hydro Boost Gel 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.987854
+  },
+  "Pond's Bright Beauty Spot-less Glow Cream Women (75g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.94675
+  },
+  "Pond's Men Energy Charge Moisturizer (75g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.994181
+  },
+  "Garnier Bright Complete Vitamin C Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.845913
+  },
+  "Garnier Men PowerWhite Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.958362
+  },
+  "Himalaya Nourishing Cream Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.869976
+  },
+  "Himalaya Men Active Fresh Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.943238
+  },
+  "Mamaearth Ubtan Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.872992
+  },
+  "Mamaearth CFC Free Charcoal Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.916728
+  },
+  "Biotique Bio Honey Gel Foaming Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.879109
+  },
+  "Biotique Bio Neem Foaming Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.905125
+  },
+  "Pond's Bright Beauty Face Wash 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.848372
+  },
+  "Pond's Men Energising Face Wash 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978881
+  },
+  "Nivea Refreshing Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.777578
+  },
+  "Nivea Men All-In-1 Charcoal Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.966857
+  },
+  "L'Oreal Paris Pure Clay Face Wash Women 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.978801
+  },
+  "L'Oreal Men Expert Pure & Matte Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.847568
+  },
+  "Dove Cream Milk Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.902095
+  },
+  "Dove Men+Care Sensitive Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.982442
+  },
+  "Plum Green Tea Pore Cleansing Face Wash Women 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985196
+  },
+  "Plum Men Facebase Daily Foaming Cleanser 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970227
+  },
+  "Olay Natural White SPF 24 Day Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.899253
+  },
+  "Olay Men Regenerist SPF 15 Moisturiser 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971488
+  },
+  "Mamaearth Ultra Light Sunscreen SPF 50 80ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.506098
+  },
+  "Mamaearth Men SPF 50 Sunscreen 80ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.965912
+  },
+  "Vaseline Sun + Pollution Protection SPF 50 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.79996
+  },
+  "Vaseline Men Active Bright SPF 30 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985621
+  },
+  "Dove Even Tone Antiperspirant+SPF Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.861215
+  },
+  "Dove Men+Care Control Antiperspirant Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978351
+  },
+  "Dove Sun Protect SPF 50 PA+++ Body Lotion Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992142
+  },
+  "Dove Men+Care Sun Protection SPF 50 (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955948
+  },
+  "Biotique Bio Sandalwood Sunscreen SPF 50 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.808726
+  },
+  "Biotique Bio Aloe Vera Sunscreen SPF 30 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.848163
+  },
+  "Neutrogena Ultra Sheer Sunscreen SPF 50+ Women 88ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989868
+  },
+  "Neutrogena Men Triple Protect SPF 20 Face Lotion 88ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.993337
+  },
+  "Parachute Advansed Jasmine Non-Sticky Hair Oil 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.915174
+  },
+  "Parachute Advansed Men Nourish Hair Oil 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985061
+  },
+  "Indulekha Bringha Hair Oil Women 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992207
+  },
+  "Indulekha Men Scalp Treatment 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.98065
+  },
+  "Mamaearth Onion Hair Oil Women 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990349
+  },
+  "Mamaearth Men Anti-Hairfall Hair Oil 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.967484
+  },
+  "WOW Onion Black Seed Hair Oil Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991484
+  },
+  "WOW Men Scalp Revitalizer Hair Oil 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.954981
+  },
+  "Dove Nourishing Hand Cream 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.897251
+  },
+  "Dove Men+Care Hand & Face Lotion 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978573
+  },
+  "Mamaearth Aloe Vera Hand Cream 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.638673
+  },
+  "Mamaearth Men Hand & Nail Cream 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.96297
+  },
+  "Vaseline Intensive Care Hand Cream 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.879887
+  },
+  "Vaseline Men Fast Absorbing Hand Lotion 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.980926
+  },
+  "Neutrogena Norwegian Formula Hand Cream Women 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990183
+  },
+  "Neutrogena Men Norwegian Formula Hand Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.972585
+  },
+  "Set Wet Perfect Look Hair Cream Women 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993309
+  },
+  "Set Wet Casual Hold Hair Gel Men 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971193
+  },
+  "Indulekha Bringha Hair Serum Women 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991188
+  },
+  "Indulekha Men Anti Hairfall Serum 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.984899
+  },
+  "Mamaearth Onion Hair Serum Women 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990083
+  },
+  "Mamaearth Men Onion Hair Serum 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962116
+  },
+  "Garnier Color Naturals Hair Colour Cream Women": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.974131
+  },
+  "Garnier Men Power Black Shampoo Hair Colour": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.865008
+  },
+  "L'Oreal Paris Excellence Creme Hair Color": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.826568
+  },
+  "L'Oreal Men Expert One-Twist Hair Color": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.843757
+  },
+  "Revlon Colorsilk Hair Color Women": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986988
+  },
+  "Revlon ColorSilk Men Hair Color": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962882
+  },
+  "BBlunt Salon Secret Hair Colour Women": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986468
+  },
+  "BBlunt Men Hair Colour": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.947614
+  },
+  "Colgate Visible White Teeth Whitening Toothpaste 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.89433
+  },
+  "Colgate Active Salt Toothpaste 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.866572
+  },
+  "Sensodyne Extra Whitening Toothpaste Women 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990306
+  },
+  "Sensodyne Men Rapid Action Toothpaste 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971577
+  },
+  "Himalaya Botanique Whitening Complete Care Toothpaste 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.87395
+  },
+  "Himalaya Men Active Fresh Toothpaste 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.952116
+  },
+  "Dove Care & Protect Hand Wash 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.894585
+  },
+  "Dove Men+Care Deep Clean Hand Wash 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.963569
+  },
+  "Savlon Floral Hand Wash Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984548
+  },
+  "Savlon Men Active Hand Wash 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961207
+  },
+  "Dettol Skincare Handwash Feminine Freshness 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985714
+  },
+  "Dettol Men Cool Handwash 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.926336
+  },
+  "Himalaya Pure Hands Sparkling Rose Hand Wash 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.914118
+  },
+  "Himalaya Men Active Fresh Hand Wash 250ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.911318
+  },
+  "Mamaearth Rose Water Toner Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988406
+  },
+  "Mamaearth Men Charcoal Toner 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955322
+  },
+  "Plum Green Tea Alcohol Free Toner Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.525027
+  },
+  "Plum Men Facebase Skin Clarifying Toner 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969657
+  },
+  "Gillette Venus Embrace Razor + 2 blades": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.887429
+  },
+  "Gillette Mach3 Razor + 2 cartridges": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.868849
+  },
+  "Gillette Venus Cartridges 4-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.641428
+  },
+  "Schick Intuition Razor Women Japan": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990315
+  },
+  "Schick Hydro5 Razor Men Japan": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960214
+  },
+  "Dove Premium Moisture Care Body Wash 470ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.880223
+  },
+  "Dove Men+Care Clean Comfort Body Wash 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.957128
+  },
+  "Lion Softymo Lux Super Moisture Body Wash 450ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.66786
+  },
+  "Lion Softymo Men Speed Wash 450ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959692
+  },
+  "Bioré Guard Body Wash Women 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982193
+  },
+  "Bioré Men Guard Body Wash 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.954363
+  },
+  "Olay Natural White Body Wash 430ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.913056
+  },
+  "Olay Men Body Wash 430ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.945227
+  },
+  "Shiseido Ma Cherie Body Wash 220ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.48582
+  },
+  "Shiseido Men Body Wash 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.937854
+  },
+  "Kao Laurier Body Wash Women 550ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983456
+  },
+  "Kao Men's Biore Body Wash 550ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.876112
+  },
+  "Cow Brand Excellent Beauty Soap 135g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.726294
+  },
+  "Cow Brand Excellent Men Soap 135g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961415
+  },
+  "Rohto Hadalabo Gokujyun Bar Soap 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.889169
+  },
+  "Rohto Hadalabo Men Face & Body Bar 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969833
+  },
+  "Sana Nameraka Isoflavone Foaming Face Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.888457
+  },
+  "Sana Men Foaming Face Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.974059
+  },
+  "Lion Look Natural Select Bar Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.719628
+  },
+  "Lion Look Natural Men Bar Soap 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.696679
+  },
+  "Dove Beauty Bar Japan 135g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.611842
+  },
+  "Dove Men+Care Clean Comfort Bar Japan 135g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.979607
+  },
+  "Kao Biore Body Wash Soap Bar Women 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984718
+  },
+  "Kao Biore Men Body Wash Soap Bar 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.936652
+  },
+  "Dove Moisture Care Shampoo 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.827256
+  },
+  "Dove Men+Care Scalp Care Shampoo 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.972946
+  },
+  "H&S Smooth Damage Care Shampoo 440ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.790323
+  },
+  "H&S Men Scalp Care Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.939743
+  },
+  "Pantene Silky Smooth Care Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.676138
+  },
+  "Pantene Men Anti-Dandruff Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.873115
+  },
+  "Pantene Silky Smooth Care Shampoo Refill 750ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.640387
+  },
+  "Pantene Men Anti-Dandruff Refill 750ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.936478
+  },
+  "Shiseido Tsubaki Premium Moist Shampoo 490ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.696612
+  },
+  "Shiseido Men Scalp Care Shampoo 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.940953
+  },
+  "Kao Merit Shampoo 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.718196
+  },
+  "Kao Merit Men Shampoo 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.872281
+  },
+  "Garnier Fructis Smooth & Shine Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.753915
+  },
+  "Garnier Fructis Men Clean & Fresh Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.899995
+  },
+  "Kose Softymo Speedy Shampoo Women 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985498
+  },
+  "Kose Men Softymo Shampoo 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.856865
+  },
+  "Rohto Hadalabo Scalp Shampoo Women 350ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982756
+  },
+  "Rohto Hadalabo Men Scalp Shampoo 350ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.909495
+  },
+  "Dove Moisture Care Conditioner 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.846473
+  },
+  "Dove Men+Care Hair Defence Conditioner 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981626
+  },
+  "Pantene Silky Smooth Care Conditioner 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.536999
+  },
+  "Pantene Men Conditioner 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.858411
+  },
+  "Kao Merit Conditioner 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.804569
+  },
+  "Kao Merit Men Conditioner 480ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.88787
+  },
+  "Shiseido Tsubaki Premium Repair Conditioner 490ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.773835
+  },
+  "Shiseido Men Scalp Conditioner 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.963107
+  },
+  "Nivea Pearl & Beauty Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.791902
+  },
+  "Nivea Men Deep Roll-On 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962677
+  },
+  "Nivea Whitening Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.749025
+  },
+  "Nivea Men Silver Protect Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.957787
+  },
+  "Kao Bioré Women Deo Sheet Spray (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.95789
+  },
+  "Kao Bioré Men Deo Spray (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.9117
+  },
+  "Bioré Deo Foot & Body Sheet Women 32-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991409
+  },
+  "Bioré Men Deo Sheet 32-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.965067
+  },
+  "Kao Biore Sarasara Powder Sheet Women 36-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991402
+  },
+  "Kao Men Biore Cooling Sheet 36-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964467
+  },
+  "Curel Intensive Moisture Care Face Cream 40ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.870589
+  },
+  "Curel Men Face Balm Cream 35ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.973005
+  },
+  "Rohto Hadalabo Gokujyun Premium Lotion 170ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.870651
+  },
+  "Rohto Hadalabo Men Skin Lotion 170ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.97755
+  },
+  "Olay Total Effects Day Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.833497
+  },
+  "Olay Men Solutions Face Moisturizer 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.98742
+  },
+  "Sana Nameraka Isoflavone Wrinkle Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.716837
+  },
+  "Sana Men Skin Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968967
+  },
+  "Shiseido Vital Perfection Uplifting Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.839608
+  },
+  "Shiseido Men Total Revitalizer Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.977708
+  },
+  "Nivea Rich Serum Concentrate 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.712456
+  },
+  "Nivea Men Gel Cream 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.929188
+  },
+  "DHC Olive Virgin Oil Concentrate 15ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.85464
+  },
+  "DHC Men Deep Cleansing Oil 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964734
+  },
+  "Kose Softymo Speedy Cleansing Oil Face Cream Women 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992891
+  },
+  "Kose Men Softymo Face Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971696
+  },
+  "Pola B.A Moisture Cream Women 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989491
+  },
+  "Pola Men BA Cream 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.975741
+  },
+  "Bioré Marshmallow Whip Face Wash 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.875253
+  },
+  "Bioré Men Facial Foam 130ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.966389
+  },
+  "Rohto Hadalabo Gokujyun Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.90178
+  },
+  "Rohto Hadalabo Men Face Wash 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956497
+  },
+  "Lion Soflan Women Cleansing Foam (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.938085
+  },
+  "Lion Men's Biore Face Wash (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.848332
+  },
+  "Kose Softymo Speedy Cleansing Oil Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992375
+  },
+  "Kose Men Softymo Face Wash 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961294
+  },
+  "Shiseido Tsubaki Premium EX Shampoo Face Wash Women 120g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984547
+  },
+  "Shiseido Men Face Wash 120ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.931161
+  },
+  "Curel Moisture Face Wash Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985638
+  },
+  "Curel Men Face Wash 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.952161
+  },
+  "Curel Moisture Lotion 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.867172
+  },
+  "Curel Men Moisturizing Lotion 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.97275
+  },
+  "Rohto Hadalabo Premium Body Milk 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.885285
+  },
+  "Rohto Hadalabo Men Body Lotion 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.951646
+  },
+  "Nivea Soft Cream 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.775224
+  },
+  "Nivea Men Cream 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956951
+  },
+  "Bioré Body Essence Milk Women 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990342
+  },
+  "Bioré Men Body Lotion 300ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.953435
+  },
+  "Kao Olay Body Milk Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984812
+  },
+  "Kao Biore Men Body Milk 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961835
+  },
+  "Kao Atrix Beauty Charge Hand Cream 80ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.824676
+  },
+  "Kao Atrix Men Protective Hand Cream 80ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964498
+  },
+  "Nivea Extra Rich Caring Hand Cream 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.790003
+  },
+  "Nivea Men Quick Dry Hand Gel 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.951738
+  },
+  "DHC Medicated Hand Cream Women 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990352
+  },
+  "DHC Men Hand Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.923072
+  },
+  "Dove Intensive Hand Cream 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.858621
+  },
+  "Dove Men+Care Hand and Body Lotion 75ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.97628
+  },
+  "Rohto Hadalabo Gokujyun Hand Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.885075
+  },
+  "Rohto Hadalabo Men Hand Cream 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.949747
+  },
+  "Bioré UV Aqua Rich Watery Essence SPF50+ 70ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.88965
+  },
+  "Bioré UV Athlizm Skin Protect Milk SPF50+ 65ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.911288
+  },
+  "Curel UV Protection Face Milk SPF50+ 60ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.892875
+  },
+  "Curel Men UV Protection Cream 60ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961184
+  },
+  "Kose Suncut Perfect UV Cream SPF50+ 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.88721
+  },
+  "Kose Men Suncut UV Protect Milk 50ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.966009
+  },
+  "Rohto Skin Aqua UV Super Moisture Milk SPF50+ Women 40ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993351
+  },
+  "Rohto Skin Aqua Men UV Protect Gel SPF50+ 40ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981748
+  },
+  "Shiseido Anessa Perfect UV Skincare Milk SPF50+ 60ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.814189
+  },
+  "Shiseido Men Urban Environment UV Protection Cream SPF50 30ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969004
+  },
+  "Lion Clinica Advantage Fresh Toothpaste 130g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.591444
+  },
+  "Lion Clinica Men Cool Toothpaste 130g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.926272
+  },
+  "Lion Systema Haguki Plus Toothpaste 95g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.539763
+  },
+  "Lion Systema Men Fresh Toothpaste 95g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.935269
+  },
+  "Kao Clear Clean Premium Toothpaste Women 120g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.967911
+  },
+  "Kao Clear Clean Men Toothpaste 120g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.776546
+  },
+  "Rohto GUM Dental Paste Women 125g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985643
+  },
+  "Rohto GUM Men Dental Paste 125g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960117
+  },
+  "Yanagiya Women Hair Serum Moist (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984502
+  },
+  "Yanagiya Men's Hair Tonic Serum (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955344
+  },
+  "Shiseido Tsubaki Premium Repair Mask Hair Oil 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.756387
+  },
+  "Shiseido Men Scalp Treatment 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.972523
+  },
+  "Kose Softymo Hair Serum Women 100ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990122
+  },
+  "Kose Men Softymo Styling Wax 80g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.93
+  },
+  "Rohto Hadalabo Gokujyun Premium Toner 170ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.867038
+  },
+  "Rohto Hadalabo Men Skin Toner 170ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.948482
+  },
+  "Sana Nameraka Isoflavone Toner Women 200ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989055
+  },
+  "Sana Men Skin Toner 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.93931
+  },
+  "Shiseido Benefiance Wrinkle Smoothing Toner Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989078
+  },
+  "Shiseido Men Hydrating Lotion 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971313
+  },
+  "Curel Moisture Face Toner Women 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987077
+  },
+  "Curel Men Toner 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.933022
+  },
+  "Garnier Nutrisse Cream (60ml kit)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.843265
+  },
+  "Garnier Men PowerLight Fairness Moisturiser kit": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.654913
+  },
+  "L'Oreal Excellence Creme (women, 72ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992525
+  },
+  "L'Oreal Men Expert One-Twist (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.888201
+  },
+  "Minimalist 7% Glycolic Toning Solution (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.814984
+  },
+  "Minimalist 10% Niacinamide Toner Men (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.935931
+  },
+  "The Derma Co AHA BHA Toner (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.889086
+  },
+  "The Derma Co Niacinamide Men Toner (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.977668
+  },
+  "Neutrogena Norwegian Formula Hand Cream (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.719654
+  },
+  "Neutrogena Men Cream (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.977215
+  },
+  "Vaseline Intensive Care Hand Cream (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.862493
+  },
+  "Vaseline Men Active Strong Hand Cream (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.983838
+  },
+  "Lifebuoy Mild Care Handwash (215ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.879217
+  },
+  "Lifebuoy Total 10 Handwash (215ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.873391
+  },
+  "Plum Glow & Glow Hand Wash (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.870817
+  },
+  "Plum BodyLovin' Men Hand Wash (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.949864
+  },
+  "Close-Up Crystal White Gel (150g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.934816
+  },
+  "Close-Up Men Active Gel (150g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.965411
+  },
+  "Oral-B Whitening (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.94991
+  },
+  "Oral-B Pro-Expert Men (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.972874
+  },
+  "Fiama Gel Bar Peach & Avocado (125g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.844006
+  },
+  "Fiama Men Refreshing Pulse Bar (125g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.94793
+  },
+  "Godrej Nupur Moisturising Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.900256
+  },
+  "Godrej Expert Men Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.903172
+  },
+  "Cetaphil Moisturising Lotion (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.855077
+  },
+  "Cetaphil Men Moisturiser (125ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955404
+  },
+  "Himalaya Cocoa Butter Intensive Body Lotion (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.87425
+  },
+  "Himalaya Men Active Fresh Body Lotion (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.908476
+  },
+  "Cetaphil Gentle Skin Cleanser Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.957751
+  },
+  "Cetaphil Men Facial Cleanser (125ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.948266
+  },
+  "Lotus Herbals WhiteGlow Facewash (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.843148
+  },
+  "Lotus Herbals Moist Matte Men Facewash (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.806125
+  },
+  "Kérastase Bain Satin 1 Shampoo (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.73652
+  },
+  "Kérastase Homme Bain Energisant (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961783
+  },
+  "Biotique Bio Kelp Fresh Growth Shampoo (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.775771
+  },
+  "Biotique Bio Green Apple Shampoo Men (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.939478
+  },
+  "Wild Stone Aqua Deodorant Spray (150ml) [women-adjacent]": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988059
+  },
+  "Wild Stone Classic Musk Deodorant Spray (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.865807
+  },
+  "Engage Spell Deodorant Spray Women (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992615
+  },
+  "Engage ON Mate Deodorant Spray Men (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960286
+  },
+  "TRESemmé Gloss & Smooth Serum Women (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990838
+  },
+  "TRESemmé Men Styling Gel (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.928122
+  },
+  "Streax Ultranourish Hair Serum Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993248
+  },
+  "Streax Men Styling Wax (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.914948
+  },
+  "Lotus Herbals SafeSun SPF 50 Women (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.97297
+  },
+  "Lotus Herbals Men SPF 30 (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.941286
+  },
+  "TRESemmé Smooth & Shine Conditioner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.793211
+  },
+  "TRESemmé Men Thick & Strong Conditioner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969937
+  },
+  "Shiseido Fino Premium Touch Hair Oil (70ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.770042
+  },
+  "Shiseido Adenogen Hair Energizing Lotion (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.832756
+  },
+  "Yanagiya Hair Growth Hair Oil Women (240ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989156
+  },
+  "Yanagiya Men's Hair Tonic Medicated (240ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.905101
+  },
+  "Bioré Soft Stone Deodorant Women (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.979875
+  },
+  "Bioré Deo Roll-On Men Cool Fresh (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.967913
+  },
+  "Dove Advance Care Deodorant Women (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989067
+  },
+  "Dove Men+Care Roll-On (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976097
+  },
+  "Shiseido TSUBAKI Premium Shampoo Women (490ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.99063
+  },
+  "Shiseido SubliMic Amino Complex Shampoo Men (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976642
+  },
+  "Lion Systema Scalp Shampoo Women (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987571
+  },
+  "Lion Banon Men Shampoo (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.939726
+  },
+  "Shiseido TSUBAKI Premium Conditioner Women (490ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991987
+  },
+  "Shiseido SubliMic Conditioner Men (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970425
+  },
+  "Lion Systema Scalp Conditioner Women (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989704
+  },
+  "Lion Banon Men Conditioner (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.936824
+  },
+  "Shiseido Integrate Body Lotion Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993328
+  },
+  "Shiseido Men Total Revitalizer Body Cream (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976513
+  },
+  "Kao Jergens Natural Glow Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.964446
+  },
+  "Kao Men's Biore Body Milk (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.905271
+  },
+  "Kao Sofina IP Women Facial Wash (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.968932
+  },
+  "Kao Men's Biore Double Scrub Face Wash (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.934742
+  },
+  "Lion System Skin Female Face Wash (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.943031
+  },
+  "Lion Pair Acne Clear Wash Men (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.934938
+  },
+  "Shiseido Ultimune Power Infusing Cream Women (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992896
+  },
+  "Shiseido Men Total Revitalizer Cream (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976587
+  },
+  "DHC Olive Virgin Oil Cream Women (25g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.965926
+  },
+  "DHC Men All-in-One Face Cream (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.884443
+  },
+  "Kao Sofina IP Toner Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984753
+  },
+  "Kao Men's Biore Toner (160ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.896482
+  },
+  "Kose Softymo Speedy Cleansing Toner Women (230ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990503
+  },
+  "Kose Men's Speedy Toner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.867308
+  },
+  "Shiseido Senka Perfect Whip Soap Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987044
+  },
+  "Shiseido Men Cleansing Foam Bar (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.952428
+  },
+  "Kao Biore Body Soap Bar Women (90g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987659
+  },
+  "Kao Men's Biore Soap Bar (90g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.917639
+  },
+  "Lion Kirei Kirei Medicated Foam Hand Soap Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982678
+  },
+  "Lion Kirei Kirei Men Cool Hand Soap (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.916379
+  },
+  "Bioré U Foaming Hand Soap Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989866
+  },
+  "Bioré Men Body Wash Hand Soap (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.919281
+  },
+  "Sunstar GUM Women Whitening Gel (95g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.977184
+  },
+  "Sunstar GUM Men Dental Paste (95g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969481
+  },
+  "Colgate Optic White Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.97932
+  },
+  "Colgate Men Active Clean (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.888959
+  },
+  "Shiseido TSUBAKI Power Repair Serum Women (75ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992861
+  },
+  "Shiseido Men Hair Wax (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964542
+  },
+  "Kao Essential Damage Care Serum Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987009
+  },
+  "Kao Gatsby Moving Rubber Hair Wax (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.711251
+  },
+  "Shiseido Senka Perfect Whip Body Wash Women (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989813
+  },
+  "Shiseido Men Body Shampoo (300ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.944817
+  },
+  "Anessa Perfect UV Sunscreen Women SPF50 (60ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986249
+  },
+  "Anessa Men Sunscreen Gel SPF50 (90ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.897397
+  },
+  "Shiseido Prima Vie Soft Women Hair Colour Cream (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984773
+  },
+  "Shiseido Men Mineral Hair Color Cream (25g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.954003
+  },
+  "Salon de Pro Women Hair Colour Cream (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987881
+  },
+  "Salon de Pro Men's Hair Colour (40g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959994
+  },
+  "Dariya Salon de Pro Beauteen Melt Color Women Cream (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987699
+  },
+  "Dariya Salon de Pro Men's Hair Colour Cream (40g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.9353
+  },
+  "Shiseido Prima Vie Soft Women Hair Colour (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983479
+  },
+  "Shiseido Men Hair Color Cream (25g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964612
+  },
+  "Schick Intuition Women Starter Kit (1 handle + 2 cartridges)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984342
+  },
+  "Schick Hydro 3 Men Starter Kit (1 handle + 2 cartridges)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.944931
+  },
+  "Schick Intuition Women Refill 4-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.98912
+  },
+  "Schick Hydro 3 Men Refill 4-pack": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.979399
+  },
+  "Kao Biore Deo Spray Refresh Women (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992971
+  },
+  "Kao Men's Biore Deo Spray Cool (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.874499
+  },
+  "Lion Ban Deodorant Spray Women (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.933861
+  },
+  "Lion Men's Ban Deodorant Spray (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.682067
+  },
+  "Shiseido Medicated Hand Cream Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.98792
+  },
+  "Shiseido Men Hand Cream (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956134
+  },
+  "Bioré Moist Hand Cream Women (60g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984973
+  },
+  "Bioré Men Hand Milk (60g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956883
+  },
+  "Rohto Skin Aqua UV Moisture Body Wash Women (380ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993862
+  },
+  "Rohto Skin Aqua Men Body Wash Cool (380ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.953561
+  },
+  "Kao Jergens Body Wash Sakura Women (450ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983842
+  },
+  "Kao Men's Biore Body Wash Charcoal (440ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.865951
+  },
+  "Rohto Hada Labo Gokujyun UV Gel Women SPF50+ (90g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992343
+  },
+  "Rohto Hada Labo Gokujyun UV Men SPF50 (90g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.967303
+  },
+  "Lion Kirié Women Moisturising Soap Bar (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981607
+  },
+  "Lion Men's Biore Charcoal Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.822735
+  },
+  "DHC Deep Cleansing Oil Women (120ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992661
+  },
+  "DHC Men Oil Cleansing (120ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.946438
+  },
+  "Shiseido Ultimune Power Infusing Toner Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992795
+  },
+  "Shiseido Men Total Revitalizer Lotion (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.974398
+  },
+  "Rohto Hada Labo Women Hair Oil (60ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985821
+  },
+  "Rohto Scalp D Men Hair Oil (60ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969337
+  },
+  "Yanagiya Hair Tonic Women (240ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982715
+  },
+  "Yanagiya Hair Tonic Men (240ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.949488
+  },
+  "Bioré UV Moisture Milk Cream SPF50 Women (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993417
+  },
+  "Bioré Men Face Milk Moist (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.980695
+  },
+  "Shiseido TSUBAKI Premium EX Shampoo Women (490ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992414
+  },
+  "Shiseido SubliMic Wind Down Shampoo Men (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.960052
+  },
+  "Lion Kirié Women Moisture Shampoo (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.969998
+  },
+  "Lion Men's Soflan Shampoo (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.836979
+  },
+  "Shiseido TSUBAKI Premium EX Conditioner Women (490ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993496
+  },
+  "Shiseido Men Conditioner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.934187
+  },
+  "Lion Kirié Women Moisture Conditioner (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.972745
+  },
+  "Lion Men's Soflan Conditioner (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.908864
+  },
+  "Lion Soflan Premium Rich Body Milk Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993645
+  },
+  "Lion Men's Soflan Body Lotion (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.852368
+  },
+  "Shiseido Senka Perfect Whip Hand Soap Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988834
+  },
+  "Shiseido Men Hand Wash (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.93376
+  },
+  "Lion Systema Haguki Women Gel Toothpaste (95g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.969209
+  },
+  "Lion Dentor Systema Men Toothpaste (95g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.943645
+  },
+  "Pond's White Beauty Day Cream Women (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983003
+  },
+  "Pond's Men Energy Gel Face Moisturiser (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981394
+  },
+  "Garnier Bright Complete Cream Women (45g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988041
+  },
+  "Garnier Men Powerwhite Anti-Dark Cells (20g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.950849
+  },
+  "Sunsilk Nourishing Soft & Smooth Shampoo Women (340ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981887
+  },
+  "Sunsilk Men Anti-Dandruff Shampoo (340ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.861367
+  },
+  "Wella Enrich Moisturising Shampoo Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.993972
+  },
+  "Wella Men Refresh Shampoo (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.893328
+  },
+  "Alphavet Argan Oil Shampoo Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.983904
+  },
+  "Alphavet Men Strong Hold Shampoo (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.948482
+  },
+  "Palmolive Aroma Therapy Relaxing Body Wash Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988664
+  },
+  "Palmolive Men Icy Rush Body Wash (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955815
+  },
+  "Bioderma Atoderm Shower Oil Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985376
+  },
+  "Bioderma Sebiaclear Body Wash Men (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959174
+  },
+  "Mamaearth Vitamin C Body Wash Women (300ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988287
+  },
+  "Mamaearth Men Face & Body Wash (300ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.951403
+  },
+  "Bioderma Photoderm Women SPF50+ (75ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992003
+  },
+  "Bioderma Men SPF50 Fluid (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.96669
+  },
+  "Neutrogena Ultra Sheer Dry-Touch Women SPF50 (88ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.994385
+  },
+  "Neutrogena Men SPF50 Sunscreen (88ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964807
+  },
+  "Minimalist SPF 50 PA++++ Sunscreen Women (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.931395
+  },
+  "Minimalist Men SPF 30 (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.696497
+  },
+  "Bioderma Sensibio H2O Micellar Water Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989765
+  },
+  "Bioderma Sébium H2O Men (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.981397
+  },
+  "Evion Vitamin E Face Wash Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989899
+  },
+  "Evion Men Refreshing Face Wash (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.942616
+  },
+  "Mamaearth Ubtan Face Wash Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986637
+  },
+  "Mamaearth Men Activ Face Wash (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.96678
+  },
+  "Dove Cream Beauty Bathing Bar Shea Butter Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991897
+  },
+  "Dove Men+Care Clean Comfort Bar (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968335
+  },
+  "Hamam Neem Tulsi & Aloe Soap Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985862
+  },
+  "Hamam Men Active Protection Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959808
+  },
+  "Cinthol Lime Refresh Soap Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982072
+  },
+  "Cinthol Men Active Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.947127
+  },
+  "Sunsilk Nourishing Conditioner Women (340ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988834
+  },
+  "Sunsilk Men Conditioner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.933244
+  },
+  "Wella Enrich Moisturising Conditioner Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.994792
+  },
+  "Wella Men Power Conditioner (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956434
+  },
+  "Mamaearth Onion Conditioner Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986175
+  },
+  "Mamaearth Men Anti-Dandruff Conditioner (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.969188
+  },
+  "Godrej Expert Cream Hair Colour Women (120ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992426
+  },
+  "Godrej Expert Men Hair Colour (25ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.975843
+  },
+  "Streax Ultralights Women Hair Colour (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991772
+  },
+  "Streax Men Color Shampoo (25ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.959598
+  },
+  "Indulekha Women Bhringa Hair Oil Treatment (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.980287
+  },
+  "Indulekha Men Hair Colour (25ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.985793
+  },
+  "Colgate Visible White Women Toothpaste (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.915796
+  },
+  "Colgate Active Salt Men (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961289
+  },
+  "Pepsodent Whitening Women Toothpaste (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.96605
+  },
+  "Pepsodent Men Strong Teeth (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.938652
+  },
+  "Signal Cavity Fighter Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990901
+  },
+  "Signal Men Active White (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.910191
+  },
+  "Lion Kirié Women Extra Moist Soap (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986749
+  },
+  "Lion Men's Biore Body Soap Bar (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.880648
+  },
+  "Pelican Soap Uruoi Women (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986947
+  },
+  "Pelican Soap Men's Clean (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.773293
+  },
+  "Shiseido Ag DEO24 Spray Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988471
+  },
+  "Shiseido Ag DEO24 Spray Men (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.965736
+  },
+  "Hoyu Beauteen Melt Color Women (cream kit, ~80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.98834
+  },
+  "Hoyu Bigen Men's Color Cream (40g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.930115
+  },
+  "Lion Soflan Premium UV Milk Women SPF50 (60ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.994261
+  },
+  "Lion Ban Sun Block Men SPF50 (60ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.878882
+  },
+  "Kao Soflan Aroma Rich Hand Soap Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.994369
+  },
+  "Kao Men's Biore Hand Soap Refresh (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.809513
+  },
+  "Rohto Hada Labo Women Body Milk (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.97887
+  },
+  "Rohto Scalp D Men Body Lotion (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.961709
+  },
+  "Yanagiya Hair Growth Conditioner Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.987587
+  },
+  "Yanagiya Men's Medicated Scalp Conditioner (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.925043
+  },
+  "Lion Kirié Women Facial Foam Wash (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.960181
+  },
+  "Lion Men's Biore Face Wash Cool (130g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.873209
+  },
+  "Cow Brand Milk Soap Extra Rich Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.998349
+  },
+  "Cow Brand Blue Box Soap Men (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.979335
+  },
+  "Rohto Skin Aqua UV Super Moisture Milk Women SPF50+ (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.994695
+  },
+  "Rohto Skin Aqua UV Men SPF50+ (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.978959
+  },
+  "Hoyu Beauteen Color Women Cream (80g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984278
+  },
+  "Hoyu Bigen Men's Color Stick (40g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.947771
+  },
+  "Kao Liese Drip Hair Serum Women (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.989675
+  },
+  "Kao Gatsby Hair Cream Serum Men (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.979872
+  },
+  "Rohto Deo Spray Women Floral (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.99092
+  },
+  "Rohto Deo Spray Men Cool (100ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.947066
+  },
+  "Saraya Arau Baby Hand Soap Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.984944
+  },
+  "Saraya Hadakara Men Hand Soap (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.93135
+  },
+  "Pola B.A. Body Wash Women (600ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.980885
+  },
+  "Pola Grooming Agency Body Wash Men (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.939042
+  },
+  "Dove Deeply Nourishing Body Wash Women (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.991977
+  },
+  "Dove Men+Care Clean Comfort Body Wash (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.944341
+  },
+  "Pola B.A. Shampoo Women (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.98089
+  },
+  "Pola Grooming Agency Shampoo Men (400ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.966847
+  },
+  "Yanagiya Hair Growth Shampoo Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.978413
+  },
+  "Yanagiya Men's Medicated Scalp Shampoo (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.858851
+  },
+  "Pola B.A. Body Lotion Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.978249
+  },
+  "Pola Grooming Agency Body Gel Men (150ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968431
+  },
+  "Dove Deeply Nourishing Body Lotion Women (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.99255
+  },
+  "Dove Men+Care Body Lotion (250ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970458
+  },
+  "Pola B.A. Cream Women (30g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982608
+  },
+  "Pola Grooming Agency Cream Men (30g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.971244
+  },
+  "Sana Nameraka Hon Po Isoflavone Cream Women (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.990077
+  },
+  "Sana Men's 10 Functions Cream (45g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968926
+  },
+  "Pola B.A. Hand Treatment Women (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.982603
+  },
+  "Pola Grooming Agency Hand Gel Men (50g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.957413
+  },
+  "Rohto Mentholatum Medicated Hand Cream Women (75g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.985406
+  },
+  "Rohto Mentholatum Men Hand Cream (75g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.901893
+  },
+  "Pola B.A. Lotion Women (120ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981752
+  },
+  "Pola Grooming Agency Lotion Men (120ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.958096
+  },
+  "Sana Nameraka Isoflavone Toner Women (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.988591
+  },
+  "Sana Men's 10 in 1 Lotion (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.955757
+  },
+  "Pola B.A. Cleansing Cream Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981463
+  },
+  "Pola Grooming Agency Face Wash Men (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.953311
+  },
+  "Sana Nameraka Face Wash Women (120g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.972994
+  },
+  "Sana Men's 10 Functions Face Wash (120g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.957911
+  },
+  "Pola Aroma Essence Soap Women (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.99034
+  },
+  "Pola Grooming Agency Soap Men (100g)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.94882
+  },
+  "Lion Ban Premium Roll-On Women (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.947143
+  },
+  "Lion Men's Ban Roll-On (40ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.739211
+  },
+  "Rexona Women Shower Fresh Roll-On (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.981162
+  },
+  "Rexona Men Active Fresh Roll-On (50ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970431
+  },
+  "Bioderma Atoderm Lotion Women (500ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.986645
+  },
+  "Bioderma Sebiaclear Body Lotion Men (200ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.962405
+  },
+  "Kérastase Elixir Ultime Original Serum Women (125ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.992182
+  },
+  "Kérastase Genesis Homme Fortifying Serum Men (90ml)": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.977667
+  },
+  "Dove Deeply Nourishing Body Wash 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.906227
+  },
+  "Dove Men+Care Extra Fresh Body Wash 500ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.980898
+  },
+  "Dove Cream Beauty Bathing Bar 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.809493
+  },
+  "Dove Men+Care Clean Comfort Bar 100g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.976715
+  },
+  "Gillette Venus Smooth Razor": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "female",
+    "confidence": 0.570881
+  },
+  "Gillette Mach3 Razor": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.85649
+  },
+  "Nivea Whitening Smooth Skin Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.764162
+  },
+  "Nivea Men Deep Black Carbon Deo Spray 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968851
+  },
+  "Olay Total Effects Day Cream 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.854681
+  },
+  "Olay Men Solutions Moisturizer 50g": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.980635
+  },
+  "Head & Shoulders Smooth & Silky Shampoo 650ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.822793
+  },
+  "Head & Shoulders Men Ultra Shampoo 650ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.933012
+  },
+  "Dove Premium Moisture Body Wash 470ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.868991
+  },
+  "Biore Marshmallow Whip Face Wash 150ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.879411
+  },
+  "Biore Men Facial Foam 130ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.964197
+  },
+  "Head & Shoulders Smooth & Silky Shampoo 440ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.834569
+  },
+  "Head & Shoulders Men Scalp Care Shampoo 400ml": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.92366
+  },
+  "Bioré UV Aqua Rich Watery Essence SPF50+": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.893034
+  },
+  "Bioré UV Athlizm Skin Protect Milk SPF50+": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.907505
+  },
+  "Curel Intensive Moisture Care Face Cream": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.87945
+  },
+  "Curel Men Face Balm Cream": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.968084
+  },
+  "Kao Merit Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.74079
+  },
+  "Kao Merit Men Shampoo": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.850628
+  },
+  "Lion Clinica Advantage Fresh Toothpaste": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.554987
+  },
+  "Lion Clinica Men Cool Toothpaste": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.920268
+  },
+  "Rohto Hadalabo Gokujyun Premium Lotion": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.846384
+  },
+  "Rohto Hadalabo Men Skin Lotion": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.970539
+  },
+  "Cow Brand Excellent Beauty Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.649253
+  },
+  "Cow Brand Excellent Men Soap": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.956601
+  },
+  "Kao Atrix Beauty Charge Hand Cream": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "neutral",
+    "confidence": 0.766008
+  },
+  "Kao Atrix Men Protective Hand Cream": {
+    "model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label": "male",
+    "confidence": 0.943915
+  }
+}
