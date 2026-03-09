@@ -25,6 +25,10 @@ if str(src) not in sys.path:
 from pink_tax.config import default_model_name, default_model_threshold, get_paths
 from pink_tax.scraping_config import load_scraping_source_config
 from pink_tax.scraping_utils.gender_labeler import ModelGenderLabeler
+from pink_tax.scraping_utils.obf_seed_loader import (
+    build_targets_from_obf_cache,
+    merge_target_products,
+)
 
 requests_module: Any = None
 beautiful_soup: Any = None
@@ -51,11 +55,18 @@ retailer = source_config["retailer"]
 today = str(date.today())
 user_agents = source_config["user_agents"]
 target_products = source_config["target_products"]
+auto_seed_from_obf = bool(source_config.get("auto_seed_from_obf", True))
+auto_seed_max_pairs = int(source_config.get("auto_seed_max_pairs", 180))
+auto_seed_locale = str(source_config.get("auto_seed_locale", "in"))
 search_base_url = source_config["search_base_url"]
 product_url_template = source_config["product_url_template"]
 referer_url = source_config["referer_url"]
 accept_language = source_config["accept_language"]
 request_timeout_seconds = float(source_config.get("request_timeout_seconds", 15))
+search_pause_min_seconds = float(source_config.get("search_pause_min_seconds", 0.8))
+search_pause_max_seconds = float(source_config.get("search_pause_max_seconds", 1.8))
+step_delay_min_seconds = float(source_config.get("step_delay_min_seconds", 1.5))
+step_delay_max_seconds = float(source_config.get("step_delay_max_seconds", 3.5))
 
 fieldnames = [
     "pair_id", "city", "brand", "category",
@@ -225,7 +236,7 @@ def scrape_product(
     if not url and not skip_search:
         log.info(f"  Searching: {product['search_query']}")
         url = search_amazon_in(product["search_query"], session)
-        time.sleep(random.uniform(2.0, 4.0))
+        time.sleep(random.uniform(search_pause_min_seconds, search_pause_max_seconds))
 
     if not url:
         log.warning(f"  No URL found for: {product['product_name']}")
@@ -262,6 +273,21 @@ def main(
         print("ERROR: requests + beautifulsoup4 are required. Run: pip install requests beautifulsoup4")
         return
 
+    seed_targets = list(target_products)
+    if auto_seed_from_obf:
+        obf_targets = build_targets_from_obf_cache(
+            obf_cache_path=paths.obf_cache,
+            city=city,
+            locale=auto_seed_locale,
+            max_pairs=auto_seed_max_pairs,
+            min_match_quality=3,
+        )
+        seed_targets = merge_target_products(seed_targets, obf_targets)
+        log.info(
+            f"OBF seed merge enabled: base={len(target_products)} merged={len(seed_targets)} "
+            f"(added={len(seed_targets) - len(target_products)})"
+        )
+
     paths.data_raw.mkdir(parents=True, exist_ok=True)
     session = requests_module.Session()
     labeler = ModelGenderLabeler(
@@ -272,10 +298,10 @@ def main(
     results = []
     found_urls = []
 
-    log.info(f"Amazon.in scrape — {len(target_products)} products {'[DRY RUN]' if dry_run else ''}")
+    log.info(f"Amazon.in scrape: {len(seed_targets)} products {'[DRY RUN]' if dry_run else ''}")
 
-    for i, product in enumerate(target_products, 1):
-        log.info(f"\n[{i:>2}/{len(target_products)}] {product['product_name']}")
+    for i, product in enumerate(seed_targets, 1):
+        log.info(f"\n[{i:>2}/{len(seed_targets)}] {product['product_name']}")
         row = scrape_product(product, session, labeler, dry_run=dry_run, skip_search=skip_search)
         results.append(row)
 
@@ -283,7 +309,7 @@ def main(
             found_urls.append(f"{row['pair_id']}|{row['expected_gender_label']}|{row['source_url']}")
 
         if not dry_run:
-            delay = random.uniform(4.0, 8.0)
+            delay = random.uniform(step_delay_min_seconds, step_delay_max_seconds)
             log.info(f"  Sleeping {delay:.1f}s...")
             time.sleep(delay)
 

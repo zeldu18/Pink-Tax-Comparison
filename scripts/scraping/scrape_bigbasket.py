@@ -13,6 +13,7 @@ import importlib
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote_plus
 
 webdriver: Any = None
 options_class: Any = None
@@ -38,6 +39,10 @@ if str(src) not in sys.path:
 from pink_tax.config import default_model_name, default_model_threshold, get_paths
 from pink_tax.scraping_config import load_scraping_source_config
 from pink_tax.scraping_utils.gender_labeler import ModelGenderLabeler
+from pink_tax.scraping_utils.obf_seed_loader import (
+    build_targets_from_obf_cache,
+    merge_target_products,
+)
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s  %(levelname)s  %(message)s")
@@ -46,11 +51,20 @@ paths = get_paths(root)
 
 source_config = load_scraping_source_config(root, "bigbasket")
 output_path = source_config["output_path"]
+found_urls_path = source_config.get("found_urls_path", "")
 city = source_config["city"]
 currency = source_config["currency"]
 retailer = source_config["retailer"]
 today = str(date.today())
 target_products = source_config["target_products"]
+search_base_url = str(source_config.get("search_base_url", "")).strip()
+auto_seed_from_obf = bool(source_config.get("auto_seed_from_obf", True))
+auto_seed_max_pairs = int(source_config.get("auto_seed_max_pairs", 120))
+auto_seed_locale = str(source_config.get("auto_seed_locale", "in"))
+search_pause_min_seconds = float(source_config.get("search_pause_min_seconds", 1.5))
+search_pause_max_seconds = float(source_config.get("search_pause_max_seconds", 3.0))
+step_delay_min_seconds = float(source_config.get("step_delay_min_seconds", 1.5))
+step_delay_max_seconds = float(source_config.get("step_delay_max_seconds", 3.5))
 
 fieldnames = [
     "pair_id", "city", "brand", "category",
@@ -130,6 +144,28 @@ def extract_price_bigbasket(driver: Any) -> tuple[float | None, float | None, bo
 
     return price, original_price, on_promotion
 
+def search_bigbasket_url(driver: Any, query: str) -> str | None:
+    """
+    Search BigBasket and return first product URL.
+    """
+
+    if not search_base_url:
+        return None
+
+    search_url = search_base_url.format(query=quote_plus(str(query or "").strip()))
+    try:
+        driver.get(search_url)
+        time.sleep(random.uniform(search_pause_min_seconds, search_pause_max_seconds))
+        links = driver.find_elements(by_class.CSS_SELECTOR, "a[href*='/pd/']")
+        for link in links:
+            href = str(link.get_attribute("href") or "").strip()
+            if "/pd/" in href:
+                return href.split("?")[0]
+    except Exception as exc:
+        log.warning(f"BigBasket search failed for query '{query}': {exc}")
+
+    return None
+
 def scrape_product(
     product: dict,
     driver,
@@ -167,7 +203,7 @@ def scrape_product(
         "match_quality":        product["match_quality"],
         "confidence":           "LOW",
         "date_scraped":         today,
-        "source_url":           product["url"],
+        "source_url":           product.get("url") or "",
         "scrape_status":        "OK",
         "ingredients":          product.get("ingredients", ""),
     }
@@ -175,14 +211,28 @@ def scrape_product(
     if dry_run:
         row["price_local"]   = "DRY_RUN"
         row["scrape_status"] = "DRY_RUN"
+        log.info(f"search: {product.get('search_query', product['product_name'])}")
         log.info(
             f"[DRY RUN] exp={row['expected_gender_label']:<7} pred={row['gender_label']:<7} "
             f"conf={row['model_gender_confidence']:.3f}  {product['product_name']}"
         )
         return row
 
+    url = str(product.get("url") or "").strip()
+    if not url:
+        search_query = str(product.get("search_query") or product["product_name"]).strip()
+        log.info(f"Searching BigBasket: {search_query}")
+        url = search_bigbasket_url(driver, search_query) or ""
+
+    if not url:
+        row["scrape_status"] = "URL_NOT_FOUND"
+        log.warning(f"URL not found: {product['product_name']}")
+        return row
+
+    row["source_url"] = url
+
     try:
-        driver.get(product["url"])
+        driver.get(url)
         time.sleep(random.uniform(2.5, 5.0))
 
         price, orig, promo = extract_price_bigbasket(driver)
@@ -201,7 +251,7 @@ def scrape_product(
             )
 
     except Exception as e:
-        log.error(f"Error scraping {product['url']}: {e}")
+        log.error(f"Error scraping {url}: {e}")
         row["scrape_status"] = "ERROR"
 
     return row
@@ -214,6 +264,21 @@ def main(
     if not dry_run and not selenium_ok:
         print("ERROR: selenium is not installed. Run: pip install selenium")
         return
+
+    seed_targets = list(target_products)
+    if auto_seed_from_obf:
+        obf_targets = build_targets_from_obf_cache(
+            obf_cache_path=paths.obf_cache,
+            city=city,
+            locale=auto_seed_locale,
+            max_pairs=auto_seed_max_pairs,
+            min_match_quality=3,
+        )
+        seed_targets = merge_target_products(seed_targets, obf_targets)
+        log.info(
+            f"OBF seed merge enabled: base={len(target_products)} merged={len(seed_targets)} "
+            f"(added={len(seed_targets) - len(target_products)})"
+        )
 
     paths.data_raw.mkdir(parents=True, exist_ok=True)
     labeler = ModelGenderLabeler(
@@ -229,21 +294,32 @@ def main(
             driver = build_driver()
 
         results = []
-        log.info(f"BigBasket scrape — {len(target_products)} products "
+        log.info(f"BigBasket scrape: {len(seed_targets)} products "
                  f"{'[DRY RUN]' if dry_run else ''}")
+        found_urls: list[str] = []
 
-        for product in target_products:
+        for product in seed_targets:
             row = scrape_product(product, driver, labeler, dry_run=dry_run)
             results.append(row)
+            if row.get("source_url") and row["source_url"] != "" and not dry_run:
+                found_urls.append(
+                    f"{row['pair_id']}|{row['expected_gender_label']}|{row['source_url']}"
+                )
 
             if not dry_run:
-                time.sleep(random.uniform(2.0, 4.0))
+                time.sleep(random.uniform(step_delay_min_seconds, step_delay_max_seconds))
 
         with open(output_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(results)
         labeler.persist()
+
+        if found_urls_path and found_urls:
+            with open(found_urls_path, "w", encoding="utf-8") as handle:
+                handle.write("pair_id|gender|url\n")
+                handle.write("\n".join(found_urls))
+            log.info(f"Found URLs saved → {found_urls_path}")
 
         ok   = sum(1 for r in results if r["scrape_status"] == "OK")
         fail = len(results) - ok
