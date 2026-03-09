@@ -1,0 +1,23 @@
+{
+  "output_path": "data/raw/rakuten_jp_raw.csv",
+  "found_urls_path": "data/raw/rakuten_jp_found_urls.txt",
+  "city": "Tokyo",
+  "currency": "JPY",
+  "retailer": "Rakuten Japan",
+  "user_agents": [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
+  ],
+  "target_products": [],
+  "search_base_url": "https://search.rakuten.co.jp/search/mall/{query}/",
+  "referer_url": "https://www.rakuten.co.jp",
+  "accept_language": "ja-JP,ja;q=0.9,en;q=0.8",
+  "request_timeout_seconds": 15,
+  "auto_seed_from_obf": true,
+  "auto_seed_max_pairs": 220,
+  "auto_seed_locale": "jp",
+  "search_pause_min_seconds": 0.8,
+  "search_pause_max_seconds": 1.8,
+  "step_delay_min_seconds": 1.5,
+  "step_delay_max_seconds": 3.5
+}

@@ -15,10 +15,24 @@
       ]
     },
     {
+      "key": "scrape_flipkart",
+      "description": "Scrape Flipkart observations",
+      "command": [
+        "scripts/scraping/scrape_flipkart.py"
+      ]
+    },
+    {
       "key": "scrape_amazon_jp",
       "description": "Scrape Amazon Japan observations",
       "command": [
         "scripts/scraping/scrape_amazon_japan.py"
+      ]
+    },
+    {
+      "key": "scrape_rakuten_jp",
+      "description": "Scrape Rakuten Japan observations",
+      "command": [
+        "scripts/scraping/scrape_rakuten_japan.py"
       ]
     },
     {
@@ -30,9 +44,12 @@
     },
     {
       "key": "build_observations",
-      "description": "Merge current scraper outputs into data/raw/pair_observations.csv with safety checks",
+      "description": "Build real-only observations from current scrape outputs with strict coverage threshold",
       "command": [
-        "scripts/cleaning/build_pair_observations.py"
+        "scripts/cleaning/build_pair_observations.py",
+        "--replace-only",
+        "--min-output-rows",
+        "200"
       ]
     },
     {

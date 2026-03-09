@@ -230,5 +230,12 @@
   "product_url_template": "https://www.amazon.co.jp/dp/{asin}",
   "referer_url": "https://www.amazon.co.jp",
   "accept_language": "ja-JP,ja;q=0.9,en;q=0.8",
-  "request_timeout_seconds": 15
+  "request_timeout_seconds": 15,
+  "auto_seed_from_obf": true,
+  "auto_seed_max_pairs": 220,
+  "auto_seed_locale": "jp",
+  "search_pause_min_seconds": 0.8,
+  "search_pause_max_seconds": 1.8,
+  "step_delay_min_seconds": 1.5,
+  "step_delay_max_seconds": 3.5
 }

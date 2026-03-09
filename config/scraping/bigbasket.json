@@ -1,8 +1,17 @@
 {
   "output_path": "data/raw/bigbasket_raw.csv",
+  "found_urls_path": "data/raw/bigbasket_found_urls.txt",
   "city": "Hyderabad",
   "currency": "INR",
   "retailer": "BigBasket",
+  "search_base_url": "https://www.bigbasket.com/ps/?q={query}",
+  "auto_seed_from_obf": true,
+  "auto_seed_max_pairs": 120,
+  "auto_seed_locale": "in",
+  "search_pause_min_seconds": 1.5,
+  "search_pause_max_seconds": 3.0,
+  "step_delay_min_seconds": 1.5,
+  "step_delay_max_seconds": 3.5,
   "target_products": [
     {
       "pair_id": "NIVEA-DEO-HYD-01",
