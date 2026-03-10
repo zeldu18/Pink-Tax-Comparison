@@ -1,0 +1,305 @@
+pair_code,city,brand,category,gender_label,product_name,size_ml_or_g,price_local,currency,original_price_local,on_promotion,retailer,match_quality,confidence,date_scraped,source_url,scrape_status
+BIOTIQ-BARSOAP-HYD-AUTO017,Hyderabad,Biotique,Bar Soap,female,Biotique Bio Almond Oil Nourishing Soap,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQ-BARSOAP-HYD-AUTO017,Hyderabad,Biotique,Bar Soap,male,Biotique Bio Neem Purifying Soap,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COWBRA-BARSOAP-HYD-AUTO029,Hyderabad,Cow Brand,Bar Soap,female,Cow Brand Excellent Beauty Soap 135g,135,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COWBRA-BARSOAP-HYD-AUTO029,Hyderabad,Cow Brand,Bar Soap,male,Cow Brand Excellent Men Soap 135g,135,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BARSOAP-HYD-AUTO044,Hyderabad,Dove,Bar Soap,female,Dove Beauty Bar Japan 135g,135,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BARSOAP-HYD-AUTO044,Hyderabad,Dove,Bar Soap,male,Dove Men+Care Clean Comfort Bar Japan 135g,135,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FIAMA-BARSOAP-HYD-AUTO001,Hyderabad,Fiama,Bar Soap,female,Fiama Women Gel Bar,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FIAMA-BARSOAP-HYD-AUTO001,Hyderabad,Fiama,Bar Soap,male,Fiama Men Gel Bar,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GODREJ-BARSOAP-HYD-AUTO001,Hyderabad,Godrej,Bar Soap,female,Godrej Nupur Moisturising Soap (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GODREJ-BARSOAP-HYD-AUTO001,Hyderabad,Godrej,Bar Soap,male,Godrej Expert Men Soap (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HUL-BARSOAP-HYD-AUTO001,Hyderabad,HUL/Hamam,Bar Soap,female,Hamam Neem Tulsi & Aloe Soap Women (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HUL-BARSOAP-HYD-AUTO001,Hyderabad,HUL/Hamam,Bar Soap,male,Hamam Men Active Protection Soap (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-BARSOAP-HYD-AUTO001,Hyderabad,Himalaya,Bar Soap,female,Himalaya Neem & Turmeric Soap,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-BARSOAP-HYD-AUTO001,Hyderabad,Himalaya,Bar Soap,male,Himalaya Men Intense Oil Clear Soap,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BARSOAP-HYD-AUTO001,Hyderabad,Kao/Merit,Bar Soap,female,Kao Biore Body Wash Soap Bar Women 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BARSOAP-HYD-AUTO001,Hyderabad,Kao/Merit,Bar Soap,male,Kao Biore Men Body Wash Soap Bar 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BARSOAP-HYD-AUTO001,Hyderabad,Lion,Bar Soap,female,Lion Look Natural Select Bar Soap 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BARSOAP-HYD-AUTO001,Hyderabad,Lion,Bar Soap,male,Lion Look Natural Men Bar Soap 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LUX-BARSOAP-HYD-AUTO001,Hyderabad,Lux,Bar Soap,female,Lux Soft Touch Soap 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LUX-BARSOAP-HYD-AUTO001,Hyderabad,Lux,Bar Soap,male,Lux Men Sport Fresh Soap 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODER-BODYLOTI-HYD-AUTO004,Hyderabad,Bioderma,Body Lotion,female,Bioderma Atoderm Lotion Women (500ml),500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODER-BODYLOTI-HYD-AUTO004,Hyderabad,Bioderma,Body Lotion,male,Bioderma Sebiaclear Body Lotion Men (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-BODYLOTI-HYD-AUTO001,Hyderabad,Bioré,Body Lotion,female,Bioré Body Essence Milk Women 300ml,300,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-BODYLOTI-HYD-AUTO001,Hyderabad,Bioré,Body Lotion,male,Bioré Men Body Lotion 300ml,300,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQUE-BODYLOTI-HYD-AUTO001,Hyderabad,Biotique,Body Lotion,female,Biotique Bio Almond Oil Moisturizer 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQUE-BODYLOTI-HYD-AUTO001,Hyderabad,Biotique,Body Lotion,male,Biotique Bio Morning Nectar Moisturizer 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CETAPHIL-BODYLOTI-HYD-AUTO001,Hyderabad,Cetaphil,Body Lotion,female,Cetaphil Moisturising Lotion (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CETAPHIL-BODYLOTI-HYD-AUTO001,Hyderabad,Cetaphil,Body Lotion,male,Cetaphil Men Moisturiser (125ml),125,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-BODYLOTI-HYD-AUTO001,Hyderabad,Curel,Body Lotion,female,Curel Moisture Lotion 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-BODYLOTI-HYD-AUTO001,Hyderabad,Curel,Body Lotion,male,Curel Men Moisturizing Lotion 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-BODYLOTI-HYD-AUTO001,Hyderabad,Himalaya,Body Lotion,female,Himalaya Nourishing Skin Cream 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-BODYLOTI-HYD-AUTO001,Hyderabad,Himalaya,Body Lotion,male,Himalaya Men Intense Moisturizing Cream 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYLOTI-HYD-AUTO001,Hyderabad,Kao/Atrix,Body Lotion,female,Atrix Skin Milk Hand & Body Lotion Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYLOTI-HYD-AUTO001,Hyderabad,Kao/Atrix,Body Lotion,male,Kao Men's Biore Body Milk (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-BODYLOTI-HYD-AUTO001,Hyderabad,L'Oreal,Body Lotion,female,L'Oreal Paris Body Expertise Revitalift Body Lotio,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-BODYLOTI-HYD-AUTO001,Hyderabad,L'Oreal,Body Lotion,male,L'Oreal Men Expert Hydra Energetic Body Lotion 200,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BODYLOTI-HYD-AUTO001,Hyderabad,Lion,Body Lotion,female,Lion Soflan Premium Rich Body Milk Women (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BODYLOTI-HYD-AUTO001,Hyderabad,Lion,Body Lotion,male,Lion Men's Soflan Body Lotion (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-BODYLOTI-HYD-AUTO001,Hyderabad,Nivea,Body Lotion,female,Nivea Soft Moisturizing Cream 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-BODYLOTI-HYD-AUTO001,Hyderabad,Nivea,Body Lotion,male,Nivea Men Creme 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-BODYWASH-HYD-AUTO001,Hyderabad,Bioderma,Body Wash,female,Bioderma Atoderm Shower Oil Women (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-BODYWASH-HYD-AUTO001,Hyderabad,Bioderma,Body Wash,male,Bioderma Sebiaclear Body Wash Men (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-BODYWASH-HYD-AUTO009,Hyderabad,Bioré,Body Wash,female,Bioré Guard Body Wash Women 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-BODYWASH-HYD-AUTO009,Hyderabad,Bioré,Body Wash,male,Bioré Men Guard Body Wash 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BODYWASH-HYD-AUTO046,Hyderabad,Dove,Body Wash,female,Dove Deeply Nourishing Body Wash,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BODYWASH-HYD-AUTO046,Hyderabad,Dove,Body Wash,male,Dove Men+Care Extra Fresh Body Wash,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BODYWASH-HYD-AUTO047,Hyderabad,Dove,Body Wash,female,Dove Premium Moisture Care Body Wash 470ml,470,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-BODYWASH-HYD-AUTO047,Hyderabad,Dove,Body Wash,male,Dove Men+Care Clean Comfort Body Wash 400ml,400,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FIAMA-BODYWASH-HYD-AUTO001,Hyderabad,Fiama,Body Wash,female,Fiama Women Shower Gel Peach & Avocado,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FIAMA-BODYWASH-HYD-AUTO001,Hyderabad,Fiama,Body Wash,male,Fiama Men Refreshing Shower Gel,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYWASH-HYD-AUTO103,Hyderabad,Kao,Body Wash,female,Kao Jergens Body Wash Sakura Women (450ml),450,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYWASH-HYD-AUTO103,Hyderabad,Kao,Body Wash,male,Kao Men's Biore Body Wash Charcoal (440ml),440,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAOATR-BODYWASH-HYD-AUTO111,Hyderabad,Kao/Atrix,Body Wash,female,Atrix Skin Milk Body Wash Women (600ml),600,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAOATR-BODYWASH-HYD-AUTO111,Hyderabad,Kao/Atrix,Body Wash,male,Kao Men's Biore Body Wash Ice Cool (450ml),450,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYWASH-HYD-AUTO001,Hyderabad,Kao/Merit,Body Wash,female,Kao Laurier Body Wash Women 550ml,550,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-BODYWASH-HYD-AUTO001,Hyderabad,Kao/Merit,Body Wash,male,Kao Men's Biore Body Wash 550ml,550,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BODYWASH-HYD-AUTO001,Hyderabad,Lion,Body Wash,female,Lion Softymo Lux Super Moisture Body Wash 450ml,450,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-BODYWASH-HYD-AUTO001,Hyderabad,Lion,Body Wash,male,Lion Softymo Men Speed Wash 450ml,450,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LUX-BODYWASH-HYD-AUTO001,Hyderabad,Lux,Body Wash,female,Lux Velvet Touch Shower Gel 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LUX-BODYWASH-HYD-AUTO001,Hyderabad,Lux,Body Wash,male,Lux Men Sport Fresh Shower Gel 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-CONDITIO-HYD-AUTO001,Hyderabad,Dove,Conditioner,female,Dove Intense Repair Conditioner 175ml,175,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-CONDITIO-HYD-AUTO001,Hyderabad,Dove,Conditioner,male,Dove Men+Care Fortifying Conditioner 180ml,180,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-CONDITIO-HYD-AUTO002,Hyderabad,Dove,Conditioner,female,Dove Moisture Care Conditioner 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-CONDITIO-HYD-AUTO002,Hyderabad,Dove,Conditioner,male,Dove Men+Care Hair Defence Conditioner 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-CONDITIO-HYD-AUTO001,Hyderabad,Garnier,Conditioner,female,Garnier Ultra Blends 5 Precious Herbs Conditioner,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-CONDITIO-HYD-AUTO001,Hyderabad,Garnier,Conditioner,male,Garnier Men Anti-Dandruff Conditioner 175ml,175,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HEADSHOU-CONDITIO-HYD-AUTO001,Hyderabad,Head & Shoulders,Conditioner,female,H&S Smooth & Silky Conditioner 340ml,340,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HEADSHOU-CONDITIO-HYD-AUTO001,Hyderabad,Head & Shoulders,Conditioner,male,H&S Men 2-in-1 Anti-Dandruff 340ml,340,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-CONDITIO-HYD-AUTO001,Hyderabad,Himalaya,Conditioner,female,Himalaya Protein Conditioner 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-CONDITIO-HYD-AUTO001,Hyderabad,Himalaya,Conditioner,male,Himalaya Men Protein Conditioner 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-CONDITIO-HYD-AUTO001,Hyderabad,Kao/Merit,Conditioner,female,Kao Merit Conditioner 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-CONDITIO-HYD-AUTO001,Hyderabad,Kao/Merit,Conditioner,male,Kao Merit Men Conditioner 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-CONDITIO-HYD-AUTO001,Hyderabad,Lion,Conditioner,female,Lion Systema Scalp Conditioner Women (400ml),400,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-CONDITIO-HYD-AUTO001,Hyderabad,Lion,Conditioner,male,Lion Banon Men Conditioner (400ml),400,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEART-CONDITIO-HYD-AUTO001,Hyderabad,Mamaearth,Conditioner,female,Mamaearth Onion Conditioner Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEART-CONDITIO-HYD-AUTO001,Hyderabad,Mamaearth,Conditioner,male,Mamaearth Men Anti-Dandruff Conditioner (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-CONDITIO-HYD-AUTO001,Hyderabad,Mandom,Conditioner,female,Lucido-L Conditioner Women (400ml),400,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-CONDITIO-HYD-AUTO001,Hyderabad,Mandom,Conditioner,male,Lucido Men Conditioner (400ml),400,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-DEODORAN-HYD-AUTO001,Hyderabad,Bioré,Deodorant Roll-On,female,Bioré Deo Foot & Body Sheet Women 32-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-DEODORAN-HYD-AUTO001,Hyderabad,Bioré,Deodorant Roll-On,male,Bioré Men Deo Sheet 32-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-DEODORAN-HYD-AUTO011,Hyderabad,Bioré,Deodorant Roll-On,female,Bioré Soft Stone Deodorant Women (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-DEODORAN-HYD-AUTO011,Hyderabad,Bioré,Deodorant Roll-On,male,Bioré Deo Roll-On Men Cool Fresh (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO001,Hyderabad,Dove,Deodorant Roll-On,female,Dove Eventone Deodorant Roll-On,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO001,Hyderabad,Dove,Deodorant Roll-On,male,Dove Men+Care Dry Comfort Roll-On,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO002,Hyderabad,Dove,Deodorant Roll-On,female,Dove Advance Care Deodorant Women (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO002,Hyderabad,Dove,Deodorant Roll-On,male,Dove Men+Care Roll-On (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FOGG-DEODORAN-HYD-AUTO001,Hyderabad,Fogg,Deodorant Roll-On,female,Fogg Miss Dew Roll-On Women,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FOGG-DEODORAN-HYD-AUTO001,Hyderabad,Fogg,Deodorant Roll-On,male,Fogg Master Roll-On Men,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-DEODORAN-HYD-AUTO001,Hyderabad,Lion,Deodorant Roll-On,female,Lion Ban Premium Roll-On Women (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-DEODORAN-HYD-AUTO001,Hyderabad,Lion,Deodorant Roll-On,male,Lion Men's Ban Roll-On (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO001,Hyderabad,Nivea,Deodorant Roll-On,female,Nivea Pearl & Beauty Roll-On 50ml,50,,INR,,False,Blinkit,5,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO001,Hyderabad,Nivea,Deodorant Roll-On,male,Nivea Men Deep Roll-On 50ml,50,,INR,,False,Blinkit,5,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO002,Hyderabad,Nivea,Deodorant Roll-On,female,Nivea Pearl & Beauty Roll-On,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO002,Hyderabad,Nivea,Deodorant Roll-On,male,Nivea Men Deep Impact Roll-On,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO052,Hyderabad,Dove,Deodorant Spray,female,Dove Eventone Body Spray Women 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-DEODORAN-HYD-AUTO052,Hyderabad,Dove,Deodorant Spray,male,Dove Men+Care Clean Comfort Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ENGAGE-DEODORAN-HYD-AUTO001,Hyderabad,Engage,Deodorant Spray,female,Engage W1 Deodorant Spray Women 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ENGAGE-DEODORAN-HYD-AUTO001,Hyderabad,Engage,Deodorant Spray,male,Engage M1 Deodorant Spray Men 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FOGG-DEODORAN-HYD-AUTO002,Hyderabad,Fogg,Deodorant Spray,female,Fogg Royal Women Body Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+FOGG-DEODORAN-HYD-AUTO002,Hyderabad,Fogg,Deodorant Spray,male,Fogg Macho Men Body Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HUL-DEODORAN-HYD-AUTO001,Hyderabad,HUL,Deodorant Spray,female,Dove Talc Deodorant Spray Women (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HUL-DEODORAN-HYD-AUTO001,Hyderabad,HUL,Deodorant Spray,male,Axe Signature Deodorant Spray (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-DEODORAN-HYD-AUTO001,Hyderabad,Kao,Deodorant Spray,female,Kao Biore Deo Spray Refresh Women (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-DEODORAN-HYD-AUTO001,Hyderabad,Kao,Deodorant Spray,male,Kao Men's Biore Deo Spray Cool (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-DEODORAN-HYD-AUTO002,Hyderabad,Lion,Deodorant Spray,female,Lion Ban Deodorant Spray Women (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-DEODORAN-HYD-AUTO002,Hyderabad,Lion,Deodorant Spray,male,Lion Men's Ban Deodorant Spray (150ml),150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-DEODORAN-HYD-AUTO001,Hyderabad,Mandom/Gatsby,Deodorant Spray,female,Mandom Lucido Lady Deo Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-DEODORAN-HYD-AUTO001,Hyderabad,Mandom/Gatsby,Deodorant Spray,male,Gatsby Deodorant Body Spray Men 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO003,Hyderabad,Nivea,Deodorant Spray,female,Nivea Whitening Talc-Free Deo Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO003,Hyderabad,Nivea,Deodorant Spray,male,Nivea Men Deep Ocean Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO004,Hyderabad,Nivea,Deodorant Spray,female,Nivea Whitening Deo Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-DEODORAN-HYD-AUTO004,Hyderabad,Nivea,Deodorant Spray,male,Nivea Men Silver Protect Spray 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-FACEMOIS-HYD-AUTO001,Hyderabad,Bioré,Face Moisturizer,female,Bioré UV Moisture Milk Cream SPF50 Women (50ml),50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-FACEMOIS-HYD-AUTO001,Hyderabad,Bioré,Face Moisturizer,male,Bioré Men Face Milk Moist (50ml),50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQ-FACEMOIS-HYD-AUTO019,Hyderabad,Biotique,Face Moisturizer,female,Biotique Bio Coconut Whitening Cream 50g,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQ-FACEMOIS-HYD-AUTO019,Hyderabad,Biotique,Face Moisturizer,male,Biotique Bio Aloe Vera Fresh Cream Men 50g,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACEMOIS-HYD-AUTO032,Hyderabad,Curel,Face Moisturizer,female,Curel Intensive Moisture Care Face Cream 40ml,40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACEMOIS-HYD-AUTO032,Hyderabad,Curel,Face Moisturizer,male,Curel Men Face Balm Cream 35ml,35,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-FACEMOIS-HYD-AUTO001,Hyderabad,DHC,Face Moisturizer,female,DHC Olive Virgin Oil Concentrate 15ml,15,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-FACEMOIS-HYD-AUTO001,Hyderabad,DHC,Face Moisturizer,male,DHC Men Deep Cleansing Oil 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-FACEMOIS-HYD-AUTO001,Hyderabad,Garnier,Face Moisturizer,female,Garnier Bright Complete Vitamin C Cream 45g,45,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-FACEMOIS-HYD-AUTO001,Hyderabad,Garnier,Face Moisturizer,male,Garnier Men PowerWhite Moisturizer 45g,45,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-FACEMOIS-HYD-AUTO001,Hyderabad,Himalaya,Face Moisturizer,female,Himalaya Nourishing Skin Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-FACEMOIS-HYD-AUTO001,Hyderabad,Himalaya,Face Moisturizer,male,Himalaya Men Intense Moisturizing Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-FACEMOIS-HYD-AUTO001,Hyderabad,Kose/Softymo,Face Moisturizer,female,Kose Softymo Speedy Cleansing Oil Face Cream Women,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-FACEMOIS-HYD-AUTO001,Hyderabad,Kose/Softymo,Face Moisturizer,male,Kose Men Softymo Face Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-FACEMOIS-HYD-AUTO001,Hyderabad,L'Oreal,Face Moisturizer,female,L'Oreal Paris Revitalift Day Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-FACEMOIS-HYD-AUTO001,Hyderabad,L'Oreal,Face Moisturizer,male,L'Oreal Men Expert Hydra Energetic Moisturizer 50m,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LAKME-FACEMOIS-HYD-AUTO001,Hyderabad,Lakme,Face Moisturizer,female,Lakme Peach Milk Moisturizer SPF 24 60ml,60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LAKME-FACEMOIS-HYD-AUTO001,Hyderabad,Lakme,Face Moisturizer,male,Garnier Men PowerWhite Moisturizer 45ml,45,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+OLAY-FACECREAM-HYD-01,Hyderabad,Olay,Face Moisturizer,female,Olay Total Effects Day Cream 50g,50,,INR,,False,Blinkit,4,LOW,2026-03-09,,URL_NOT_FOUND
+OLAY-FACECREAM-HYD-01,Hyderabad,Olay,Face Moisturizer,male,Olay Men Solutions Moisturizer 50g,50,,INR,,False,Blinkit,4,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACETONE-HYD-AUTO033,Hyderabad,Curel,Face Toner,female,Curel Moisture Face Toner Women 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACETONE-HYD-AUTO033,Hyderabad,Curel,Face Toner,male,Curel Men Toner 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-FACETONE-HYD-AUTO001,Hyderabad,Kao,Face Toner,female,Kao Sofina IP Toner Women (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-FACETONE-HYD-AUTO001,Hyderabad,Kao,Face Toner,male,Kao Men's Biore Toner (160ml),160,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-FACETONE-HYD-AUTO001,Hyderabad,Kose/Softymo,Face Toner,female,Kose Softymo Speedy Cleansing Toner Women (230ml),230,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-FACETONE-HYD-AUTO001,Hyderabad,Kose/Softymo,Face Toner,male,Kose Men's Speedy Toner (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEART-FACETONE-HYD-AUTO001,Hyderabad,Mamaearth,Face Toner,female,Mamaearth Rose Water Toner Women 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEART-FACETONE-HYD-AUTO001,Hyderabad,Mamaearth,Face Toner,male,Mamaearth Men Charcoal Toner 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MINIMALI-FACETONE-HYD-AUTO001,Hyderabad,Minimalist,Face Toner,female,Minimalist 7% Glycolic Toning Solution (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MINIMALI-FACETONE-HYD-AUTO001,Hyderabad,Minimalist,Face Toner,male,Minimalist 10% Niacinamide Toner Men (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PLUM-FACETONE-HYD-AUTO001,Hyderabad,Plum,Face Toner,female,Plum Green Tea Alcohol Free Toner Women 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PLUM-FACETONE-HYD-AUTO001,Hyderabad,Plum,Face Toner,male,Plum Men Facebase Skin Clarifying Toner 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-FACIALCL-HYD-AUTO001,Hyderabad,Bioderma,Facial Cleanser,female,Bioderma Sensibio H2O Micellar Water Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-FACIALCL-HYD-AUTO001,Hyderabad,Bioderma,Facial Cleanser,male,Bioderma Sébium H2O Men (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-FACIALCL-HYD-AUTO001,Hyderabad,Bioré,Facial Cleanser,female,Bioré Marshmallow Whip Face Wash 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-FACIALCL-HYD-AUTO001,Hyderabad,Bioré,Facial Cleanser,male,Bioré Men Facial Foam 130ml,130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQUE-FACIALCL-HYD-AUTO001,Hyderabad,Biotique,Facial Cleanser,female,Biotique Bio Honey Gel Foaming Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQUE-FACIALCL-HYD-AUTO001,Hyderabad,Biotique,Facial Cleanser,male,Biotique Bio Neem Foaming Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CETAPHIL-FACIALCL-HYD-AUTO001,Hyderabad,Cetaphil,Facial Cleanser,female,Cetaphil Gentle Skin Cleanser Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CETAPHIL-FACIALCL-HYD-AUTO001,Hyderabad,Cetaphil,Facial Cleanser,male,Cetaphil Men Facial Cleanser (125ml),125,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACIALCL-HYD-AUTO001,Hyderabad,Curel,Facial Cleanser,female,Curel Moisture Face Wash Women 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-FACIALCL-HYD-AUTO001,Hyderabad,Curel,Facial Cleanser,male,Curel Men Face Wash 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-FACIALCL-HYD-AUTO001,Hyderabad,DHC,Facial Cleanser,female,DHC Deep Cleansing Oil Women (120ml),120,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-FACIALCL-HYD-AUTO001,Hyderabad,DHC,Facial Cleanser,male,DHC Men Oil Cleansing (120ml),120,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-FACIALCL-HYD-AUTO053,Hyderabad,Dove,Facial Cleanser,female,Dove Cream Milk Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-FACIALCL-HYD-AUTO053,Hyderabad,Dove,Facial Cleanser,male,Dove Men+Care Sensitive Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-FACEWASH-HYD-01,Hyderabad,Garnier,Facial Cleanser,female,Garnier Bright Complete Vitamin C Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-FACEWASH-HYD-01,Hyderabad,Garnier,Facial Cleanser,male,Garnier Men PowerWhite Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-FACIALCL-HYD-AUTO001,Hyderabad,Himalaya,Facial Cleanser,female,Himalaya Nourishing Cream Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-FACIALCL-HYD-AUTO001,Hyderabad,Himalaya,Facial Cleanser,male,Himalaya Men Active Fresh Face Wash 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-FACIALCL-HYD-AUTO001,Hyderabad,Kao,Facial Cleanser,female,Kao Sofina IP Women Facial Wash (130g),130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-FACIALCL-HYD-AUTO001,Hyderabad,Kao,Facial Cleanser,male,Kao Men's Biore Double Scrub Face Wash (130g),130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BBLUNT-HAIRCOLO-HYD-AUTO001,Hyderabad,BBlunt,Hair Colour,female,BBlunt Salon Secret Hair Colour Women,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BBLUNT-HAIRCOLO-HYD-AUTO001,Hyderabad,BBlunt,Hair Colour,male,BBlunt Men Hair Colour,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DARIYA-HAIRCOLO-HYD-AUTO001,Hyderabad,Dariya,Hair Colour,female,Salon de Pro Women Hair Colour Cream (50g),50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DARIYA-HAIRCOLO-HYD-AUTO001,Hyderabad,Dariya,Hair Colour,male,Salon de Pro Men's Hair Colour (40g),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DARIYA-HAIRCOLO-HYD-AUTO002,Hyderabad,Dariya,Hair Colour,female,Dariya Salon de Pro Beauteen Melt Color Women Crea,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DARIYA-HAIRCOLO-HYD-AUTO002,Hyderabad,Dariya,Hair Colour,male,Dariya Salon de Pro Men's Hair Colour Cream (40g),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-HAIRCOLO-HYD-AUTO001,Hyderabad,Garnier,Hair Colour,female,Garnier Color Naturals Hair Colour Cream Women,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-HAIRCOLO-HYD-AUTO001,Hyderabad,Garnier,Hair Colour,male,Garnier Men Power Black Shampoo Hair Colour,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GODREJ-HAIRCOLO-HYD-AUTO001,Hyderabad,Godrej,Hair Colour,female,Godrej Expert Cream Hair Colour Women (120ml),120,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GODREJ-HAIRCOLO-HYD-AUTO001,Hyderabad,Godrej,Hair Colour,male,Godrej Expert Men Hair Colour (25ml),25,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HENKEL-HAIRCOLO-HYD-AUTO001,Hyderabad,Henkel,Hair Colour,female,Freshlight Women Foam Colour (130ml),130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HENKEL-HAIRCOLO-HYD-AUTO001,Hyderabad,Henkel,Hair Colour,male,Bigen Men's Color (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HOYU-HAIRCOLO-HYD-AUTO001,Hyderabad,Hoyu,Hair Colour,female,"Hoyu Beauteen Melt Color Women (cream kit, ~80g)",80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HOYU-HAIRCOLO-HYD-AUTO001,Hyderabad,Hoyu,Hair Colour,male,Hoyu Bigen Men's Color Cream (40g),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIRCOLO-HYD-AUTO001,Hyderabad,Indulekha,Hair Colour,female,Indulekha Women Bhringa Hair Oil Treatment (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIRCOLO-HYD-AUTO001,Hyderabad,Indulekha,Hair Colour,male,Indulekha Men Hair Colour (25ml),25,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRCOLO-HYD-AUTO001,Hyderabad,Kao/Liese,Hair Colour,female,Liese Prettia Bubble Hair Colour Women (108ml+),108,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRCOLO-HYD-AUTO001,Hyderabad,Kao/Liese,Hair Colour,male,Kao Blaune Men Hair Colour Cream (40g),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-HAIRCOLO-HYD-AUTO001,Hyderabad,L'Oreal,Hair Colour,female,L'Oreal Paris Excellence Creme Hair Color,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOREAL-HAIRCOLO-HYD-AUTO001,Hyderabad,L'Oreal,Hair Colour,male,L'Oreal Men Expert One-Twist Hair Color,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIRGELS-HYD-AUTO001,Hyderabad,Indulekha,Hair Gel / Serum,female,Indulekha Bringha Hair Serum Women 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIRGELS-HYD-AUTO001,Hyderabad,Indulekha,Hair Gel / Serum,male,Indulekha Men Anti Hairfall Serum 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRGELS-HYD-AUTO001,Hyderabad,Kao,Hair Gel / Serum,female,Kao Essential Damage Care Serum Women (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRGELS-HYD-AUTO001,Hyderabad,Kao,Hair Gel / Serum,male,Kao Gatsby Moving Rubber Hair Wax (80g),80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRGELS-HYD-AUTO002,Hyderabad,Kao,Hair Gel / Serum,female,Kao Liese Drip Hair Serum Women (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIRGELS-HYD-AUTO002,Hyderabad,Kao,Hair Gel / Serum,male,Kao Gatsby Hair Cream Serum Men (100ml),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-HAIRGELS-HYD-AUTO001,Hyderabad,Kose/Softymo,Hair Gel / Serum,female,Kose Softymo Hair Serum Women 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-HAIRGELS-HYD-AUTO001,Hyderabad,Kose/Softymo,Hair Gel / Serum,male,Kose Men Softymo Styling Wax 80g,80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIRGELS-HYD-AUTO001,Hyderabad,Mandom,Hair Gel / Serum,female,Lucido-L Hair Serum Argan Oil Women (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIRGELS-HYD-AUTO001,Hyderabad,Mandom,Hair Gel / Serum,male,Gatsby Moving Rubber Wild Shake (80g),80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIRGELS-HYD-AUTO002,Hyderabad,Mandom/Gatsby,Hair Gel / Serum,female,Mandom Lucido Style Mix Serum Women 150ml,150,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIRGELS-HYD-AUTO002,Hyderabad,Mandom/Gatsby,Hair Gel / Serum,male,Gatsby Water Gloss Ultra Hard Men 300ml,300,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIROIL-HYD-AUTO001,Hyderabad,Indulekha,Hair Oil,female,Indulekha Bringha Hair Oil Women 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-HAIROIL-HYD-AUTO001,Hyderabad,Indulekha,Hair Oil,male,Indulekha Men Scalp Treatment 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIROIL-HYD-AUTO001,Hyderabad,Kao/Merit,Hair Oil,female,Kao Merit Hair Oil Smooth Women (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HAIROIL-HYD-AUTO001,Hyderabad,Kao/Merit,Hair Oil,male,Kao Men's Biore Scalp Hair Oil (80ml),80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KRASTASE-HAIROIL-HYD-AUTO001,Hyderabad,Kérastase,Hair Oil,female,Kérastase Elixir Ultime Original Serum Women (125m,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KRASTASE-HAIROIL-HYD-AUTO001,Hyderabad,Kérastase,Hair Oil,male,Kérastase Genesis Homme Fortifying Serum Men (90ml,90,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIROIL-HYD-AUTO001,Hyderabad,Mandom,Hair Oil,female,Lucido-L Women Argan Hair Treatment Oil (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MANDOM-HAIROIL-HYD-AUTO001,Hyderabad,Mandom,Hair Oil,male,Lucido Men Hair Water (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PARACHUT-HAIROIL-HYD-AUTO001,Hyderabad,Parachute,Hair Oil,female,Parachute Advansed Jasmine Non-Sticky Hair Oil 200,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PARACHUT-HAIROIL-HYD-AUTO001,Hyderabad,Parachute,Hair Oil,male,Parachute Advansed Men Nourish Hair Oil 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-HANDCREA-HYD-AUTO001,Hyderabad,Bioré,Hand Cream,female,Bioré Moist Hand Cream Women (60g),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-HANDCREA-HYD-AUTO001,Hyderabad,Bioré,Hand Cream,male,Bioré Men Hand Milk (60g),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-HANDCREA-HYD-AUTO001,Hyderabad,DHC,Hand Cream,female,DHC Medicated Hand Cream Women 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DHC-HANDCREA-HYD-AUTO001,Hyderabad,DHC,Hand Cream,male,DHC Men Hand Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDCREA-HYD-AUTO001,Hyderabad,Dove,Hand Cream,female,Dove Nourishing Hand Cream 75ml,75,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDCREA-HYD-AUTO001,Hyderabad,Dove,Hand Cream,male,Dove Men+Care Hand & Face Lotion 75ml,75,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDCREA-HYD-AUTO055,Hyderabad,Dove,Hand Cream,female,Dove Intensive Hand Cream 75ml,75,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDCREA-HYD-AUTO055,Hyderabad,Dove,Hand Cream,male,Dove Men+Care Hand and Body Lotion 75ml,75,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HANDCREA-HYD-AUTO001,Hyderabad,Kao/Merit,Hand Cream,female,Kao Atrix Beauty Charge Hand Cream 80ml,80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HANDCREA-HYD-AUTO001,Hyderabad,Kao/Merit,Hand Cream,male,Kao Atrix Men Protective Hand Cream 80ml,80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEA-HANDCREA-HYD-AUTO165,Hyderabad,Mamaearth,Hand Cream,female,Mamaearth Aloe Vera Hand Cream 30ml,30,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+MAMAEA-HANDCREA-HYD-AUTO165,Hyderabad,Mamaearth,Hand Cream,male,Mamaearth Men Hand & Nail Cream 30ml,30,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NEUTROGE-HANDCREA-HYD-AUTO001,Hyderabad,Neutrogena,Hand Cream,female,Neutrogena Norwegian Formula Hand Cream Women 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NEUTROGE-HANDCREA-HYD-AUTO001,Hyderabad,Neutrogena,Hand Cream,male,Neutrogena Men Norwegian Formula Hand Cream 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-HANDCREA-HYD-AUTO001,Hyderabad,Nivea,Hand Cream,female,Nivea Extra Rich Caring Hand Cream 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NIVEA-HANDCREA-HYD-AUTO001,Hyderabad,Nivea,Hand Cream,male,Nivea Men Quick Dry Hand Gel 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-HANDWASH-HYD-AUTO001,Hyderabad,Bioré,Hand Wash,female,Bioré U Foaming Hand Soap Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-HANDWASH-HYD-AUTO001,Hyderabad,Bioré,Hand Wash,male,Bioré Men Body Wash Hand Soap (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDWASH-HYD-AUTO001,Hyderabad,Dove,Hand Wash,female,Dove Care & Protect Hand Wash 250ml,250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-HANDWASH-HYD-AUTO001,Hyderabad,Dove,Hand Wash,male,Dove Men+Care Deep Clean Hand Wash 250ml,250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-HANDWASH-HYD-AUTO001,Hyderabad,Himalaya,Hand Wash,female,Himalaya Pure Hands Sparkling Rose Hand Wash 250ml,250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-HANDWASH-HYD-AUTO001,Hyderabad,Himalaya,Hand Wash,male,Himalaya Men Active Fresh Hand Wash 250ml,250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HANDWASH-HYD-AUTO001,Hyderabad,Kao,Hand Wash,female,Kao Soflan Aroma Rich Hand Soap Women (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-HANDWASH-HYD-AUTO001,Hyderabad,Kao,Hand Wash,male,Kao Men's Biore Hand Soap Refresh (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-HANDWASH-HYD-AUTO001,Hyderabad,Lion,Hand Wash,female,Lion Kirei Kirei Medicated Foam Hand Soap Women (2,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-HANDWASH-HYD-AUTO001,Hyderabad,Lion,Hand Wash,male,Lion Kirei Kirei Men Cool Hand Soap (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PLUM-HANDWASH-HYD-AUTO001,Hyderabad,Plum,Hand Wash,female,Plum Glow & Glow Hand Wash (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+PLUM-HANDWASH-HYD-AUTO001,Hyderabad,Plum,Hand Wash,male,Plum BodyLovin' Men Hand Wash (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLET-RAZOR3BL-HYD-AUTO075,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Smooth (handle + 2 cartridges),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLET-RAZOR3BL-HYD-AUTO075,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 (handle + 1 cartridge),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO001,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Smooth Razor,1,,INR,,False,Blinkit,5,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO001,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 Razor,1,,INR,,False,Blinkit,5,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO002,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Simply 3 Disposable Razor 3-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO002,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Blue3 Disposable Razor 3-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO003,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Embrace Razor + 2 blades,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZOR3BL-HYD-AUTO003,Hyderabad,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 Razor + 2 cartridges,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZORCAR-HYD-AUTO001,Hyderabad,Gillette/Venus,Razor Cartridges,female,Gillette Venus Smooth Cartridges 4-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZORCAR-HYD-AUTO001,Hyderabad,Gillette/Venus,Razor Cartridges,male,Gillette Mach3 Cartridges 4-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZORCAR-HYD-AUTO002,Hyderabad,Gillette/Venus,Razor Cartridges,female,Gillette Venus Smooth Cartridges 6-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GILLETTE-RAZORCAR-HYD-AUTO002,Hyderabad,Gillette/Venus,Razor Cartridges,male,Gillette Mach3 Cartridges 6-pack,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ALPHAVET-SHAMPOO-HYD-AUTO001,Hyderabad,Alphavet,Shampoo,female,Alphavet Argan Oil Shampoo Women (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ALPHAVET-SHAMPOO-HYD-AUTO001,Hyderabad,Alphavet,Shampoo,male,Alphavet Men Strong Hold Shampoo (200ml),200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQ-SHAMPOO-HYD-AUTO021,Hyderabad,Biotique,Shampoo,female,Biotique Bio Kelp Fresh Growth Shampoo,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOTIQ-SHAMPOO-HYD-AUTO021,Hyderabad,Biotique,Shampoo,male,Biotique Bio Green Apple Shampoo,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-SHAMPOO-HYD-AUTO001,Hyderabad,Dove,Shampoo,female,Dove Intense Repair Shampoo 650ml,650,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-SHAMPOO-HYD-AUTO001,Hyderabad,Dove,Shampoo,male,Dove Men+Care Strengthening Shampoo 650ml,650,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-SHAMPOO-HYD-AUTO001,Hyderabad,Garnier,Shampoo,female,Garnier Ultra Blends Soy Milk Shampoo 340ml,340,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+GARNIER-SHAMPOO-HYD-AUTO001,Hyderabad,Garnier,Shampoo,male,Garnier Men Anti-Dandruff Shampoo 340ml,340,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HEADSHOU-SHAMPOO-HYD-AUTO001,Hyderabad,Head & Shoulders,Shampoo,female,H&S Smooth & Silky Shampoo,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HEADSHOU-SHAMPOO-HYD-AUTO001,Hyderabad,Head & Shoulders,Shampoo,male,H&S Men Ultra Shampoo,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-SHAMPOO-HYD-AUTO001,Hyderabad,Himalaya,Shampoo,female,Himalaya Anti-Dandruff Shampoo Women 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-SHAMPOO-HYD-AUTO001,Hyderabad,Himalaya,Shampoo,male,Himalaya Men Anti-Dandruff Shampoo 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-SHAMPOO-HYD-AUTO001,Hyderabad,Indulekha,Shampoo,female,Indulekha Bringha Shampoo 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+INDULEKH-SHAMPOO-HYD-AUTO001,Hyderabad,Indulekha,Shampoo,male,Indulekha Men Hair Vitalizer 200ml,200,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-SHAMPOO-HYD-AUTO001,Hyderabad,Kao/Merit,Shampoo,female,Kao Merit Shampoo 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-SHAMPOO-HYD-AUTO001,Hyderabad,Kao/Merit,Shampoo,male,Kao Merit Men Shampoo 480ml,480,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-SHAMPOO-HYD-AUTO001,Hyderabad,Kose/Softymo,Shampoo,female,Kose Softymo Speedy Shampoo Women 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-SHAMPOO-HYD-AUTO001,Hyderabad,Kose/Softymo,Shampoo,male,Kose Men Softymo Shampoo 500ml,500,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KRASTASE-SHAMPOO-HYD-AUTO001,Hyderabad,Kérastase,Shampoo,female,Kérastase Bain Satin 1 Shampoo (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KRASTASE-SHAMPOO-HYD-AUTO001,Hyderabad,Kérastase,Shampoo,male,Kérastase Homme Bain Energisant (250ml),250,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ANESSA-SUNSCREE-HYD-AUTO001,Hyderabad,Anessa,Sunscreen,female,Anessa Perfect UV Sunscreen Women SPF50 (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ANESSA-SUNSCREE-HYD-AUTO001,Hyderabad,Anessa,Sunscreen,male,Anessa Men Sunscreen Gel SPF50 (90ml),90,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-SUNSCREE-HYD-AUTO001,Hyderabad,Bioderma,Sunscreen,female,Bioderma Photoderm Women SPF50+ (75ml),75,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIODERMA-SUNSCREE-HYD-AUTO001,Hyderabad,Bioderma,Sunscreen,male,Bioderma Men SPF50 Fluid (40ml),40,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-SUNSCREE-HYD-AUTO016,Hyderabad,Bioré,Sunscreen,female,Bioré UV Aqua Rich Watery Essence SPF50+ 70ml,70,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+BIOR-SUNSCREE-HYD-AUTO016,Hyderabad,Bioré,Sunscreen,male,Bioré UV Athlizm Skin Protect Milk SPF50+ 65ml,65,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-SUNSCREE-HYD-AUTO035,Hyderabad,Curel,Sunscreen,female,Curel UV Protection Face Milk SPF50+ 60ml,60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+CUREL-SUNSCREE-HYD-AUTO035,Hyderabad,Curel,Sunscreen,male,Curel Men UV Protection Cream 60ml,60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-SUNSCREE-HYD-AUTO001,Hyderabad,Dove,Sunscreen,female,Dove Even Tone Antiperspirant+SPF Roll-On 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+DOVE-SUNSCREE-HYD-AUTO001,Hyderabad,Dove,Sunscreen,male,Dove Men+Care Control Antiperspirant Roll-On 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-SUNSCREE-HYD-AUTO001,Hyderabad,Kose/Softymo,Sunscreen,female,Kose Suncut Perfect UV Cream SPF50+ 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KOSE-SUNSCREE-HYD-AUTO001,Hyderabad,Kose/Softymo,Sunscreen,male,Kose Men Suncut UV Protect Milk 50ml,50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LAKME-SUNSCREE-HYD-AUTO001,Hyderabad,Lakme,Sunscreen,female,Lakme Sun Expert SPF 50 PA+++ Ultra Matte Lotion 1,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LAKME-SUNSCREE-HYD-AUTO001,Hyderabad,Lakme,Sunscreen,male,Garnier Men Acno Fight SPF 20 Moisturizer 100ml,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-SUNSCREE-HYD-AUTO001,Hyderabad,Lion,Sunscreen,female,Lion Soflan Premium UV Milk Women SPF50 (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-SUNSCREE-HYD-AUTO001,Hyderabad,Lion,Sunscreen,male,Lion Ban Sun Block Men SPF50 (60ml),60,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOTUSHER-SUNSCREE-HYD-AUTO001,Hyderabad,Lotus Herbals,Sunscreen,female,Lotus Herbals SafeSun SPF 50 Women (50g),50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LOTUSHER-SUNSCREE-HYD-AUTO001,Hyderabad,Lotus Herbals,Sunscreen,male,Lotus Herbals Men SPF 30 (50g),50,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NEUTRO-SUNSCREE-HYD-AUTO184,Hyderabad,Neutrogena,Sunscreen,female,Neutrogena Ultra Sheer Sunscreen SPF 50+ Women 88m,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+NEUTRO-SUNSCREE-HYD-AUTO184,Hyderabad,Neutrogena,Sunscreen,male,Neutrogena Men Triple Protect SPF 20 Face Lotion 8,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGAT-TOOTHPAS-HYD-AUTO028,Hyderabad,Colgate,Toothpaste,female,Colgate Visible White Women Toothpaste (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGAT-TOOTHPAS-HYD-AUTO028,Hyderabad,Colgate,Toothpaste,male,Colgate Active Salt Men (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGATE-TOOTHPAS-HYD-AUTO001,Hyderabad,Colgate,Toothpaste,female,Colgate Visible White Teeth Whitening Toothpaste 1,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGATE-TOOTHPAS-HYD-AUTO001,Hyderabad,Colgate,Toothpaste,male,Colgate Active Salt Toothpaste 100g,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGATE-TOOTHPAS-HYD-AUTO002,Hyderabad,Colgate,Toothpaste,female,Colgate Optic White Women (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+COLGATE-TOOTHPAS-HYD-AUTO002,Hyderabad,Colgate,Toothpaste,male,Colgate Men Active Clean (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-TOOTHPAS-HYD-AUTO001,Hyderabad,Himalaya,Toothpaste,female,Himalaya Botanique Whitening Complete Care Toothpa,100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+HIMALAYA-TOOTHPAS-HYD-AUTO001,Hyderabad,Himalaya,Toothpaste,male,Himalaya Men Active Fresh Toothpaste 80g,80,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-TOOTHPAS-HYD-AUTO001,Hyderabad,Kao/Merit,Toothpaste,female,Kao Clear Clean Premium Toothpaste Women 120g,120,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+KAO-TOOTHPAS-HYD-AUTO001,Hyderabad,Kao/Merit,Toothpaste,male,Kao Clear Clean Men Toothpaste 120g,120,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO001,Hyderabad,Lion,Toothpaste,female,Lion Clinica Advantage Fresh Toothpaste 130g,130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO001,Hyderabad,Lion,Toothpaste,male,Lion Clinica Men Cool Toothpaste 130g,130,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO002,Hyderabad,Lion,Toothpaste,female,Lion Systema Haguki Plus Toothpaste 95g,95,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO002,Hyderabad,Lion,Toothpaste,male,Lion Systema Men Fresh Toothpaste 95g,95,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO003,Hyderabad,Lion,Toothpaste,female,Lion Systema Haguki Women Gel Toothpaste (95g),95,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+LION-TOOTHPAS-HYD-AUTO003,Hyderabad,Lion,Toothpaste,male,Lion Dentor Systema Men Toothpaste (95g),95,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ORALB-TOOTHPAS-HYD-AUTO001,Hyderabad,Oral-B,Toothpaste,female,Oral-B Whitening (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND
+ORALB-TOOTHPAS-HYD-AUTO001,Hyderabad,Oral-B,Toothpaste,male,Oral-B Pro-Expert Men (100g),100,,INR,,False,Blinkit,3,LOW,2026-03-09,,URL_NOT_FOUND

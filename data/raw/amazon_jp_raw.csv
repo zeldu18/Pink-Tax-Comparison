@@ -1,19 +1,419 @@
-pair_id,city,brand,category,expected_gender_label,gender_label,gender_label_source,model_gender_label,model_gender_confidence,keyword_gender_label,keyword_evidence,gender_needs_review,gender_model_name,gender_model_threshold,product_name,size_ml_or_g,price_local,currency,original_price_local,on_promotion,retailer,match_quality,confidence,date_scraped,source_url,scrape_status,ingredients
-DOVE-BODYWASH-TKY-01,Tokyo,Dove,Body Wash,female,neutral,model_only,neutral,0.868991,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Dove Premium Moisture Body Wash 470ml,470,1664.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0CD7BHBYG,OK,"glycerin,stearic acid"
-DOVE-BODYWASH-TKY-01,Tokyo,Dove,Body Wash,male,male,model+keyword,male,0.957128,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Dove Men+Care Clean Comfort Body Wash 400ml,400,1034.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0D7ZLQ8P7,OK,"glycerin,stearic acid"
-GILLET-RAZOR-TKY-01,Tokyo,Gillette/Venus,Razor (3-blade starter kit),female,female,model_low_confidence,female,0.570881,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Gillette Venus Smooth Razor,1,2503.0,JPY,,False,Amazon.co.jp,5,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B01A50N1EG,OK,"3-blade,moisture ribbon"
-GILLET-RAZOR-TKY-01,Tokyo,Gillette/Venus,Razor (3-blade starter kit),male,neutral,model_only,neutral,0.85649,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Gillette Mach3 Razor,1,1680.0,JPY,,False,Amazon.co.jp,5,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0CTK23RJP,OK,"3-blade,lubra strip"
-BIORE-FACEWASH-TKY-01,Tokyo,Bioré,Facial Cleanser,female,neutral,model_only,neutral,0.879411,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Biore Marshmallow Whip Face Wash 150ml,150,337.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B003G05K6K,OK,"foaming agents,glycerin"
-BIORE-FACEWASH-TKY-01,Tokyo,Bioré,Facial Cleanser,male,male,model+keyword,male,0.964197,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Biore Men Facial Foam 130ml,130,683.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B00INRO4XG,OK,"salicylic acid,glycerin"
-SHIS-SHAMP-TKY-01,Tokyo,Shiseido,Shampoo,female,neutral,model_only,neutral,0.696612,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Shiseido Tsubaki Premium Moist Shampoo 490ml,490,2640.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0DBHQZZC2,OK,"camellia oil,hydrolyzed silk"
-SHIS-SHAMP-TKY-01,Tokyo,Shiseido,Shampoo,male,male,model+keyword,male,0.940953,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Shiseido Men Scalp Care Shampoo 300ml,300,3168.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B00TWRX1RQ,OK,"glycerin,caffeine"
-CUREL-LOTION-TKY-01,Tokyo,Curel,Body Lotion,female,neutral,model_only,neutral,0.867172,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Curel Moisture Lotion 150ml,150,1386.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B01LX63OFI,OK,"ceramide,glycerin,hyaluronic acid"
-CUREL-LOTION-TKY-01,Tokyo,Curel,Body Lotion,male,male,model+keyword,male,0.97275,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Curel Men Moisturizing Lotion 150ml,150,1980.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B001JF0MQC,OK,"ceramide,glycerin"
-NIVEA-DEO-TKY-01,Tokyo,Nivea,Deodorant Roll-On,female,neutral,model_only,neutral,0.791902,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Nivea Pearl & Beauty Roll-On 50ml,50,2354.0,JPY,,False,Amazon.co.jp,5,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B087FBY884,OK,"aluminum chlorohydrate,isopropyl myristate"
-NIVEA-DEO-TKY-01,Tokyo,Nivea,Deodorant Roll-On,male,male,model+keyword,male,0.962677,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Nivea Men Deep Roll-On 50ml,50,973.0,JPY,,False,Amazon.co.jp,5,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B088Q67WT6,OK,"aluminum chlorohydrate,isopropyl myristate"
-OLAY-FACECREAM-TKY-01,Tokyo,Olay,Face Moisturizer,female,neutral,model_only,neutral,0.833497,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Olay Total Effects Day Cream 50ml,50,2389.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B00ENZTAEK,OK,"niacinamide,vitamins b3 b5 e"
-OLAY-FACECREAM-TKY-01,Tokyo,Olay,Face Moisturizer,male,male,model+keyword,male,0.98742,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Olay Men Solutions Face Moisturizer 50ml,50,9949.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B000PQJ0KK,OK,"glycerin,aloe vera"
-HNS-SHAMP-TKY-01,Tokyo,Head & Shoulders,Shampoo,female,neutral,model_only,neutral,0.834569,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Head & Shoulders Smooth & Silky Shampoo 440ml,440,2904.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0CGJ4Z7L4,OK,"zinc pyrithione,dimethicone"
-HNS-SHAMP-TKY-01,Tokyo,Head & Shoulders,Shampoo,male,male,model+keyword,male,0.92366,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Head & Shoulders Men Scalp Care Shampoo 400ml,400,818.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B0D9VXBJ4Y,OK,"zinc pyrithione,caffeine"
-PANTENE-SHAMP-TKY-01,Tokyo,Pantene,Shampoo,female,neutral,model_only,neutral,0.676138,unknown,,1,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Pantene Silky Smooth Care Shampoo 400ml,400,720.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B09QSBNML9,OK,"Pro-V,panthenol"
-PANTENE-SHAMP-TKY-01,Tokyo,Pantene,Shampoo,male,male,model+keyword,male,0.873115,male,men,0,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,0.6,Pantene Men Anti-Dandruff Shampoo 400ml,400,720.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-08,https://www.amazon.co.jp/dp/B09QSBNML9,OK,"Pro-V,zinc pyrithione"
+pair_code,city,brand,category,gender_label,product_name,size_ml_or_g,price_local,currency,original_price_local,on_promotion,retailer,match_quality,confidence,date_scraped,source_url,scrape_status
+BIOTIQ-BARSOAP-TKY-AUTO017,Tokyo,Biotique,Bar Soap,female,Biotique Bio Almond Oil Nourishing Soap,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+BIOTIQ-BARSOAP-TKY-AUTO017,Tokyo,Biotique,Bar Soap,male,Biotique Bio Neem Purifying Soap,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+COWBRA-BARSOAP-TKY-AUTO029,Tokyo,Cow Brand,Bar Soap,female,Cow Brand Excellent Beauty Soap 135g,135,1145.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BFVW2YMP,OK
+COWBRA-BARSOAP-TKY-AUTO029,Tokyo,Cow Brand,Bar Soap,male,Cow Brand Excellent Men Soap 135g,135,537.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0090VFGOU,OK
+COWBRA-BARSOAP-TKY-AUTO030,Tokyo,Cow Brand,Bar Soap,female,Cow Brand Milk Soap Extra Rich Women (100g),100,1145.0,JPY,29802980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BFVW2YMP,OK
+COWBRA-BARSOAP-TKY-AUTO030,Tokyo,Cow Brand,Bar Soap,male,Cow Brand Blue Box Soap Men (100g),100,875.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07W3Q9PCG,OK
+DOVE-BARSOAP-TKY-AUTO043,Tokyo,Dove,Bar Soap,female,Dove Beauty Bar,100,1582.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0026IDPKQ,OK
+DOVE-BARSOAP-TKY-AUTO043,Tokyo,Dove,Bar Soap,male,Dove Men+Care Clean Comfort Bar,100,6960.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00CHHKJ2S,OK
+DOVE-BARSOAP-TKY-AUTO044,Tokyo,Dove,Bar Soap,female,Dove Beauty Bar Japan 135g,135,1800.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B001GBF0A2,OK
+DOVE-BARSOAP-TKY-AUTO044,Tokyo,Dove,Bar Soap,male,Dove Men+Care Clean Comfort Bar Japan 135g,135,875.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+DOVE-BARSOAP-TKY-AUTO045,Tokyo,Dove,Bar Soap,female,Dove Cream Beauty Bathing Bar Shea Butter Women (1,100,1980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000NOFZFS,OK
+DOVE-BARSOAP-TKY-AUTO045,Tokyo,Dove,Bar Soap,male,Dove Men+Care Clean Comfort Bar (100g),100,875.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+FIAMA-BARSOAP-TKY-AUTO062,Tokyo,Fiama,Bar Soap,female,Fiama Women Gel Bar,100,880.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07CJW4FBB,OK
+FIAMA-BARSOAP-TKY-AUTO062,Tokyo,Fiama,Bar Soap,male,Fiama Men Gel Bar,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B079KS44L8,PRICE_NOT_FOUND
+FIAMA-BARSOAP-TKY-AUTO063,Tokyo,Fiama,Bar Soap,female,Fiama Gel Bar Peach & Avocado (125g),125,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/3925203699,PRICE_NOT_FOUND
+FIAMA-BARSOAP-TKY-AUTO063,Tokyo,Fiama,Bar Soap,male,Fiama Men Refreshing Pulse Bar (125g),125,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B079KS44L8,PRICE_NOT_FOUND
+GODREJ-BARSOAP-TKY-AUTO080,Tokyo,Godrej,Bar Soap,female,Godrej Nupur Moisturising Soap (100g),100,2182.0,JPY,10781078.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B005ZLCIU4,OK
+GODREJ-BARSOAP-TKY-AUTO080,Tokyo,Godrej,Bar Soap,male,Godrej Expert Men Soap (100g),100,1139.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07YZ7FSGM,OK
+HULHAM-BARSOAP-TKY-AUTO084,Tokyo,HUL/Hamam,Bar Soap,female,Hamam Neem Tulsi & Aloe Soap Women (100g),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B004ZFEVQ0,PRICE_NOT_FOUND
+HULHAM-BARSOAP-TKY-AUTO084,Tokyo,HUL/Hamam,Bar Soap,male,Hamam Men Active Protection Soap (100g),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B004ZFEVQ0,PRICE_NOT_FOUND
+HIMALA-BARSOAP-TKY-AUTO089,Tokyo,Himalaya,Bar Soap,female,Himalaya Neem & Turmeric Soap,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B09X6ZNYQC,PRICE_NOT_FOUND
+HIMALA-BARSOAP-TKY-AUTO089,Tokyo,Himalaya,Bar Soap,male,Himalaya Men Intense Oil Clear Soap,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FCDJL95X,PRICE_NOT_FOUND
+KAOMER-BARSOAP-TKY-AUTO114,Tokyo,Kao/Merit,Bar Soap,female,Kao Biore Body Wash Soap Bar Women 100g,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0058MU014,PRICE_NOT_FOUND
+KAOMER-BARSOAP-TKY-AUTO114,Tokyo,Kao/Merit,Bar Soap,male,Kao Biore Men Body Wash Soap Bar 100g,100,1780.0,JPY,890890.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9Y7QMGX,OK
+LION-BARSOAP-TKY-AUTO140,Tokyo,Lion,Bar Soap,female,Lion Look Natural Select Bar Soap 100g,100,1699.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0C2TD7ZPP,OK
+LION-BARSOAP-TKY-AUTO140,Tokyo,Lion,Bar Soap,male,Lion Look Natural Men Bar Soap 100g,100,600.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08TCH3CPX,OK
+LUX-BARSOAP-TKY-AUTO155,Tokyo,Lux,Bar Soap,female,Lux Soft Touch Soap 100g,100,1236.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08Q8JJ6B3,OK
+LUX-BARSOAP-TKY-AUTO155,Tokyo,Lux,Bar Soap,male,Lux Men Sport Fresh Soap 100g,100,2749.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0GGS9V668,OK
+MEDIMI-BARSOAP-TKY-AUTO178,Tokyo,Medimix,Bar Soap,female,Medimix Ayurvedic Natural Glycerine Soap 100g,100,2020.0,JPY,13991399.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08WPZ44C7,OK
+MEDIMI-BARSOAP-TKY-AUTO178,Tokyo,Medimix,Bar Soap,male,Medimix Men Active Soap 100g,100,3800.0,JPY,143000143000.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08WPQ7KSD,OK
+PEARS-BARSOAP-TKY-AUTO210,Tokyo,Pears,Bar Soap,female,Pears Pure & Gentle Soap 125g,125,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+PEARS-BARSOAP-TKY-AUTO210,Tokyo,Pears,Bar Soap,male,Pears Men Power Soap 125g,125,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+PELICA-BARSOAP-TKY-AUTO212,Tokyo,Pelican,Bar Soap,female,Pelican Soap Uruoi Women (80g),80,1552.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B001AP4NA2,OK
+PELICA-BARSOAP-TKY-AUTO212,Tokyo,Pelican,Bar Soap,male,Pelican Soap Men's Clean (80g),80,1100.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CK2FB12F,OK
+POLA-BARSOAP-TKY-AUTO216,Tokyo,Pola,Bar Soap,female,Pola Aroma Essence Soap Women (100g),100,3015.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D3XN22S6,OK
+POLA-BARSOAP-TKY-AUTO216,Tokyo,Pola,Bar Soap,male,Pola Grooming Agency Soap Men (100g),100,2336.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08JLP6V97,OK
+BIODER-BODYLOTI-TKY-AUTO004,Tokyo,Bioderma,Body Lotion,female,Bioderma Atoderm Lotion Women (500ml),500,3960.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00W6YDW5I,OK
+BIODER-BODYLOTI-TKY-AUTO004,Tokyo,Bioderma,Body Lotion,male,Bioderma Sebiaclear Body Lotion Men (200ml),200,2530.0,JPY,2980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07BH8RGBW,OK
+BIOR-BODYLOTI-TKY-AUTO008,Tokyo,Bioré,Body Lotion,female,Bioré Body Essence Milk Women 300ml,300,549.0,JPY,665.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07599CF14,OK
+BIOR-BODYLOTI-TKY-AUTO008,Tokyo,Bioré,Body Lotion,male,Bioré Men Body Lotion 300ml,300,1580.0,JPY,287287.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B82MBTG2,OK
+BIOTIQ-BODYLOTI-TKY-AUTO018,Tokyo,Biotique,Body Lotion,female,Biotique Bio Almond Oil Moisturizer 200ml,200,2480.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003GSPFFI,OK
+BIOTIQ-BODYLOTI-TKY-AUTO018,Tokyo,Biotique,Body Lotion,male,Biotique Bio Morning Nectar Moisturizer 200ml,200,1746.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B005MDSJRQ,OK
+CETAPH-BODYLOTI-TKY-AUTO023,Tokyo,Cetaphil,Body Lotion,female,Cetaphil Moisturising Lotion (250ml),250,2116.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09T313GPY,OK
+CETAPH-BODYLOTI-TKY-AUTO023,Tokyo,Cetaphil,Body Lotion,male,Cetaphil Men Moisturiser (125ml),125,3889.0,JPY,713713.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09T2J5W6Y,OK
+CUREL-BODYLOTI-TKY-AUTO031,Tokyo,Curel,Body Lotion,female,Curel Moisture Lotion 150ml,150,3850.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CCJ88ZQM,OK
+CUREL-BODYLOTI-TKY-AUTO031,Tokyo,Curel,Body Lotion,male,Curel Men Moisturizing Lotion 150ml,150,1597.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01CG1TZDI,OK
+CUREL-LOTION-TKY-01,Tokyo,Curel,Body Lotion,female,Curel Moisture Lotion 150ml,150,1980.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B001JF0MP8,OK
+CUREL-LOTION-TKY-01,Tokyo,Curel,Body Lotion,male,Curel Men Moisturizing Lotion 150ml,150,2863.0,JPY,287287.0,True,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B9JNH13M,OK
+HIMALA-BODYLOTI-TKY-AUTO090,Tokyo,Himalaya,Body Lotion,female,Himalaya Nourishing Skin Cream 150ml,150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0G45GF96J,PRICE_NOT_FOUND
+HIMALA-BODYLOTI-TKY-AUTO090,Tokyo,Himalaya,Body Lotion,male,Himalaya Men Intense Moisturizing Cream 150ml,150,1100.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0GJPSYMFG,OK
+KAOATR-BODYLOTI-TKY-AUTO110,Tokyo,Kao/Atrix,Body Lotion,female,Atrix Skin Milk Hand & Body Lotion Women (250ml),250,749.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FFMHRMZ6,OK
+KAOATR-BODYLOTI-TKY-AUTO110,Tokyo,Kao/Atrix,Body Lotion,male,Kao Men's Biore Body Milk (200ml),200,1408.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B8CVG21L,OK
+LOREAL-BODYLOTI-TKY-AUTO131,Tokyo,L'Oreal,Body Lotion,female,L'Oreal Paris Body Expertise Revitalift Body Lotio,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B08DRPH74B,PRICE_NOT_FOUND
+LOREAL-BODYLOTI-TKY-AUTO131,Tokyo,L'Oreal,Body Lotion,male,L'Oreal Men Expert Hydra Energetic Body Lotion 200,100,1969.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B019SL0KN8,OK
+LION-BODYLOTI-TKY-AUTO141,Tokyo,Lion,Body Lotion,female,Lion Soflan Premium Rich Body Milk Women (200ml),200,3429.0,JPY,14991499.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DSZS8SQK,OK
+LION-BODYLOTI-TKY-AUTO141,Tokyo,Lion,Body Lotion,male,Lion Men's Soflan Body Lotion (200ml),200,1055.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08JB28HDM,OK
+NIVEA-BODYLOTI-TKY-AUTO185,Tokyo,Nivea,Body Lotion,female,Nivea Soft Moisturizing Cream 200ml,200,465.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQMT8K,OK
+NIVEA-BODYLOTI-TKY-AUTO185,Tokyo,Nivea,Body Lotion,male,Nivea Men Creme 150ml,150,377.0,JPY,450.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0759HGRWV,OK
+NIVEA-BODYLOTI-TKY-AUTO186,Tokyo,Nivea,Body Lotion,female,Nivea Soft Cream 200ml,200,808.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DBKWJ1S6,OK
+NIVEA-BODYLOTI-TKY-AUTO186,Tokyo,Nivea,Body Lotion,male,Nivea Men Cream 150ml,150,2057.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08HMDQM1V,OK
+PARACH-BODYLOTI-TKY-AUTO207,Tokyo,Parachute,Body Lotion,female,Parachute Advansed Body Lotion Soft Touch 250ml,250,144866.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DZ69PVJP,OK
+PARACH-BODYLOTI-TKY-AUTO207,Tokyo,Parachute,Body Lotion,male,Parachute Men After Shower Lotion 250ml,250,2648.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B7NG59VB,OK
+PARACH-BODYLOTI-TKY-AUTO208,Tokyo,Parachute,Body Lotion,female,Parachute Advansed Deep Nourish Lotion 400ml,400,3127.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CQDX1RSC,OK
+PARACH-BODYLOTI-TKY-AUTO208,Tokyo,Parachute,Body Lotion,male,Parachute Men Extra Moisturising 400ml,400,2648.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B7P2QB6N,OK
+POLA-BODYLOTI-TKY-AUTO217,Tokyo,Pola,Body Lotion,female,Pola B.A. Body Lotion Women (200ml),200,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B00DVEHFZA,PRICE_NOT_FOUND
+POLA-BODYLOTI-TKY-AUTO217,Tokyo,Pola,Body Lotion,male,Pola Grooming Agency Body Gel Men (150ml),150,2062.0,JPY,2290.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07HYTQ7H4,OK
+BIODER-BODYWASH-TKY-AUTO005,Tokyo,Bioderma,Body Wash,female,Bioderma Atoderm Shower Oil Women (200ml),200,3860.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00ZY65RUI,OK
+BIODER-BODYWASH-TKY-AUTO005,Tokyo,Bioderma,Body Wash,male,Bioderma Sebiaclear Body Wash Men (200ml),200,2530.0,JPY,2980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07BH8RGBW,OK
+BIOR-BODYWASH-TKY-AUTO009,Tokyo,Bioré,Body Wash,female,Bioré Guard Body Wash Women 480ml,480,404.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08YK5HV4S,OK
+BIOR-BODYWASH-TKY-AUTO009,Tokyo,Bioré,Body Wash,male,Bioré Men Guard Body Wash 480ml,480,1158.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07B5BD4RT,OK
+DOVE-BODYWASH-TKY-01,Tokyo,Dove,Body Wash,female,Dove Premium Moisture Body Wash 470ml,470,2087.0,JPY,2293.0,True,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CD7BHBYG,OK
+DOVE-BODYWASH-TKY-01,Tokyo,Dove,Body Wash,male,Dove Men+Care Clean Comfort Body Wash 400ml,400,1990.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07PWCMW68,OK
+DOVE-BODYWASH-TKY-AUTO046,Tokyo,Dove,Body Wash,female,Dove Deeply Nourishing Body Wash,100,699.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTSD9MS8,OK
+DOVE-BODYWASH-TKY-AUTO046,Tokyo,Dove,Body Wash,male,Dove Men+Care Extra Fresh Body Wash,100,9771.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00SD8JA02,OK
+DOVE-BODYWASH-TKY-AUTO047,Tokyo,Dove,Body Wash,female,Dove Premium Moisture Care Body Wash 470ml,470,2570.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D9ZQFZLQ,OK
+DOVE-BODYWASH-TKY-AUTO047,Tokyo,Dove,Body Wash,male,Dove Men+Care Clean Comfort Body Wash 400ml,400,9771.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00SD8JA02,OK
+FIAMA-BODYWASH-TKY-AUTO064,Tokyo,Fiama,Body Wash,female,Fiama Women Shower Gel Peach & Avocado,100,2798.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00TT8K1A8,OK
+FIAMA-BODYWASH-TKY-AUTO064,Tokyo,Fiama,Body Wash,male,Fiama Men Refreshing Shower Gel,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B079KS44L8,PRICE_NOT_FOUND
+KAO-BODYWASH-TKY-AUTO103,Tokyo,Kao,Body Wash,female,Kao Jergens Body Wash Sakura Women (450ml),450,2480.0,JPY,24802480.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FG1M724N,OK
+KAO-BODYWASH-TKY-AUTO103,Tokyo,Kao,Body Wash,male,Kao Men's Biore Body Wash Charcoal (440ml),440,1408.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B8CVG21L,OK
+KAOATR-BODYWASH-TKY-AUTO111,Tokyo,Kao/Atrix,Body Wash,female,Atrix Skin Milk Body Wash Women (600ml),600,4290.0,JPY,76507650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FG1M724N,OK
+KAOATR-BODYWASH-TKY-AUTO111,Tokyo,Kao/Atrix,Body Wash,male,Kao Men's Biore Body Wash Ice Cool (450ml),450,1408.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B8CVG21L,OK
+KAOMER-BODYWASH-TKY-AUTO116,Tokyo,Kao/Merit,Body Wash,female,Kao Laurier Body Wash Women 550ml,550,4290.0,JPY,76507650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FG1M724N,OK
+KAOMER-BODYWASH-TKY-AUTO116,Tokyo,Kao/Merit,Body Wash,male,Kao Men's Biore Body Wash 550ml,550,1408.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B8CVG21L,OK
+LION-BODYWASH-TKY-AUTO142,Tokyo,Lion,Body Wash,female,Lion Softymo Lux Super Moisture Body Wash 450ml,450,3429.0,JPY,636636.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DSZS8SQK,OK
+LION-BODYWASH-TKY-AUTO142,Tokyo,Lion,Body Wash,male,Lion Softymo Men Speed Wash 450ml,450,1055.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08JB28HDM,OK
+LUX-BODYWASH-TKY-AUTO156,Tokyo,Lux,Body Wash,female,Lux Velvet Touch Shower Gel 500ml,500,871.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FJXJXQYH,OK
+LUX-BODYWASH-TKY-AUTO156,Tokyo,Lux,Body Wash,male,Lux Men Sport Fresh Shower Gel 500ml,500,937.0,JPY,1100.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FJX6G88Q,OK
+MAMAEA-BODYWASH-TKY-AUTO158,Tokyo,Mamaearth,Body Wash,female,Mamaearth Ubtan Body Wash with Turmeric 300ml,300,2085.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B085B33TJQ,OK
+MAMAEA-BODYWASH-TKY-AUTO158,Tokyo,Mamaearth,Body Wash,male,Mamaearth Men Charcoal Body Wash 300ml,300,1890.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081VLMCB7,OK
+NIVEA-BODYWASH-TKY-AUTO187,Tokyo,Nivea,Body Wash,female,Nivea Waterlily & Oil Body Wash,100,548.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CF7ZX4M7,OK
+NIVEA-BODYWASH-TKY-AUTO187,Tokyo,Nivea,Body Wash,male,Nivea Men Deep Black Charcoal Body Wash,100,1765.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D77CPXGW,OK
+OLAY-BODYWASH-TKY-AUTO195,Tokyo,Olay,Body Wash,female,Olay Natural White Body Wash,100,1572.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTTXHNGZ,OK
+OLAY-BODYWASH-TKY-AUTO195,Tokyo,Olay,Body Wash,male,Olay Men Solutions Body Wash,100,990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000NURW1M,OK
+OLAY-BODYWASH-TKY-AUTO196,Tokyo,Olay,Body Wash,female,Olay Natural White Body Wash 430ml,430,25300.0,JPY,3860038600.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00791DYEW,OK
+OLAY-BODYWASH-TKY-AUTO196,Tokyo,Olay,Body Wash,male,Olay Men Body Wash 430ml,430,2390.0,JPY,23902390.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000NURW1M,OK
+PALMOL-BODYWASH-TKY-AUTO201,Tokyo,Palmolive,Body Wash,female,Palmolive Aroma Therapy Relaxing Body Wash Women (,100,2499.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D298BW9R,OK
+PALMOL-BODYWASH-TKY-AUTO201,Tokyo,Palmolive,Body Wash,male,Palmolive Men Icy Rush Body Wash (250ml),250,4680.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003U4YJ1O,OK
+PEARS-BODYWASH-TKY-AUTO211,Tokyo,Pears,Body Wash,female,Pears Soft & Fresh Shower Gel 250ml,250,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+PEARS-BODYWASH-TKY-AUTO211,Tokyo,Pears,Body Wash,male,Pears Men Power Shower Gel 250ml,250,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,,URL_NOT_FOUND
+POLA-BODYWASH-TKY-AUTO218,Tokyo,Pola,Body Wash,female,Pola B.A. Body Wash Women (600ml),600,2336.0,JPY,250250.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07FPP92RD,OK
+POLA-BODYWASH-TKY-AUTO218,Tokyo,Pola,Body Wash,male,Pola Grooming Agency Body Wash Men (500ml),500,2336.0,JPY,49404940.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B016XNHWJE,OK
+DOVE-CONDITIO-TKY-AUTO048,Tokyo,Dove,Conditioner,female,Dove Intense Repair Conditioner 175ml,175,776.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01J38CPHU,OK
+DOVE-CONDITIO-TKY-AUTO048,Tokyo,Dove,Conditioner,male,Dove Men+Care Fortifying Conditioner 180ml,180,1990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+DOVE-CONDITIO-TKY-AUTO049,Tokyo,Dove,Conditioner,female,Dove Moisture Care Conditioner 500ml,500,776.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01J38CPHU,OK
+DOVE-CONDITIO-TKY-AUTO049,Tokyo,Dove,Conditioner,male,Dove Men+Care Hair Defence Conditioner 500ml,500,841.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07MN244BZ,OK
+GARNIE-CONDITIO-TKY-AUTO067,Tokyo,Garnier,Conditioner,female,Garnier Ultra Blends 5 Precious Herbs Conditioner,100,4950.0,JPY,19801980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08DL6YBJJ,OK
+GARNIE-CONDITIO-TKY-AUTO067,Tokyo,Garnier,Conditioner,male,Garnier Men Anti-Dandruff Conditioner 175ml,175,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B006J44BSI,PRICE_NOT_FOUND
+HEADSH-CONDITIO-TKY-AUTO085,Tokyo,Head & Shoulders,Conditioner,female,H&S Smooth & Silky Conditioner 340ml,340,3051.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08MT8DMFT,OK
+HEADSH-CONDITIO-TKY-AUTO085,Tokyo,Head & Shoulders,Conditioner,male,H&S Men 2-in-1 Anti-Dandruff 340ml,340,1950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009PLSPS4,OK
+HIMALA-CONDITIO-TKY-AUTO091,Tokyo,Himalaya,Conditioner,female,Himalaya Protein Conditioner 200ml,200,3490.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CRYQLSQX,OK
+HIMALA-CONDITIO-TKY-AUTO091,Tokyo,Himalaya,Conditioner,male,Himalaya Men Protein Conditioner 200ml,200,3490.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CRYQLSQX,OK
+KAOMER-CONDITIO-TKY-AUTO117,Tokyo,Kao/Merit,Conditioner,female,Kao Merit Conditioner 480ml,480,909.0,JPY,29702970.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B097BB6Z89,OK
+KAOMER-CONDITIO-TKY-AUTO117,Tokyo,Kao/Merit,Conditioner,male,Kao Merit Men Conditioner 480ml,480,500.0,JPY,232232.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07C22XMPJ,OK
+LION-CONDITIO-TKY-AUTO143,Tokyo,Lion,Conditioner,female,Lion Systema Scalp Conditioner Women (400ml),400,579.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7SVZFVT,OK
+LION-CONDITIO-TKY-AUTO143,Tokyo,Lion,Conditioner,male,Lion Banon Men Conditioner (400ml),400,598.0,JPY,59505950.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00M6ANFPO,OK
+MAMAEA-CONDITIO-TKY-AUTO159,Tokyo,Mamaearth,Conditioner,female,Mamaearth Onion Conditioner Women (250ml),250,4400.0,JPY,58005800.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081T4WN55,OK
+MAMAEA-CONDITIO-TKY-AUTO159,Tokyo,Mamaearth,Conditioner,male,Mamaearth Men Anti-Dandruff Conditioner (250ml),250,4180.0,JPY,41804180.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081VLMCB7,OK
+MANDOM-CONDITIO-TKY-AUTO170,Tokyo,Mandom,Conditioner,female,Lucido-L Conditioner Women (400ml),400,660.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQOMXA,OK
+MANDOM-CONDITIO-TKY-AUTO170,Tokyo,Mandom,Conditioner,male,Lucido Men Conditioner (400ml),400,398.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CJMPX9YF,OK
+BIOR-DEODORAN-TKY-AUTO010,Tokyo,Bioré,Deodorant Roll-On,female,Bioré Deo Foot & Body Sheet Women 32-pack,100,4290.0,JPY,76507650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FG1M724N,OK
+BIOR-DEODORAN-TKY-AUTO010,Tokyo,Bioré,Deodorant Roll-On,male,Bioré Men Deo Sheet 32-pack,100,655.0,JPY,770.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D9L4QG1W,OK
+BIOR-DEODORAN-TKY-AUTO011,Tokyo,Bioré,Deodorant Roll-On,female,Bioré Soft Stone Deodorant Women (40ml),40,1980.0,JPY,19801980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01MTDFD5A,OK
+BIOR-DEODORAN-TKY-AUTO011,Tokyo,Bioré,Deodorant Roll-On,male,Bioré Deo Roll-On Men Cool Fresh (40ml),40,733.0,JPY,770.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D9L43Y78,OK
+DOVE-DEODORAN-TKY-AUTO050,Tokyo,Dove,Deodorant Roll-On,female,Dove Eventone Deodorant Roll-On,100,1990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07PXJTCCR,OK
+DOVE-DEODORAN-TKY-AUTO050,Tokyo,Dove,Deodorant Roll-On,male,Dove Men+Care Dry Comfort Roll-On,100,1990.0,JPY,38503850.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07PXJTCCR,OK
+DOVE-DEODORAN-TKY-AUTO051,Tokyo,Dove,Deodorant Roll-On,female,Dove Advance Care Deodorant Women (40ml),40,1350.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000JLOROA,OK
+DOVE-DEODORAN-TKY-AUTO051,Tokyo,Dove,Deodorant Roll-On,male,Dove Men+Care Roll-On (40ml),40,1990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07PXJTCCR,OK
+FOGG-DEODORAN-TKY-AUTO065,Tokyo,Fogg,Deodorant Roll-On,female,Fogg Miss Dew Roll-On Women,100,4575.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B015SI0HGU,OK
+FOGG-DEODORAN-TKY-AUTO065,Tokyo,Fogg,Deodorant Roll-On,male,Fogg Master Roll-On Men,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/5621014782,PRICE_NOT_FOUND
+LION-DEODORAN-TKY-AUTO144,Tokyo,Lion,Deodorant Roll-On,female,Lion Ban Premium Roll-On Women (40ml),40,770.0,JPY,5151.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FPDY83M3,OK
+LION-DEODORAN-TKY-AUTO144,Tokyo,Lion,Deodorant Roll-On,male,Lion Men's Ban Roll-On (40ml),40,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FPDY83M3,PRICE_NOT_FOUND
+NIVEA-DEO-TKY-01,Tokyo,Nivea,Deodorant Roll-On,female,Nivea Pearl & Beauty Roll-On 50ml,50,,JPY,,False,Amazon.co.jp,5,LOW,2026-03-10,https://www.amazon.co.jp/dp/B087FB6BYL,PRICE_NOT_FOUND
+NIVEA-DEO-TKY-01,Tokyo,Nivea,Deodorant Roll-On,male,Nivea Men Deep Roll-On 50ml,50,,JPY,,False,Amazon.co.jp,5,LOW,2026-03-10,https://www.amazon.co.jp/dp/B08DP6TVX5,PRICE_NOT_FOUND
+NIVEA-DEODORAN-TKY-AUTO188,Tokyo,Nivea,Deodorant Roll-On,female,Nivea Pearl & Beauty Roll-On,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B087CKGQQM,PRICE_NOT_FOUND
+NIVEA-DEODORAN-TKY-AUTO188,Tokyo,Nivea,Deodorant Roll-On,male,Nivea Men Deep Impact Roll-On,100,3146.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B087DYR3DP,OK
+NIVEA-DEODORAN-TKY-AUTO189,Tokyo,Nivea,Deodorant Roll-On,female,Nivea Pearl & Beauty Roll-On 50ml,50,2358.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B087CK3JJ3,OK
+NIVEA-DEODORAN-TKY-AUTO189,Tokyo,Nivea,Deodorant Roll-On,male,Nivea Men Deep Roll-On 50ml,50,3146.0,JPY,24802480.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B087DYR3DP,OK
+DOVE-DEODORAN-TKY-AUTO052,Tokyo,Dove,Deodorant Spray,female,Dove Eventone Body Spray Women 150ml,150,2200.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00GY2B6NS,OK
+DOVE-DEODORAN-TKY-AUTO052,Tokyo,Dove,Deodorant Spray,male,Dove Men+Care Clean Comfort Spray 150ml,150,1990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+ENGAGE-DEODORAN-TKY-AUTO060,Tokyo,Engage,Deodorant Spray,female,Engage W1 Deodorant Spray Women 150ml,150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0CKXJQJ2V,PRICE_NOT_FOUND
+ENGAGE-DEODORAN-TKY-AUTO060,Tokyo,Engage,Deodorant Spray,male,Engage M1 Deodorant Spray Men 150ml,150,3443.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01ELI7ZOK,OK
+FOGG-DEODORAN-TKY-AUTO066,Tokyo,Fogg,Deodorant Spray,female,Fogg Royal Women Body Spray 150ml,150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B00G4UHNQY,PRICE_NOT_FOUND
+FOGG-DEODORAN-TKY-AUTO066,Tokyo,Fogg,Deodorant Spray,male,Fogg Macho Men Body Spray 150ml,150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/5621014782,PRICE_NOT_FOUND
+HUL-DEODORAN-TKY-AUTO083,Tokyo,HUL,Deodorant Spray,female,Dove Talc Deodorant Spray Women (150ml),150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0B8NSQMKC,PRICE_NOT_FOUND
+HUL-DEODORAN-TKY-AUTO083,Tokyo,HUL,Deodorant Spray,male,Axe Signature Deodorant Spray (150ml),150,1280.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B2JGJ584,OK
+KAO-DEODORAN-TKY-AUTO104,Tokyo,Kao,Deodorant Spray,female,Kao Biore Deo Spray Refresh Women (150ml),150,2172.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00IW1QOPO,OK
+KAO-DEODORAN-TKY-AUTO104,Tokyo,Kao,Deodorant Spray,male,Kao Men's Biore Deo Spray Cool (150ml),150,1408.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DXFYM215,OK
+LION-DEODORAN-TKY-AUTO145,Tokyo,Lion,Deodorant Spray,female,Lion Ban Deodorant Spray Women (150ml),150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FPDXR529,PRICE_NOT_FOUND
+LION-DEODORAN-TKY-AUTO145,Tokyo,Lion,Deodorant Spray,male,Lion Men's Ban Deodorant Spray (150ml),150,1078.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B078WTLCNH,OK
+MANDOM-DEODORAN-TKY-AUTO175,Tokyo,Mandom/Gatsby,Deodorant Spray,female,Mandom Lucido Lady Deo Spray 150ml,150,1321.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07ND3YBHG,OK
+MANDOM-DEODORAN-TKY-AUTO175,Tokyo,Mandom/Gatsby,Deodorant Spray,male,Gatsby Deodorant Body Spray Men 150ml,150,982.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08G18NDYY,OK
+NIVEA-DEODORAN-TKY-AUTO190,Tokyo,Nivea,Deodorant Spray,female,Nivea Whitening Talc-Free Deo Spray 150ml,150,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B08R1GRXFN,PRICE_NOT_FOUND
+NIVEA-DEODORAN-TKY-AUTO190,Tokyo,Nivea,Deodorant Spray,male,Nivea Men Deep Ocean Spray 150ml,150,1950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07CQS3PXM,OK
+NIVEA-DEODORAN-TKY-AUTO191,Tokyo,Nivea,Deodorant Spray,female,Nivea Whitening Deo Spray 150ml,150,2980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08R1BFQNP,OK
+NIVEA-DEODORAN-TKY-AUTO191,Tokyo,Nivea,Deodorant Spray,male,Nivea Men Silver Protect Spray 150ml,150,1984.0,JPY,19841984.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07D1RL7ZD,OK
+BIOR-FACEMOIS-TKY-AUTO012,Tokyo,Bioré,Face Moisturizer,female,Bioré UV Moisture Milk Cream SPF50 Women (50ml),50,732.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00SM99KY8,OK
+BIOR-FACEMOIS-TKY-AUTO012,Tokyo,Bioré,Face Moisturizer,male,Bioré Men Face Milk Moist (50ml),50,779.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07VS2W5ZB,OK
+BIOTIQ-FACEMOIS-TKY-AUTO019,Tokyo,Biotique,Face Moisturizer,female,Biotique Bio Coconut Whitening Cream 50g,50,1100.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0099PU7G4,OK
+BIOTIQ-FACEMOIS-TKY-AUTO019,Tokyo,Biotique,Face Moisturizer,male,Biotique Bio Aloe Vera Fresh Cream Men 50g,50,1746.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B005MDSJRQ,OK
+CUREL-FACEMOIS-TKY-AUTO032,Tokyo,Curel,Face Moisturizer,female,Curel Intensive Moisture Care Face Cream 40ml,40,6399.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01M5AYGPC,OK
+CUREL-FACEMOIS-TKY-AUTO032,Tokyo,Curel,Face Moisturizer,male,Curel Men Face Balm Cream 35ml,35,2520.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07JL34PQJ,OK
+DHC-FACEMOIS-TKY-AUTO036,Tokyo,DHC,Face Moisturizer,female,DHC Olive Virgin Oil Concentrate 15ml,15,3450.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09B77XPGH,OK
+DHC-FACEMOIS-TKY-AUTO036,Tokyo,DHC,Face Moisturizer,male,DHC Men Deep Cleansing Oil 150ml,150,1499.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0042HVIIU,OK
+DHC-FACEMOIS-TKY-AUTO037,Tokyo,DHC,Face Moisturizer,female,DHC Olive Virgin Oil Cream Women (25g),25,2130.0,JPY,52805280.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07HQ6N9WZ,OK
+DHC-FACEMOIS-TKY-AUTO037,Tokyo,DHC,Face Moisturizer,male,DHC Men All-in-One Face Cream (50g),50,1350.0,JPY,2357.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B008S6QPAC,OK
+GARNIE-FACEMOIS-TKY-AUTO068,Tokyo,Garnier,Face Moisturizer,female,Garnier Bright Complete Vitamin C Cream 45g,45,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B089YRR4VS,PRICE_NOT_FOUND
+GARNIE-FACEMOIS-TKY-AUTO068,Tokyo,Garnier,Face Moisturizer,male,Garnier Men PowerWhite Moisturizer 45g,45,1624.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B007921JYI,OK
+GARNIE-FACEMOIS-TKY-AUTO069,Tokyo,Garnier,Face Moisturizer,female,Garnier Bright Complete Cream Women (45g),45,1465.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003RF82UK,OK
+GARNIE-FACEMOIS-TKY-AUTO069,Tokyo,Garnier,Face Moisturizer,male,Garnier Men Powerwhite Anti-Dark Cells (20g),20,2288.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08PQLBM2M,OK
+HIMALA-FACEMOIS-TKY-AUTO092,Tokyo,Himalaya,Face Moisturizer,female,Himalaya Nourishing Skin Cream 50ml,50,1250.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G45GF96J,OK
+HIMALA-FACEMOIS-TKY-AUTO092,Tokyo,Himalaya,Face Moisturizer,male,Himalaya Men Intense Moisturizing Cream 50ml,50,32010.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07KDBRQ92,OK
+KOSESO-FACEMOIS-TKY-AUTO123,Tokyo,Kose/Softymo,Face Moisturizer,female,Kose Softymo Speedy Cleansing Oil Face Cream Women,100,727.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B2Q5SXBN,OK
+KOSESO-FACEMOIS-TKY-AUTO123,Tokyo,Kose/Softymo,Face Moisturizer,male,Kose Men Softymo Face Cream 50ml,50,1580.0,JPY,38503850.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BS6LZDKG,OK
+LOREAL-FACEMOIS-TKY-AUTO132,Tokyo,L'Oreal,Face Moisturizer,female,L'Oreal Paris Revitalift Day Cream 50ml,50,1467.0,JPY,1010.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08DRPH74B,OK
+LOREAL-FACEMOIS-TKY-AUTO132,Tokyo,L'Oreal,Face Moisturizer,male,L'Oreal Men Expert Hydra Energetic Moisturizer 50m,100,6600.0,JPY,367367.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00005333I,OK
+LAKME-FACEMOIS-TKY-AUTO137,Tokyo,Lakme,Face Moisturizer,female,Lakme Peach Milk Moisturizer SPF 24 60ml,60,1601.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01NBO2IA8,OK
+LAKME-FACEMOIS-TKY-AUTO137,Tokyo,Lakme,Face Moisturizer,male,Garnier Men PowerWhite Moisturizer 45ml,45,1726.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01BBNF6GM,OK
+MAMAEA-FACEMOIS-TKY-AUTO160,Tokyo,Mamaearth,Face Moisturizer,female,Mamaearth Vitamin C Day Cream 50g,50,2085.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B085B33TJQ,OK
+MAMAEA-FACEMOIS-TKY-AUTO160,Tokyo,Mamaearth,Face Moisturizer,male,Mamaearth Men SPF 50 Day Cream 50g,50,2200.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081T4WN55,OK
+NEUTRO-FACEMOIS-TKY-AUTO182,Tokyo,Neutrogena,Face Moisturizer,female,Neutrogena Hydro Boost Water Gel 50ml,50,3856.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CDGVDZ6H,OK
+NEUTRO-FACEMOIS-TKY-AUTO182,Tokyo,Neutrogena,Face Moisturizer,male,Neutrogena Men Hydro Boost Gel 50ml,50,3650.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B075C4FWX6,OK
+NIVEA-FACEMOIS-TKY-AUTO192,Tokyo,Nivea,Face Moisturizer,female,Nivea Rich Serum Concentrate 30ml,30,1100.0,JPY,11001100.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08PNT4Q4W,OK
+NIVEA-FACEMOIS-TKY-AUTO192,Tokyo,Nivea,Face Moisturizer,male,Nivea Men Gel Cream 30ml,30,377.0,JPY,450.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0759HGRWV,OK
+OLAY-FACECREAM-TKY-01,Tokyo,Olay,Face Moisturizer,female,Olay Total Effects Day Cream 50ml,50,6800.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08698SL3W,OK
+OLAY-FACECREAM-TKY-01,Tokyo,Olay,Face Moisturizer,male,Olay Men Solutions Face Moisturizer 50ml,50,,JPY,,False,Amazon.co.jp,4,LOW,2026-03-10,https://www.amazon.co.jp/dp/B001PRJ9XQ,PRICE_NOT_FOUND
+OLAY-FACEMOIS-TKY-AUTO197,Tokyo,Olay,Face Moisturizer,female,Olay Total Effects 7-in-1 Day Cream 50g,50,6800.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08698SL3W,OK
+OLAY-FACEMOIS-TKY-AUTO197,Tokyo,Olay,Face Moisturizer,male,Olay Men Solutions Sensitive Moisturizer 50g,50,1980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000PQJ0KK,OK
+OLAY-FACEMOIS-TKY-AUTO198,Tokyo,Olay,Face Moisturizer,female,Olay Total Effects Day Cream 50ml,50,1980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000PQJ0KK,OK
+OLAY-FACEMOIS-TKY-AUTO198,Tokyo,Olay,Face Moisturizer,male,Olay Men Solutions Face Moisturizer 50ml,50,1320.0,JPY,59675967.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0C4458BLX,OK
+POLA-FACEMOIS-TKY-AUTO219,Tokyo,Pola,Face Moisturizer,female,Pola B.A Moisture Cream Women 30ml,30,1624.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BW44NK3D,OK
+POLA-FACEMOIS-TKY-AUTO219,Tokyo,Pola,Face Moisturizer,male,Pola Men BA Cream 30ml,30,1624.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BW44NK3D,OK
+CUREL-FACETONE-TKY-AUTO033,Tokyo,Curel,Face Toner,female,Curel Moisture Face Toner Women 150ml,150,1980.0,JPY,1414.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B083LVY1VQ,OK
+CUREL-FACETONE-TKY-AUTO033,Tokyo,Curel,Face Toner,male,Curel Men Toner 150ml,150,1600.0,JPY,16001600.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09YY6NZ7N,OK
+KAO-FACETONE-TKY-AUTO105,Tokyo,Kao,Face Toner,female,Kao Sofina IP Toner Women (200ml),200,4290.0,JPY,76507650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FG1M724N,OK
+KAO-FACETONE-TKY-AUTO105,Tokyo,Kao,Face Toner,male,Kao Men's Biore Toner (160ml),160,1699.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DMW2JR1G,OK
+KOSESO-FACETONE-TKY-AUTO124,Tokyo,Kose/Softymo,Face Toner,female,Kose Softymo Speedy Cleansing Toner Women (230ml),230,845.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000V2FBAQ,OK
+KOSESO-FACETONE-TKY-AUTO124,Tokyo,Kose/Softymo,Face Toner,male,Kose Men's Speedy Toner (200ml),200,2980.0,JPY,29802980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BV66DZWB,OK
+MAMAEA-FACETONE-TKY-AUTO161,Tokyo,Mamaearth,Face Toner,female,Mamaearth Rose Water Toner Women 200ml,200,2085.0,JPY,16501650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B085B33TJQ,OK
+MAMAEA-FACETONE-TKY-AUTO161,Tokyo,Mamaearth,Face Toner,male,Mamaearth Men Charcoal Toner 200ml,200,2200.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081T4WN55,OK
+MINIMA-FACETONE-TKY-AUTO180,Tokyo,Minimalist,Face Toner,female,Minimalist 7% Glycolic Toning Solution (100ml),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B097RGXRNX,PRICE_NOT_FOUND
+MINIMA-FACETONE-TKY-AUTO180,Tokyo,Minimalist,Face Toner,male,Minimalist 10% Niacinamide Toner Men (100ml),100,3682.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G7ZR7RH3,OK
+PLUM-FACETONE-TKY-AUTO213,Tokyo,Plum,Face Toner,female,Plum Green Tea Alcohol Free Toner Women 200ml,200,3396.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0GQ3933PL,OK
+PLUM-FACETONE-TKY-AUTO213,Tokyo,Plum,Face Toner,male,Plum Men Facebase Skin Clarifying Toner 100ml,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0DY6G3W98,PRICE_NOT_FOUND
+BIODER-FACIALCL-TKY-AUTO006,Tokyo,Bioderma,Facial Cleanser,female,Bioderma Sensibio H2O Micellar Water Women (250ml),250,2530.0,JPY,2980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07BH8RGBW,OK
+BIODER-FACIALCL-TKY-AUTO006,Tokyo,Bioderma,Facial Cleanser,male,Bioderma Sébium H2O Men (200ml),200,3080.0,JPY,3300.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009NPX456,OK
+BIOR-FACIALCL-TKY-AUTO013,Tokyo,Bioré,Facial Cleanser,female,Bioré Marshmallow Whip Face Wash 150ml,150,766.0,JPY,831.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08H5DHBSY,OK
+BIOR-FACIALCL-TKY-AUTO013,Tokyo,Bioré,Facial Cleanser,male,Bioré Men Facial Foam 130ml,130,733.0,JPY,770.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D9L43Y78,OK
+BIORE-FACEWASH-TKY-01,Tokyo,Bioré,Facial Cleanser,female,Biore Marshmallow Whip Face Wash 150ml,150,337.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003G05K6K,OK
+BIORE-FACEWASH-TKY-01,Tokyo,Bioré,Facial Cleanser,male,Biore Men Facial Foam 130ml,130,554.0,JPY,660.0,True,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D9L492S4,OK
+BIOTIQ-FACIALCL-TKY-AUTO020,Tokyo,Biotique,Facial Cleanser,female,Biotique Bio Honey Gel Foaming Face Wash 100ml,100,1869.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00KCLZ6VU,OK
+BIOTIQ-FACIALCL-TKY-AUTO020,Tokyo,Biotique,Facial Cleanser,male,Biotique Bio Neem Foaming Face Wash 100ml,100,1869.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00KCLZ6VU,OK
+CETAPH-FACIALCL-TKY-AUTO024,Tokyo,Cetaphil,Facial Cleanser,female,Cetaphil Gentle Skin Cleanser Women (250ml),250,3889.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09T2J5W6Y,OK
+CETAPH-FACIALCL-TKY-AUTO024,Tokyo,Cetaphil,Facial Cleanser,male,Cetaphil Men Facial Cleanser (125ml),125,3889.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09T2J5W6Y,OK
+CUREL-FACIALCL-TKY-AUTO034,Tokyo,Curel,Facial Cleanser,female,Curel Moisture Face Wash Women 150ml,150,1595.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00A0GNXBC,OK
+CUREL-FACIALCL-TKY-AUTO034,Tokyo,Curel,Facial Cleanser,male,Curel Men Face Wash 150ml,150,2706.0,JPY,35203520.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009L1LN1O,OK
+DHC-FACIALCL-TKY-AUTO038,Tokyo,DHC,Facial Cleanser,female,DHC Deep Cleansing Oil Women (120ml),120,2440.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00BVWAW8G,OK
+DHC-FACIALCL-TKY-AUTO038,Tokyo,DHC,Facial Cleanser,male,DHC Men Oil Cleansing (120ml),120,3520.0,JPY,35203520.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07T9DB3VN,OK
+DOVE-FACIALCL-TKY-AUTO053,Tokyo,Dove,Facial Cleanser,female,Dove Cream Milk Face Wash 100ml,100,740.0,JPY,940.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CD3Q9VY3,OK
+DOVE-FACIALCL-TKY-AUTO053,Tokyo,Dove,Facial Cleanser,male,Dove Men+Care Sensitive Face Wash 100ml,100,875.0,JPY,946.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08JFZV6DK,OK
+GARNIE-FACIALCL-TKY-AUTO070,Tokyo,Garnier,Facial Cleanser,female,Garnier Bright Complete Vitamin C Face Wash 100ml,100,2137.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01MSJV5ZH,OK
+GARNIE-FACIALCL-TKY-AUTO070,Tokyo,Garnier,Facial Cleanser,male,Garnier Men PowerWhite Face Wash 100ml,100,3837.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07BVFRFF2,OK
+HIMALA-FACIALCL-TKY-AUTO093,Tokyo,Himalaya,Facial Cleanser,female,Himalaya Nourishing Cream Face Wash 100ml,100,1760.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G5KM21YT,OK
+HIMALA-FACIALCL-TKY-AUTO093,Tokyo,Himalaya,Facial Cleanser,male,Himalaya Men Active Fresh Face Wash 100ml,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FCDJL95X,PRICE_NOT_FOUND
+KAO-FACIALCL-TKY-AUTO106,Tokyo,Kao,Facial Cleanser,female,Kao Sofina IP Women Facial Wash (130g),130,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0CG3DH8SQ,PRICE_NOT_FOUND
+KAO-FACIALCL-TKY-AUTO106,Tokyo,Kao,Facial Cleanser,male,Kao Men's Biore Double Scrub Face Wash (130g),130,1180.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQMYKS,OK
+KOSESO-FACIALCL-TKY-AUTO125,Tokyo,Kose/Softymo,Facial Cleanser,female,Kose Softymo Speedy Cleansing Oil Women 200ml,200,1467.0,JPY,1010.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003ZX6Q9S,OK
+KOSESO-FACIALCL-TKY-AUTO125,Tokyo,Kose/Softymo,Facial Cleanser,male,Kose Men Softymo Face Wash 150ml,150,1320.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08D3RW1ZQ,OK
+LOREAL-FACIALCL-TKY-AUTO133,Tokyo,L'Oreal,Facial Cleanser,female,L'Oreal Paris Pure Clay Face Wash Women 100ml,100,5390.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FD2RQDJK,OK
+LOREAL-FACIALCL-TKY-AUTO133,Tokyo,L'Oreal,Facial Cleanser,male,L'Oreal Men Expert Pure & Matte Face Wash 100ml,100,5390.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9KVG312,OK
+LION-FACIALCL-TKY-AUTO146,Tokyo,Lion,Facial Cleanser,female,Lion System Skin Female Face Wash (130g),130,579.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7SVZFVT,OK
+LION-FACIALCL-TKY-AUTO146,Tokyo,Lion,Facial Cleanser,male,Lion Pair Acne Clear Wash Men (80g),80,1678.0,JPY,35203520.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FPWR3371,OK
+LOTUSH-FACIALCL-TKY-AUTO153,Tokyo,Lotus Herbals,Facial Cleanser,female,Lotus Herbals WhiteGlow Facewash (100g),100,2743.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/7042932021,OK
+LOTUSH-FACIALCL-TKY-AUTO153,Tokyo,Lotus Herbals,Facial Cleanser,male,Lotus Herbals Moist Matte Men Facewash (100g),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B001HWYT1Q,PRICE_NOT_FOUND
+MAMAEA-FACIALCL-TKY-AUTO162,Tokyo,Mamaearth,Facial Cleanser,female,Mamaearth Ubtan Face Wash 100ml,100,2390.0,JPY,23902390.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081Z44S71,OK
+MAMAEA-FACIALCL-TKY-AUTO162,Tokyo,Mamaearth,Facial Cleanser,male,Mamaearth CFC Free Charcoal Face Wash 100ml,100,1890.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B081VLMCB7,OK
+MANDOM-FACIALCL-TKY-AUTO171,Tokyo,Mandom,Facial Cleanser,female,Lucido-L Cleansing Foam Women (130g),130,1255.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D42V52ZP,OK
+MANDOM-FACIALCL-TKY-AUTO171,Tokyo,Mandom,Facial Cleanser,male,Gatsby Facial Wash Ice-type Men (130g),130,720.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09V1FQ9Y5,OK
+MANDOM-FACIALCL-TKY-AUTO176,Tokyo,Mandom/Gatsby,Facial Cleanser,female,Mandom Lucido Lady Gentle Face Wash 120ml,120,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0CWNGNX2F,PRICE_NOT_FOUND
+MANDOM-FACIALCL-TKY-AUTO176,Tokyo,Mandom/Gatsby,Facial Cleanser,male,Gatsby Facial Wash Oil Clear 130ml,130,979.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07RV86QWM,OK
+MERCKE-FACIALCL-TKY-AUTO179,Tokyo,Merck/Evion,Facial Cleanser,female,Evion Vitamin E Face Wash Women (100ml),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B06XBN8PQT,PRICE_NOT_FOUND
+MERCKE-FACIALCL-TKY-AUTO179,Tokyo,Merck/Evion,Facial Cleanser,male,Evion Men Refreshing Face Wash (100ml),100,1788.0,JPY,52295229.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CN4LBG2G,OK
+NIVEA-FACIALCL-TKY-AUTO193,Tokyo,Nivea,Facial Cleanser,female,Nivea Refreshing Face Wash 100ml,100,396.0,JPY,450.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B079ZY683G,OK
+NIVEA-FACIALCL-TKY-AUTO193,Tokyo,Nivea,Facial Cleanser,male,Nivea Men All-In-1 Charcoal Face Wash 100ml,100,1210.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FXWT46F4,OK
+PLUM-FACIALCL-TKY-AUTO214,Tokyo,Plum,Facial Cleanser,female,Plum Green Tea Pore Cleansing Face Wash Women 100m,100,269.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FJ2H5C8H,OK
+PLUM-FACIALCL-TKY-AUTO214,Tokyo,Plum,Facial Cleanser,male,Plum Men Facebase Daily Foaming Cleanser 100ml,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0DC64KN6Q,PRICE_NOT_FOUND
+BBLUNT-HAIRCOLO-TKY-AUTO003,Tokyo,BBlunt,Hair Colour,female,BBlunt Salon Secret Hair Colour Women,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FXGZHCBQ,PRICE_NOT_FOUND
+BBLUNT-HAIRCOLO-TKY-AUTO003,Tokyo,BBlunt,Hair Colour,male,BBlunt Men Hair Colour,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FHL34GBK,PRICE_NOT_FOUND
+DARIYA-HAIRCOLO-TKY-AUTO040,Tokyo,Dariya,Hair Colour,female,Salon de Pro Women Hair Colour Cream (50g),50,800.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D6QQ9S4V,OK
+DARIYA-HAIRCOLO-TKY-AUTO040,Tokyo,Dariya,Hair Colour,male,Salon de Pro Men's Hair Colour (40g),40,573.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B013D3W0R6,OK
+DARIYA-HAIRCOLO-TKY-AUTO041,Tokyo,Dariya,Hair Colour,female,Dariya Salon de Pro Beauteen Melt Color Women Crea,100,758.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01NBV7FJ0,OK
+DARIYA-HAIRCOLO-TKY-AUTO041,Tokyo,Dariya,Hair Colour,male,Dariya Salon de Pro Men's Hair Colour Cream (40g),40,1657.0,JPY,2200.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CD3RF439,OK
+GARNIE-HAIRCOLO-TKY-AUTO071,Tokyo,Garnier,Hair Colour,female,Garnier Color Naturals Hair Colour Cream Women,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B003LYX3AG,PRICE_NOT_FOUND
+GARNIE-HAIRCOLO-TKY-AUTO071,Tokyo,Garnier,Hair Colour,male,Garnier Men Power Black Shampoo Hair Colour,100,2504.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01MFF7A02,OK
+GARNIE-HAIRCOLO-TKY-AUTO072,Tokyo,Garnier,Hair Colour,female,Garnier Nutrisse Cream (60ml kit),60,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B089YRR4VS,PRICE_NOT_FOUND
+GARNIE-HAIRCOLO-TKY-AUTO072,Tokyo,Garnier,Hair Colour,male,Garnier Men PowerLight Fairness Moisturiser kit,100,1540.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009S7401Q,OK
+GODREJ-HAIRCOLO-TKY-AUTO081,Tokyo,Godrej,Hair Colour,female,Godrej Expert Cream Hair Colour Women (120ml),120,2180.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B1DJ6B13,OK
+GODREJ-HAIRCOLO-TKY-AUTO081,Tokyo,Godrej,Hair Colour,male,Godrej Expert Men Hair Colour (25ml),25,1139.0,JPY,396396.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07YZ7FSGM,OK
+HENKEL-HAIRCOLO-TKY-AUTO088,Tokyo,Henkel,Hair Colour,female,Freshlight Women Foam Colour (130ml),130,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B06XRXTP64,PRICE_NOT_FOUND
+HENKEL-HAIRCOLO-TKY-AUTO088,Tokyo,Henkel,Hair Colour,male,Bigen Men's Color (40ml),40,3700.0,JPY,22002200.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B003PQ09VG,OK
+HOYU-HAIRCOLO-TKY-AUTO097,Tokyo,Hoyu,Hair Colour,female,"Hoyu Beauteen Melt Color Women (cream kit, ~80g)",80,1078.0,JPY,396396.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01GZTD91G,OK
+HOYU-HAIRCOLO-TKY-AUTO097,Tokyo,Hoyu,Hair Colour,male,Hoyu Bigen Men's Color Cream (40g),40,574.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQU8YW,OK
+HOYU-HAIRCOLO-TKY-AUTO098,Tokyo,Hoyu,Hair Colour,female,Hoyu Beauteen Color Women Cream (80g),80,927.0,JPY,1078.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTS57RRS,OK
+HOYU-HAIRCOLO-TKY-AUTO098,Tokyo,Hoyu,Hair Colour,male,Hoyu Bigen Men's Color Stick (40g),40,3980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09C28L5V6,OK
+INDULE-HAIRCOLO-TKY-AUTO099,Tokyo,Indulekha,Hair Colour,female,Indulekha Women Bhringa Hair Oil Treatment (100ml),100,2199.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B077K1XRQM,OK
+INDULE-HAIRCOLO-TKY-AUTO099,Tokyo,Indulekha,Hair Colour,male,Indulekha Men Hair Colour (25ml),25,2270.0,JPY,16501650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00S850C5C,OK
+KAOLIE-HAIRCOLO-TKY-AUTO112,Tokyo,Kao/Liese,Hair Colour,female,Liese Prettia Bubble Hair Colour Women (108ml+),108,9000.0,JPY,38003800.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FNM7H1BJ,OK
+KAOLIE-HAIRCOLO-TKY-AUTO112,Tokyo,Kao/Liese,Hair Colour,male,Kao Blaune Men Hair Colour Cream (40g),40,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0F8HHXS13,PRICE_NOT_FOUND
+KAOLIE-HAIRCOLO-TKY-AUTO113,Tokyo,Kao/Liese,Hair Colour,female,Kao Liese Creamy Foam Colour Women (cream foam),100,601.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B008XT4P4W,OK
+KAOLIE-HAIRCOLO-TKY-AUTO113,Tokyo,Kao/Liese,Hair Colour,male,Kao Blaune Men Hair Color Q (40g),40,828.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9Y7QMGX,OK
+LOREAL-HAIRCOLO-TKY-AUTO134,Tokyo,L'Oreal,Hair Colour,female,L'Oreal Paris Excellence Creme Hair Color,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B000GCVZSI,PRICE_NOT_FOUND
+LOREAL-HAIRCOLO-TKY-AUTO134,Tokyo,L'Oreal,Hair Colour,male,L'Oreal Men Expert One-Twist Hair Color,100,1969.0,JPY,22002200.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09N1CXLBN,OK
+LOREAL-HAIRCOLO-TKY-AUTO135,Tokyo,L'Oreal,Hair Colour,female,"L'Oreal Excellence Creme (women, 72ml)",72,1419.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09FPXLD1Q,OK
+LOREAL-HAIRCOLO-TKY-AUTO135,Tokyo,L'Oreal,Hair Colour,male,L'Oreal Men Expert One-Twist (40ml),40,1969.0,JPY,24802480.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CB3ZC5DM,OK
+INDULE-HAIRGELS-TKY-AUTO100,Tokyo,Indulekha,Hair Gel / Serum,female,Indulekha Bringha Hair Serum Women 50ml,50,2199.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B077K1XRQM,OK
+INDULE-HAIRGELS-TKY-AUTO100,Tokyo,Indulekha,Hair Gel / Serum,male,Indulekha Men Anti Hairfall Serum 50ml,50,2270.0,JPY,16501650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00S850C5C,OK
+KAO-HAIRGELS-TKY-AUTO107,Tokyo,Kao,Hair Gel / Serum,female,Kao Essential Damage Care Serum Women (100ml),100,1150.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B097B9ZT95,OK
+KAO-HAIRGELS-TKY-AUTO107,Tokyo,Kao,Hair Gel / Serum,male,Kao Gatsby Moving Rubber Hair Wax (80g),80,828.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9Y7QMGX,OK
+KAO-HAIRGELS-TKY-AUTO108,Tokyo,Kao,Hair Gel / Serum,female,Kao Liese Drip Hair Serum Women (100ml),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B06XKTC4BV,PRICE_NOT_FOUND
+KAO-HAIRGELS-TKY-AUTO108,Tokyo,Kao,Hair Gel / Serum,male,Kao Gatsby Hair Cream Serum Men (100ml),100,2200.0,JPY,22002200.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQMYKS,OK
+KOSESO-HAIRGELS-TKY-AUTO126,Tokyo,Kose/Softymo,Hair Gel / Serum,female,Kose Softymo Hair Serum Women 100ml,100,880.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0017AMYOC,OK
+KOSESO-HAIRGELS-TKY-AUTO126,Tokyo,Kose/Softymo,Hair Gel / Serum,male,Kose Men Softymo Styling Wax 80g,80,1064.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CB85BC7T,OK
+MANDOM-HAIRGELS-TKY-AUTO172,Tokyo,Mandom,Hair Gel / Serum,female,Lucido-L Hair Serum Argan Oil Women (60ml),60,1150.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00WQDJCA8,OK
+MANDOM-HAIRGELS-TKY-AUTO172,Tokyo,Mandom,Hair Gel / Serum,male,Gatsby Moving Rubber Wild Shake (80g),80,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B08G17TDRY,PRICE_NOT_FOUND
+MANDOM-HAIRGELS-TKY-AUTO177,Tokyo,Mandom/Gatsby,Hair Gel / Serum,female,Mandom Lucido Style Mix Serum Women 150ml,150,1334.0,JPY,275275.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DVGF9KB4,OK
+MANDOM-HAIRGELS-TKY-AUTO177,Tokyo,Mandom/Gatsby,Hair Gel / Serum,male,Gatsby Water Gloss Ultra Hard Men 300ml,300,660.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CD73XNZ2,OK
+INDULE-HAIROIL-TKY-AUTO101,Tokyo,Indulekha,Hair Oil,female,Indulekha Bringha Hair Oil Women 100ml,100,2270.0,JPY,899899.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00S850C5C,OK
+INDULE-HAIROIL-TKY-AUTO101,Tokyo,Indulekha,Hair Oil,male,Indulekha Men Scalp Treatment 100ml,100,2199.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B077K1XRQM,OK
+KAOMER-HAIROIL-TKY-AUTO119,Tokyo,Kao/Merit,Hair Oil,female,Kao Merit Hair Oil Smooth Women (60ml),60,3980.0,JPY,39803980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B06XKTC4BV,OK
+KAOMER-HAIROIL-TKY-AUTO119,Tokyo,Kao/Merit,Hair Oil,male,Kao Men's Biore Scalp Hair Oil (80ml),80,828.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9Y7QMGX,OK
+KRASTA-HAIROIL-TKY-AUTO129,Tokyo,Kérastase,Hair Oil,female,Kérastase Elixir Ultime Original Serum Women (125m,100,4180.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FT31W621,OK
+KRASTA-HAIROIL-TKY-AUTO129,Tokyo,Kérastase,Hair Oil,male,Kérastase Genesis Homme Fortifying Serum Men (90ml,90,4180.0,JPY,45274527.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BLST87NS,OK
+MANDOM-HAIROIL-TKY-AUTO173,Tokyo,Mandom,Hair Oil,female,Lucido-L Women Argan Hair Treatment Oil (60ml),60,1150.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00WQDJCA8,OK
+MANDOM-HAIROIL-TKY-AUTO173,Tokyo,Mandom,Hair Oil,male,Lucido Men Hair Water (200ml),200,2145.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000FQOOUG,OK
+PARACH-HAIROIL-TKY-AUTO209,Tokyo,Parachute,Hair Oil,female,Parachute Advansed Jasmine Non-Sticky Hair Oil 200,100,3380.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BX6LFCWF,OK
+PARACH-HAIROIL-TKY-AUTO209,Tokyo,Parachute,Hair Oil,male,Parachute Advansed Men Nourish Hair Oil 200ml,200,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0DVRQ3X6X,PRICE_NOT_FOUND
+BIOR-HANDCREA-TKY-AUTO014,Tokyo,Bioré,Hand Cream,female,Bioré Moist Hand Cream Women (60g),60,458.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CWV1D1QB,OK
+BIOR-HANDCREA-TKY-AUTO014,Tokyo,Bioré,Hand Cream,male,Bioré Men Hand Milk (60g),60,779.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B82LXTLH,OK
+DHC-HANDCREA-TKY-AUTO039,Tokyo,DHC,Hand Cream,female,DHC Medicated Hand Cream Women 50ml,50,552.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07H954475,OK
+DHC-HANDCREA-TKY-AUTO039,Tokyo,DHC,Hand Cream,male,DHC Men Hand Cream 50ml,50,2200.0,JPY,44004400.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B46L7C72,OK
+DOVE-HANDCREA-TKY-AUTO054,Tokyo,Dove,Hand Cream,female,Dove Nourishing Hand Cream 75ml,75,950.0,JPY,76807680.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FM8HHFWZ,OK
+DOVE-HANDCREA-TKY-AUTO054,Tokyo,Dove,Hand Cream,male,Dove Men+Care Hand & Face Lotion 75ml,75,1207.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07GPNZWCZ,OK
+DOVE-HANDCREA-TKY-AUTO055,Tokyo,Dove,Hand Cream,female,Dove Intensive Hand Cream 75ml,75,950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FM8HHFWZ,OK
+DOVE-HANDCREA-TKY-AUTO055,Tokyo,Dove,Hand Cream,male,Dove Men+Care Hand and Body Lotion 75ml,75,1428.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07GPX5V2Z,OK
+KAOMER-HANDCREA-TKY-AUTO120,Tokyo,Kao/Merit,Hand Cream,female,Kao Atrix Beauty Charge Hand Cream 80ml,80,788.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DV3N664J,OK
+KAOMER-HANDCREA-TKY-AUTO120,Tokyo,Kao/Merit,Hand Cream,male,Kao Atrix Men Protective Hand Cream 80ml,80,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0FFMP2JV4,PRICE_NOT_FOUND
+NEUTRO-HANDCREA-TKY-AUTO183,Tokyo,Neutrogena,Hand Cream,female,Neutrogena Norwegian Formula Hand Cream Women 50ml,50,2018.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07JYYX1CR,OK
+NEUTRO-HANDCREA-TKY-AUTO183,Tokyo,Neutrogena,Hand Cream,male,Neutrogena Men Norwegian Formula Hand Cream 50ml,50,1129.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CJX3G2MS,OK
+NIVEA-HANDCREA-TKY-AUTO194,Tokyo,Nivea,Hand Cream,female,Nivea Extra Rich Caring Hand Cream 100ml,100,2827.0,JPY,413413.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00DEG8N9W,OK
+NIVEA-HANDCREA-TKY-AUTO194,Tokyo,Nivea,Hand Cream,male,Nivea Men Quick Dry Hand Gel 100ml,100,1082.0,JPY,1200.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08HMBLR2Z,OK
+BIOR-HANDWASH-TKY-AUTO015,Tokyo,Bioré,Hand Wash,female,Bioré U Foaming Hand Soap Women (250ml),250,658.0,JPY,740.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B085XXBJZ9,OK
+BIOR-HANDWASH-TKY-AUTO015,Tokyo,Bioré,Hand Wash,male,Bioré Men Body Wash Hand Soap (250ml),250,1095.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B089MQMF69,OK
+DOVE-HANDWASH-TKY-AUTO056,Tokyo,Dove,Hand Wash,female,Dove Care & Protect Hand Wash 250ml,250,2780.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08RDSKN94,OK
+DOVE-HANDWASH-TKY-AUTO056,Tokyo,Dove,Hand Wash,male,Dove Men+Care Deep Clean Hand Wash 250ml,250,1990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+HIMALA-HANDWASH-TKY-AUTO094,Tokyo,Himalaya,Hand Wash,female,Himalaya Pure Hands Sparkling Rose Hand Wash 250ml,250,3222.0,JPY,3980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DGGRRYVK,OK
+HIMALA-HANDWASH-TKY-AUTO094,Tokyo,Himalaya,Hand Wash,male,Himalaya Men Active Fresh Hand Wash 250ml,250,1379.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F1HF8GZS,OK
+KAO-HANDWASH-TKY-AUTO109,Tokyo,Kao,Hand Wash,female,Kao Soflan Aroma Rich Hand Soap Women (250ml),250,2611.0,JPY,367367.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B002D197B2,OK
+KAO-HANDWASH-TKY-AUTO109,Tokyo,Kao,Hand Wash,male,Kao Men's Biore Hand Soap Refresh (250ml),250,1648.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0C2GY6JHW,OK
+LION-HANDWASH-TKY-AUTO147,Tokyo,Lion,Hand Wash,female,Lion Kirei Kirei Medicated Foam Hand Soap Women (2,100,930.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09KVDHCK9,OK
+LION-HANDWASH-TKY-AUTO147,Tokyo,Lion,Hand Wash,male,Lion Kirei Kirei Men Cool Hand Soap (250ml),250,2603.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G12ZMJ17,OK
+PLUM-HANDWASH-TKY-AUTO215,Tokyo,Plum,Hand Wash,female,Plum Glow & Glow Hand Wash (250ml),250,1980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FH623TWC,OK
+PLUM-HANDWASH-TKY-AUTO215,Tokyo,Plum,Hand Wash,male,Plum BodyLovin' Men Hand Wash (250ml),250,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B08W2SG9KD,PRICE_NOT_FOUND
+GILLET-RAZOR-TKY-01,Tokyo,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Smooth Razor,1,2725.0,JPY,558558.0,True,Amazon.co.jp,5,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CWKX13XR,OK
+GILLET-RAZOR-TKY-01,Tokyo,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 Razor,1,6028.0,JPY,,False,Amazon.co.jp,5,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098W98LP9,OK
+GILLET-RAZOR3BL-TKY-AUTO075,Tokyo,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Smooth (handle + 2 cartridges),100,3492.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CWKVNTS4,OK
+GILLET-RAZOR3BL-TKY-AUTO075,Tokyo,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 (handle + 1 cartridge),100,6028.0,JPY,840840.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098W98LP9,OK
+GILLET-RAZOR3BL-TKY-AUTO076,Tokyo,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Simply 3 Disposable Razor 3-pack,100,1309.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTH4NXWQ,OK
+GILLET-RAZOR3BL-TKY-AUTO076,Tokyo,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Blue3 Disposable Razor 3-pack,100,5283.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098W9MF6Q,OK
+GILLET-RAZOR3BL-TKY-AUTO077,Tokyo,Gillette/Venus,Razor (3-blade starter kit),female,Gillette Venus Embrace Razor + 2 blades,100,1216.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTH6NXLS,OK
+GILLET-RAZOR3BL-TKY-AUTO077,Tokyo,Gillette/Venus,Razor (3-blade starter kit),male,Gillette Mach3 Razor + 2 cartridges,100,6028.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098W98LP9,OK
+GILLET-RAZORCAR-TKY-AUTO078,Tokyo,Gillette/Venus,Razor Cartridges,female,Gillette Venus Smooth Cartridges 4-pack,100,1216.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CTH6NXLS,OK
+GILLET-RAZORCAR-TKY-AUTO078,Tokyo,Gillette/Venus,Razor Cartridges,male,Gillette Mach3 Cartridges 4-pack,100,6028.0,JPY,29802980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098VVR8PX,OK
+GILLET-RAZORCAR-TKY-AUTO079,Tokyo,Gillette/Venus,Razor Cartridges,female,Gillette Venus Smooth Cartridges 6-pack,100,2725.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CWKX13XR,OK
+GILLET-RAZORCAR-TKY-AUTO079,Tokyo,Gillette/Venus,Razor Cartridges,male,Gillette Mach3 Cartridges 6-pack,100,6028.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B098VVR8PX,OK
+ALPHAV-SHAMPOO-TKY-AUTO001,Tokyo,Alphavet,Shampoo,female,Alphavet Argan Oil Shampoo Women (200ml),200,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0CHDGXHCY,BLOCKED
+ALPHAV-SHAMPOO-TKY-AUTO001,Tokyo,Alphavet,Shampoo,male,Alphavet Men Strong Hold Shampoo (200ml),200,1691.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0GMMN3LMK,OK
+BIOTIQ-SHAMPOO-TKY-AUTO021,Tokyo,Biotique,Shampoo,female,Biotique Bio Kelp Fresh Growth Shampoo,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B07YWNQPWB,PRICE_NOT_FOUND
+BIOTIQ-SHAMPOO-TKY-AUTO021,Tokyo,Biotique,Shampoo,male,Biotique Bio Green Apple Shampoo,100,2762.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00KCLZ1KQ,OK
+DOVE-SHAMPOO-TKY-AUTO057,Tokyo,Dove,Shampoo,female,Dove Intense Repair Shampoo 650ml,650,2926.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LNBRLYQ,OK
+DOVE-SHAMPOO-TKY-AUTO057,Tokyo,Dove,Shampoo,male,Dove Men+Care Strengthening Shampoo 650ml,650,1379.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7ZLQ8P7,OK
+DOVE-SHAMPOO-TKY-AUTO058,Tokyo,Dove,Shampoo,female,Dove Moisture Care Shampoo 500ml,500,1463.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B089WSBTYD,OK
+DOVE-SHAMPOO-TKY-AUTO058,Tokyo,Dove,Shampoo,male,Dove Men+Care Scalp Care Shampoo 480ml,480,450.0,JPY,28462846.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07GPX5V2Z,OK
+GARNIE-SHAMPOO-TKY-AUTO073,Tokyo,Garnier,Shampoo,female,Garnier Ultra Blends Soy Milk Shampoo 340ml,340,2800.0,JPY,59505950.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01AUJ1RAW,OK
+GARNIE-SHAMPOO-TKY-AUTO073,Tokyo,Garnier,Shampoo,male,Garnier Men Anti-Dandruff Shampoo 340ml,340,5940.0,JPY,29702970.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08PQLBM2M,OK
+GARNIE-SHAMPOO-TKY-AUTO074,Tokyo,Garnier,Shampoo,female,Garnier Fructis Smooth & Shine Shampoo 400ml,400,2504.0,JPY,77067706.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01MFF7A02,OK
+GARNIE-SHAMPOO-TKY-AUTO074,Tokyo,Garnier,Shampoo,male,Garnier Fructis Men Clean & Fresh Shampoo 400ml,400,1980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0050N4DLE,OK
+HEADSH-SHAMPOO-TKY-AUTO086,Tokyo,Head & Shoulders,Shampoo,female,H&S Smooth & Silky Shampoo,100,2600.0,JPY,3999.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00556SIDK,OK
+HEADSH-SHAMPOO-TKY-AUTO086,Tokyo,Head & Shoulders,Shampoo,male,H&S Men Ultra Shampoo,100,1950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009PLSPS4,OK
+HEADSH-SHAMPOO-TKY-AUTO087,Tokyo,Head & Shoulders,Shampoo,female,H&S Smooth Damage Care Shampoo 440ml,440,3051.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08MT8DMFT,OK
+HEADSH-SHAMPOO-TKY-AUTO087,Tokyo,Head & Shoulders,Shampoo,male,H&S Men Scalp Care Shampoo 400ml,400,1950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009PLSPS4,OK
+HNS-SHAMP-TKY-01,Tokyo,Head & Shoulders,Shampoo,female,Head & Shoulders Smooth & Silky Shampoo 440ml,440,2600.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08QZ8CLPS,OK
+HNS-SHAMP-TKY-01,Tokyo,Head & Shoulders,Shampoo,male,Head & Shoulders Men Scalp Care Shampoo 400ml,400,3535.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00ENZRLRS,OK
+HIMALA-SHAMPOO-TKY-AUTO095,Tokyo,Himalaya,Shampoo,female,Himalaya Anti-Dandruff Shampoo Women 200ml,200,1930.0,JPY,770770.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07D6ZLNQ2,OK
+HIMALA-SHAMPOO-TKY-AUTO095,Tokyo,Himalaya,Shampoo,male,Himalaya Men Anti-Dandruff Shampoo 200ml,200,1250.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G45GF96J,OK
+INDULE-SHAMPOO-TKY-AUTO102,Tokyo,Indulekha,Shampoo,female,Indulekha Bringha Shampoo 200ml,200,3029.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08N6J6TS3,OK
+INDULE-SHAMPOO-TKY-AUTO102,Tokyo,Indulekha,Shampoo,male,Indulekha Men Hair Vitalizer 200ml,200,2270.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00S850C5C,OK
+KAOMER-SHAMPOO-TKY-AUTO121,Tokyo,Kao/Merit,Shampoo,female,Kao Merit Shampoo 480ml,480,1653.0,JPY,1734.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G6TN5HVX,OK
+KAOMER-SHAMPOO-TKY-AUTO121,Tokyo,Kao/Merit,Shampoo,male,Kao Merit Men Shampoo 480ml,480,1000.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07C22VTK2,OK
+KOSESO-SHAMPOO-TKY-AUTO127,Tokyo,Kose/Softymo,Shampoo,female,Kose Softymo Speedy Shampoo Women 500ml,500,2160.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07DQBMK4B,OK
+KOSESO-SHAMPOO-TKY-AUTO127,Tokyo,Kose/Softymo,Shampoo,male,Kose Men Softymo Shampoo 500ml,500,794.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00LO87CXK,OK
+KRASTA-SHAMPOO-TKY-AUTO130,Tokyo,Kérastase,Shampoo,female,Kérastase Bain Satin 1 Shampoo (250ml),250,4180.0,JPY,59505950.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01LKZ0Q20,OK
+KRASTA-SHAMPOO-TKY-AUTO130,Tokyo,Kérastase,Shampoo,male,Kérastase Homme Bain Energisant (250ml),250,4180.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7VM8BG4,OK
+LOREAL-SHAMPOO-TKY-AUTO136,Tokyo,L'Oreal,Shampoo,female,L'Oreal Paris Total Repair 5 Shampoo 360ml,360,2530.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B094DHJ3X3,OK
+LOREAL-SHAMPOO-TKY-AUTO136,Tokyo,L'Oreal,Shampoo,male,L'Oreal Men Expert Pure & Matte Shampoo 360ml,360,5390.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F9KVG312,OK
+LION-SHAMPOO-TKY-AUTO148,Tokyo,Lion,Shampoo,female,Lion Systema Scalp Shampoo Women (400ml),400,879.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7SWH8XK,OK
+LION-SHAMPOO-TKY-AUTO148,Tokyo,Lion,Shampoo,male,Lion Banon Men Shampoo (400ml),400,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B0GJTX2ZHC,PRICE_NOT_FOUND
+MANDOM-SHAMPOO-TKY-AUTO174,Tokyo,Mandom,Shampoo,female,Lucido-L Shampoo Women (400ml),400,982.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B084KRRWWS,OK
+MANDOM-SHAMPOO-TKY-AUTO174,Tokyo,Mandom,Shampoo,male,Lucido Men Shampoo (400ml),400,982.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B084KRRWWS,OK
+PANTEN-SHAMPOO-TKY-AUTO204,Tokyo,Pantene,Shampoo,female,Pantene Silky Smooth Shampoo 340ml,340,2246.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09QS7HQG7,OK
+PANTEN-SHAMPOO-TKY-AUTO204,Tokyo,Pantene,Shampoo,male,Pantene Men Anti-Dandruff Shampoo 340ml,340,720.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09QSBNML9,OK
+PANTEN-SHAMPOO-TKY-AUTO205,Tokyo,Pantene,Shampoo,female,Pantene Silky Smooth Care Shampoo 400ml,400,2246.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09QS7HQG7,OK
+PANTEN-SHAMPOO-TKY-AUTO205,Tokyo,Pantene,Shampoo,male,Pantene Men Anti-Dandruff Shampoo 400ml,400,1430.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B074F11QHD,OK
+PANTENE-SHAMP-TKY-01,Tokyo,Pantene,Shampoo,female,Pantene Silky Smooth Care Shampoo 400ml,400,720.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09QSBNML9,OK
+PANTENE-SHAMP-TKY-01,Tokyo,Pantene,Shampoo,male,Pantene Men Anti-Dandruff Shampoo 400ml,400,662.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B074F11QHD,OK
+SHIS-SHAMP-TKY-01,Tokyo,Shiseido,Shampoo,female,Shiseido Tsubaki Premium Moist Shampoo 490ml,490,2799.0,JPY,,False,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B09JFMNQ1C,OK
+SHIS-SHAMP-TKY-01,Tokyo,Shiseido,Shampoo,male,Shiseido Men Scalp Care Shampoo 300ml,300,4730.0,JPY,59505950.0,True,Amazon.co.jp,4,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FY5KJVP7,OK
+ANESSA-SUNSCREE-TKY-AUTO002,Tokyo,Anessa,Sunscreen,female,Anessa Perfect UV Sunscreen Women SPF50 (60ml),60,2181.0,JPY,29802980.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CSSWL2B5,OK
+ANESSA-SUNSCREE-TKY-AUTO002,Tokyo,Anessa,Sunscreen,male,Anessa Men Sunscreen Gel SPF50 (90ml),90,2970.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0GFLG2K7G,OK
+BIODER-SUNSCREE-TKY-AUTO007,Tokyo,Bioderma,Sunscreen,female,Bioderma Photoderm Women SPF50+ (75ml),75,4460.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00V5CQYGQ,OK
+BIODER-SUNSCREE-TKY-AUTO007,Tokyo,Bioderma,Sunscreen,male,Bioderma Men SPF50 Fluid (40ml),40,3080.0,JPY,3300.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B009NPX456,OK
+BIOR-SUNSCREE-TKY-AUTO016,Tokyo,Bioré,Sunscreen,female,Bioré UV Aqua Rich Watery Essence SPF50+ 70ml,70,1205.0,JPY,1650.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DS7YW98H,OK
+BIOR-SUNSCREE-TKY-AUTO016,Tokyo,Bioré,Sunscreen,male,Bioré UV Athlizm Skin Protect Milk SPF50+ 65ml,65,1617.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08RB63XXP,OK
+CUREL-SUNSCREE-TKY-AUTO035,Tokyo,Curel,Sunscreen,female,Curel UV Protection Face Milk SPF50+ 60ml,60,1760.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00URAKW2E,OK
+CUREL-SUNSCREE-TKY-AUTO035,Tokyo,Curel,Sunscreen,male,Curel Men UV Protection Cream 60ml,60,1760.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0BT99BF83,OK
+DOVE-SUNSCREE-TKY-AUTO059,Tokyo,Dove,Sunscreen,female,Dove Even Tone Antiperspirant+SPF Roll-On 50ml,50,2200.0,JPY,72387238.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00GY2B6NS,OK
+DOVE-SUNSCREE-TKY-AUTO059,Tokyo,Dove,Sunscreen,male,Dove Men+Care Control Antiperspirant Roll-On 50ml,50,3480.0,JPY,34803480.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08LK1LBFX,OK
+KOSESO-SUNSCREE-TKY-AUTO128,Tokyo,Kose/Softymo,Sunscreen,female,Kose Suncut Perfect UV Cream SPF50+ 50ml,50,722.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CQXGMJYB,OK
+KOSESO-SUNSCREE-TKY-AUTO128,Tokyo,Kose/Softymo,Sunscreen,male,Kose Men Suncut UV Protect Milk 50ml,50,2200.0,JPY,28462846.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08VY2QQPP,OK
+LAKME-SUNSCREE-TKY-AUTO138,Tokyo,Lakme,Sunscreen,female,Lakme Sun Expert SPF 50 PA+++ Ultra Matte Lotion 1,100,1726.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B01BBNF6GM,OK
+LAKME-SUNSCREE-TKY-AUTO138,Tokyo,Lakme,Sunscreen,male,Garnier Men Acno Fight SPF 20 Moisturizer 100ml,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/2162109743,PRICE_NOT_FOUND
+LION-SUNSCREE-TKY-AUTO149,Tokyo,Lion,Sunscreen,female,Lion Soflan Premium UV Milk Women SPF50 (60ml),60,1680.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D7ST4MCS,OK
+LION-SUNSCREE-TKY-AUTO149,Tokyo,Lion,Sunscreen,male,Lion Ban Sun Block Men SPF50 (60ml),60,990.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B078WTLCNH,OK
+LOTUSH-SUNSCREE-TKY-AUTO154,Tokyo,Lotus Herbals,Sunscreen,female,Lotus Herbals SafeSun SPF 50 Women (50g),50,1624.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/6002349782,OK
+LOTUSH-SUNSCREE-TKY-AUTO154,Tokyo,Lotus Herbals,Sunscreen,male,Lotus Herbals Men SPF 30 (50g),50,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B001HWYT1Q,PRICE_NOT_FOUND
+MINIMA-SUNSCREE-TKY-AUTO181,Tokyo,Minimalist,Sunscreen,female,Minimalist SPF 50 PA++++ Sunscreen Women (50ml),50,3783.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0D4TVZTQC,OK
+MINIMA-SUNSCREE-TKY-AUTO181,Tokyo,Minimalist,Sunscreen,male,Minimalist Men SPF 30 (50ml),50,3465.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0G7ZMYLVH,OK
+NEUTRO-SUNSCREE-TKY-AUTO184,Tokyo,Neutrogena,Sunscreen,female,Neutrogena Ultra Sheer Sunscreen SPF 50+ Women 88m,100,638.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B000EPA4GQ,OK
+NEUTRO-SUNSCREE-TKY-AUTO184,Tokyo,Neutrogena,Sunscreen,male,Neutrogena Men Triple Protect SPF 20 Face Lotion 8,100,2580.0,JPY,1111.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DMC6ZRJZ,OK
+OLAY-SUNSCREE-TKY-AUTO199,Tokyo,Olay,Sunscreen,female,Olay Natural White SPF 24 Day Cream 50g,50,7950.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B08CD979ZS,OK
+OLAY-SUNSCREE-TKY-AUTO199,Tokyo,Olay,Sunscreen,male,Olay Men Regenerist SPF 15 Moisturiser 50g,50,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B00ENZT4M8,PRICE_NOT_FOUND
+COLGAT-TOOTHPAS-TKY-AUTO026,Tokyo,Colgate,Toothpaste,female,Colgate Visible White Teeth Whitening Toothpaste 1,100,1780.0,JPY,620620.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B010V82ZD0,OK
+COLGAT-TOOTHPAS-TKY-AUTO026,Tokyo,Colgate,Toothpaste,male,Colgate Active Salt Toothpaste 100g,100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B07D718QHH,PRICE_NOT_FOUND
+COLGAT-TOOTHPAS-TKY-AUTO027,Tokyo,Colgate,Toothpaste,female,Colgate Optic White Women (100g),100,1620.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0B1SFCYSN,OK
+COLGAT-TOOTHPAS-TKY-AUTO027,Tokyo,Colgate,Toothpaste,male,Colgate Men Active Clean (100g),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B07D718QHH,PRICE_NOT_FOUND
+COLGAT-TOOTHPAS-TKY-AUTO028,Tokyo,Colgate,Toothpaste,female,Colgate Visible White Women Toothpaste (100g),100,1780.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B010V82ZD0,OK
+COLGAT-TOOTHPAS-TKY-AUTO028,Tokyo,Colgate,Toothpaste,male,Colgate Active Salt Men (100g),100,,JPY,,False,Amazon.co.jp,3,LOW,2026-03-10,https://www.amazon.co.jp/dp/B07D718QHH,PRICE_NOT_FOUND
+HIMALA-TOOTHPAS-TKY-AUTO096,Tokyo,Himalaya,Toothpaste,female,Himalaya Botanique Whitening Complete Care Toothpa,100,2420.0,JPY,34803480.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FCCYWWB9,OK
+HIMALA-TOOTHPAS-TKY-AUTO096,Tokyo,Himalaya,Toothpaste,male,Himalaya Men Active Fresh Toothpaste 80g,80,2000.0,JPY,218218.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FCBRDYM9,OK
+KAOMER-TOOTHPAS-TKY-AUTO122,Tokyo,Kao/Merit,Toothpaste,female,Kao Clear Clean Premium Toothpaste Women 120g,120,723.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0F3WS6K3Z,OK
+KAOMER-TOOTHPAS-TKY-AUTO122,Tokyo,Kao/Merit,Toothpaste,male,Kao Clear Clean Men Toothpaste 120g,120,1114.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0FHGXNWJB,OK
+LION-TOOTHPAS-TKY-AUTO150,Tokyo,Lion,Toothpaste,female,Lion Clinica Advantage Fresh Toothpaste 130g,130,2980.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B007Q1LJ6A,OK
+LION-TOOTHPAS-TKY-AUTO150,Tokyo,Lion,Toothpaste,male,Lion Clinica Men Cool Toothpaste 130g,130,945.0,JPY,40004000.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DPB3BNNP,OK
+LION-TOOTHPAS-TKY-AUTO151,Tokyo,Lion,Toothpaste,female,Lion Systema Haguki Plus Toothpaste 95g,95,882.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B096G4R18Y,OK
+LION-TOOTHPAS-TKY-AUTO151,Tokyo,Lion,Toothpaste,male,Lion Systema Men Fresh Toothpaste 95g,95,2120.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0DTK761G9,OK
+LION-TOOTHPAS-TKY-AUTO152,Tokyo,Lion,Toothpaste,female,Lion Systema Haguki Women Gel Toothpaste (95g),95,4790.0,JPY,17701770.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07N68TG8T,OK
+LION-TOOTHPAS-TKY-AUTO152,Tokyo,Lion,Toothpaste,male,Lion Dentor Systema Men Toothpaste (95g),95,4790.0,JPY,21202120.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B00YTYQWH8,OK
+ORALB-TOOTHPAS-TKY-AUTO200,Tokyo,Oral-B,Toothpaste,female,Oral-B Whitening (100g),100,3580.0,JPY,119119.0,True,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B07HPHQ23M,OK
+ORALB-TOOTHPAS-TKY-AUTO200,Tokyo,Oral-B,Toothpaste,male,Oral-B Pro-Expert Men (100g),100,1699.0,JPY,,False,Amazon.co.jp,3,HIGH,2026-03-10,https://www.amazon.co.jp/dp/B0CN6VMT3N,OK
