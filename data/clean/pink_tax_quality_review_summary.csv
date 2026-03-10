@@ -1,0 +1,20 @@
+metric,value
+total_rows,303
+flagged_rows,185
+flagged_pct,61.06
+severity:high,0
+severity:medium,137
+severity:low,48
+issue:city_category_pair_count_low,122
+issue:city_pair_count_below_recommended,120
+issue:extreme_pink_tax,19
+issue:suspicious_size_ratio,6
+issue:suspicious_price_ratio,5
+city_unique_pairs:Hyderabad,120
+city_unique_pairs:Tokyo,183
+retailer_rows:Amazon.co.jp,149
+retailer_rows:Amazon.in,120
+retailer_rows:Rakuten Japan,34
+city_retailer_rows:Hyderabad:Amazon.in,120
+city_retailer_rows:Tokyo:Amazon.co.jp,149
+city_retailer_rows:Tokyo:Rakuten Japan,34
