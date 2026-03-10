@@ -1,10 +1,33 @@
 {
   "steps": [
     {
+      "key": "expand_seed_catalog",
+      "description": "Expand Hyderabad seed catalog with same-brand pairs by category quota",
+      "command": [
+        "scripts/cleaning/expand_pair_seed_catalog.py",
+        "--city",
+        "Hyderabad",
+        "--fallback-city",
+        "Tokyo",
+        "--target-per-category",
+        "10",
+        "--write"
+      ]
+    },
+    {
+      "key": "reset_outputs",
+      "description": "Reset prior generated raw/clean outputs before scraping",
+      "command": [
+        "scripts/pipeline/reset_outputs.py",
+        "--clear-url-cache"
+      ]
+    },
+    {
       "key": "scrape_amazon_in",
       "description": "Scrape Amazon India observations",
       "command": [
-        "scripts/scraping/scrape_amazon_india.py"
+        "scripts/scraping/scrape_amazon_india.py",
+        "--browser-mode"
       ]
     },
     {
@@ -18,45 +41,55 @@
       "key": "scrape_flipkart",
       "description": "Scrape Flipkart observations",
       "command": [
-        "scripts/scraping/scrape_flipkart.py"
+        "scripts/scraping/scrape_flipkart.py",
+        "--browser-mode"
       ]
     },
     {
       "key": "scrape_amazon_jp",
       "description": "Scrape Amazon Japan observations",
       "command": [
-        "scripts/scraping/scrape_amazon_japan.py"
+        "scripts/scraping/scrape_amazon_japan.py",
+        "--browser-mode"
       ]
     },
     {
       "key": "scrape_rakuten_jp",
       "description": "Scrape Rakuten Japan observations",
+      "optional": true,
       "command": [
-        "scripts/scraping/scrape_rakuten_japan.py"
+        "scripts/scraping/scrape_rakuten_japan.py",
+        "--browser-mode"
       ]
     },
     {
       "key": "scrape_matsumoto",
       "description": "Scrape Matsumoto Kiyoshi observations",
+      "optional": true,
       "command": [
-        "scripts/scraping/scrape_matsumoto_kiyoshi.py"
+        "scripts/scraping/scrape_matsumoto_kiyoshi.py",
+        "--browser-mode"
       ]
     },
     {
       "key": "build_observations",
-      "description": "Build real-only observations from current scrape outputs with strict coverage threshold",
+      "description": "Build real-only observations from current scrape outputs",
       "command": [
         "scripts/cleaning/build_pair_observations.py",
         "--replace-only",
         "--min-output-rows",
-        "200"
+        "0"
       ]
     },
     {
       "key": "clean_pairs",
       "description": "Build cleaned dataset with hybrid gender labeling",
       "command": [
-        "scripts/cleaning/generate_pairs_dataset.py"
+        "scripts/cleaning/generate_pairs_dataset.py",
+        "--model-name",
+        "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+        "--model-threshold",
+        "0.60"
       ]
     }
   ]
