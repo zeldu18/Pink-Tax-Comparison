@@ -7,7 +7,11 @@
   "currency": "INR",
   "search_base_url": "https://www.bigbasket.com/ps/?q={query}",
   "blinkit_search_base_url": "https://blinkit.com/s/?q={query}",
-  "enable_ddg_fallback": false,
+  "browser_wait_seconds": 10,
+  "driver_get_retries": 2,
+  "driver_get_retry_pause_min_seconds": 2.0,
+  "driver_get_retry_pause_max_seconds": 4.0,
+  "driver_recycle_every": 30,
   "wait_timeout_seconds": 14,
   "page_load_timeout_seconds": 25,
   "page_settle_seconds": 2.5,
@@ -17,5 +21,26 @@
   "product_delay_max_seconds": 8.0,
   "user_agents": [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+  ],
+  "allowed_brands": [
+    "Dove",
+    "Nivea",
+    "Gillette/Venus",
+    "Biotique",
+    "Garnier",
+    "Himalaya",
+    "Lakme",
+    "Mamaearth",
+    "Colgate",
+    "Head & Shoulders",
+    "Lux",
+    "Fiama",
+    "Godrej",
+    "Olay",
+    "Parachute",
+    "Neutrogena",
+    "Engage",
+    "Fogg",
+    "Oral-B"
   ]
 }

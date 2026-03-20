@@ -37,7 +37,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--include-optional",
         action="store_true",
-        help="Include optional pipeline steps (for example Rakuten scraping).",
+        help="Compatibility flag. Optional pipeline steps are included by default.",
+    )
+    parser.add_argument(
+        "--no-optional",
+        action="store_true",
+        help="Skip optional pipeline steps.",
     )
     args = parser.parse_args()
 
@@ -46,7 +51,7 @@ if __name__ == "__main__":
 
     if args.step:
         cmd.extend(["--step", args.step])
-    if args.include_optional:
+    if not args.no_optional:
         cmd.append("--include-optional")
 
     result = subprocess.run(cmd, cwd=root, check=False)

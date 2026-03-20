@@ -16,6 +16,7 @@
   "product_delay_max_seconds": 8.0,
   "ddg_delay_min_seconds": 3.0,
   "ddg_delay_max_seconds": 6.0,
+  "enable_ddg_fallback": false,
   "block_pause_seconds": 30.0,
   "fail_fast_on_block": true,
   "user_agents": [
@@ -23,5 +24,26 @@
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0"
+  ],
+  "allowed_brands": [
+    "Dove",
+    "Nivea",
+    "Gillette/Venus",
+    "Biotique",
+    "Garnier",
+    "Himalaya",
+    "Lakme",
+    "Mamaearth",
+    "Colgate",
+    "Head & Shoulders",
+    "Lux",
+    "Fiama",
+    "Godrej",
+    "Olay",
+    "Parachute",
+    "Neutrogena",
+    "Engage",
+    "Fogg",
+    "Oral-B"
   ]
 }

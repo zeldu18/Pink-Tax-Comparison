@@ -34,7 +34,11 @@
       "key": "scrape_bigbasket",
       "description": "Scrape BigBasket observations",
       "command": [
-        "scripts/scraping/scrape_bigbasket.py"
+        "scripts/scraping/scrape_bigbasket.py",
+        "--browser-mode",
+        "--headful",
+        "--user-data-dir",
+        "/tmp/pink_tax_chrome_profile"
       ]
     },
     {
@@ -42,7 +46,10 @@
       "description": "Scrape Flipkart observations",
       "command": [
         "scripts/scraping/scrape_flipkart.py",
-        "--browser-mode"
+        "--browser-mode",
+        "--headful",
+        "--user-data-dir",
+        "/tmp/pink_tax_chrome_profile"
       ]
     },
     {

@@ -1,20 +1,26 @@
 metric,value
-total_rows,303
-flagged_rows,185
-flagged_pct,61.06
-severity:high,0
-severity:medium,137
-severity:low,48
-issue:city_category_pair_count_low,122
-issue:city_pair_count_below_recommended,120
-issue:extreme_pink_tax,19
-issue:suspicious_size_ratio,6
+total_rows,458
+flagged_rows,116
+flagged_pct,25.33
+severity:high,59
+severity:medium,57
+severity:low,0
+issue:invalid_retailer_for_city,59
+issue:city_category_pair_count_low,34
+issue:extreme_pink_tax,24
+issue:suspicious_size_ratio,7
 issue:suspicious_price_ratio,5
-city_unique_pairs:Hyderabad,120
-city_unique_pairs:Tokyo,183
+city_unique_pairs:Hyderabad,227
+city_unique_pairs:Tokyo,231
 retailer_rows:Amazon.co.jp,149
 retailer_rows:Amazon.in,120
+retailer_rows:Blinkit,59
+retailer_rows:Flipkart,48
+retailer_rows:Matsumoto Kiyoshi,48
 retailer_rows:Rakuten Japan,34
 city_retailer_rows:Hyderabad:Amazon.in,120
+city_retailer_rows:Hyderabad:Blinkit,59
+city_retailer_rows:Hyderabad:Flipkart,48
 city_retailer_rows:Tokyo:Amazon.co.jp,149
+city_retailer_rows:Tokyo:Matsumoto Kiyoshi,48
 city_retailer_rows:Tokyo:Rakuten Japan,34
