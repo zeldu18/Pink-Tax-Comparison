@@ -27,6 +27,7 @@ frontend/**/.cache/
 frontend/**/coverage/
 frontend/**/public/data/*.json
 !frontend/**/public/data/.gitkeep
+!frontend/public/data/eda_summary.json
 frontend/**/public/charts/
 frontend/**/public/charts/*.png
 npm-debug.log*
