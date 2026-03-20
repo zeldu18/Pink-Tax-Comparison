@@ -6,6 +6,7 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date, datetime
 from pathlib import Path
+from typing import Any
 
 def to_float(raw: object | None) -> float | None:
     """
@@ -135,3 +136,30 @@ def select_diverse_pair_codes(products: list[dict], limit: int) -> set[str]:
         category_counts[category] += 1
 
     return set(selected)
+
+
+def enforce_single_window(driver: Any) -> None:
+    """
+    Keep Selenium bound to one primary window and close unexpected extra tabs.
+    """
+
+    try:
+        handles = list(driver.window_handles)
+    except Exception:
+        return
+
+    if not handles:
+        return
+
+    primary = handles[0]
+    for handle in handles[1:]:
+        try:
+            driver.switch_to.window(handle)
+            driver.close()
+        except Exception:
+            continue
+
+    try:
+        driver.switch_to.window(primary)
+    except Exception:
+        pass

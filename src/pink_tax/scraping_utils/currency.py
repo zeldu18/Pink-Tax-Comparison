@@ -41,7 +41,7 @@ def _nearest_rate_date(obs_date: str) -> str:
 
 
 def to_usd(price_local: float, currency: str,
-           obs_date: str = None) -> float:
+           obs_date: str | None = None) -> float:
     """
     Convert a local price to USD at the market exchange rate.
 
@@ -70,7 +70,7 @@ def to_usd_ppp(price_local: float, currency: str) -> float:
 
     return round(price_local * ppp_rates[currency], 6)
 
-def get_rate(currency: str, obs_date: str = None,
+def get_rate(currency: str, obs_date: str | None = None,
              ppp: bool = False) -> float:
     """
     Get the exchange rate coefficient (usd per local unit).
