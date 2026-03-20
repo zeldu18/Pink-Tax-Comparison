@@ -14,8 +14,9 @@ from datetime import date
 from pathlib import Path
 from bs4 import BeautifulSoup  # type: ignore[import-not-found]
 from urllib.parse import quote_plus, unquote
+from typing import Any
 import csv, json, time, random, re, argparse, logging, sys, unicodedata
-    import requests  # type: ignore[import-not-found,import-untyped]
+import requests  # type: ignore[import-not-found,import-untyped]
 
 root = Path(__file__).resolve().parents[2]
 src = root / "src"
@@ -31,7 +32,7 @@ from pink_tax.scraping_config import (
     cfg_str,
     load_scraping_source_config,
 )
-from pink_tax.utils import select_diverse_pair_codes
+from pink_tax.utils import enforce_single_window, select_diverse_pair_codes
 
 # Optional Selenium browser mode
 selenium_ok = False
@@ -147,7 +148,13 @@ def build_query(name: str, gender: str, size: str) -> str:
     Build a search query for a product based on its name, gender, and size.
     """
 
-    words = name.split()[:7]
+    cleaned_name = re.sub(
+        r"\b(japan|japanese|tokyo|jp)\b|[日本東京女性用男性用]+",
+        " ",
+        str(name),
+        flags=re.IGNORECASE,
+    )
+    words = cleaned_name.split()[:7]
     q = " ".join(words)
     try:
         sz = float(size)
@@ -170,6 +177,20 @@ def normalize_text(text: str) -> str:
     no_marks = "".join(ch for ch in folded if not unicodedata.combining(ch))
     low = no_marks.lower()
     return re.sub(r"[^a-z0-9]+", " ", low).strip()
+
+
+def as_text(value: Any) -> str:
+    """
+    Convert BeautifulSoup attribute values (str/list/None/other) to plain text.
+    """
+
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(v) for v in value if v is not None)
+    return str(value)
 
 def build_query_variants(
     base_query: str,
@@ -274,25 +295,34 @@ def build_driver(headless: bool = True, user_data_dir: str = ""):
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_experimental_option(
+        "prefs",
+        {
+            "profile.default_content_setting_values.notifications": 2,
+            "profile.default_content_setting_values.popups": 0,
+        },
+    )
     if user_data_dir:
         opts.add_argument(f"--user-data-dir={user_data_dir}")
     opts.add_argument(f"--user-agent={random.choice(user_agents)}")
+    from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebDriver  # type: ignore[import-not-found]
+    from selenium.webdriver.chrome.service import Service as ChromeService  # type: ignore[import-not-found]
+
     driver = None
     try:
-        from selenium.webdriver.chrome.service import Service  # type: ignore[import-not-found]
-
         cached = cached_chromedriver_path()
         if cached:
-            driver = webdriver.Chrome(service=Service(cached), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(cached), options=opts)
         else:
             from webdriver_manager.chrome import ChromeDriverManager  # type: ignore[import-not-found]
 
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
+            driver = ChromeWebDriver(
+                service=ChromeService(ChromeDriverManager().install()),
                 options=opts,
             )
     except Exception:
-        driver = webdriver.Chrome(options=opts)
+        driver = ChromeWebDriver(options=opts)
+    enforce_single_window(driver)
     driver.execute_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
     return driver
 
@@ -307,6 +337,7 @@ def search_amazon_one(query: str, session, driver=None) -> BeautifulSoup | None:
         url = f"{url}{joiner}i={quote_plus(search_index)}"
     if driver is not None:
         try:
+            enforce_single_window(driver)
             driver.get(url)
             try:
                 WebDriverWait(driver, browser_wait_seconds).until(
@@ -314,8 +345,9 @@ def search_amazon_one(query: str, session, driver=None) -> BeautifulSoup | None:
                 )
             except TimeoutException:
                 pass
+            enforce_single_window(driver)
             page_html = driver.page_source
-            if _is_blocked(page_html):
+            if is_blocked(page_html):
                 return None
             return BeautifulSoup(page_html, "html.parser")
         except WebDriverException as exc:
@@ -332,7 +364,7 @@ def pick_asin_from_soup(soup: BeautifulSoup, brand_kw: str, gender_kw: list[str]
     norm_gender = [normalize_text(k) for k in gender_kw if normalize_text(k)]
 
     for el in soup.select("div[data-asin]"):
-        asin = el.get("data-asin", "").strip()
+        asin = as_text(el.get("data-asin")).strip()
         if len(asin) != 10:
             continue
         title_raw = ""
@@ -410,7 +442,7 @@ def ddg_fallback(query: str, session) -> str | None:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
         for a in soup.select("a.result__a, a[href*='amazon.in']"):
-            href = unquote(a.get("href", ""))
+            href = unquote(as_text(a.get("href")))
             m = re.search(r"https?://(?:www\.)?amazon\.in/dp/[A-Z0-9]{10}", href)
             if m:
                 url = m.group(0)
@@ -541,6 +573,7 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
 
     if driver is not None:
         try:
+            enforce_single_window(driver)
             driver.get(url)
             try:
                 WebDriverWait(driver, browser_wait_seconds).until(
@@ -548,8 +581,9 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
                 )
             except TimeoutException:
                 pass
+            enforce_single_window(driver)
             page_html = driver.page_source
-            if _is_blocked(page_html):
+            if is_blocked(page_html):
                 row["scrape_status"] = "BLOCKED"
                 return row
             soup = BeautifulSoup(page_html, "html.parser")
@@ -632,7 +666,7 @@ def main(
 
     session = requests.Session()
     driver = None
-    if browser_mode:
+    if browser_mode and not dry_run:
         if not selenium_ok:
             log.error("Selenium not installed. Run: pip install selenium webdriver-manager")
             return

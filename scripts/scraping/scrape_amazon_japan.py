@@ -14,6 +14,7 @@ Features:
 import csv, json, time, random, re, argparse, logging, sys, unicodedata
 from datetime import date
 from pathlib import Path
+from typing import Any
 from urllib.parse import quote, quote_plus, unquote
 
 import requests  # type: ignore[import-not-found,import-untyped]
@@ -47,7 +48,7 @@ from pink_tax.scraping_config import (
     cfg_str,
     load_scraping_source_config,
 )
-from pink_tax.utils import select_diverse_pair_codes
+from pink_tax.utils import enforce_single_window, select_diverse_pair_codes
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s  %(levelname)s  %(message)s",
@@ -80,6 +81,11 @@ product_url_template = cfg_str(
 referer_url = cfg_str(scraper_config, "referer_url", "https://www.amazon.co.jp")
 search_index = cfg_str(scraper_config, "search_index", "beauty")
 browser_wait_seconds = cfg_float(scraper_config, "browser_wait_seconds", 10.0)
+allowed_brands = {
+    b.strip().lower()
+    for b in cfg_list(scraper_config, "allowed_brands", [])
+    if b.strip()
+}
 
 default_user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -113,6 +119,7 @@ def load_tky_products() -> list[dict]:
             f"{root / 'data' / 'clean' / 'pink_tax_pairs.csv'}"
         )
     products, seen = [], set()
+    skipped_brand = 0
     with open(pairs_csv, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             if row["city"] != city:
@@ -122,6 +129,9 @@ def load_tky_products() -> list[dict]:
                 continue
             seen.add(pc)
             brand_query = row["brand"].split("/")[0].strip()
+            if allowed_brands and brand_query.lower() not in allowed_brands:
+                skipped_brand += 1
+                continue
             for gender, name_col, size_col in [
                 ("female", "female_product", "female_size"),
                 ("male",   "male_product",   "male_size"),
@@ -144,12 +154,20 @@ def load_tky_products() -> list[dict]:
                     "gender_kw":    female_kw if gender == "female" else male_kw,
                     "category_kw":  normalize_text(row["category"]),
                 })
+    if skipped_brand:
+        log.info(f"Brand filter active: skipped {skipped_brand} pairs outside allowed_brands")
     log.info(f"Loaded {len(products)} products from {len(seen)} pairs ({city})")
     return products
 
 def build_query(name: str, gender: str, size: str) -> str:
     # Use English brand + product name 
-    words = name.split()[:7]
+    cleaned_name = re.sub(
+        r"\b(japan|japanese|tokyo|jp)\b|[日本東京女性用男性用]+",
+        " ",
+        str(name),
+        flags=re.IGNORECASE,
+    )
+    words = cleaned_name.split()[:7]
     q = " ".join(words)
     try:
         sz = float(size)
@@ -171,6 +189,20 @@ def normalize_text(text: str) -> str:
     no_marks = "".join(ch for ch in folded if not unicodedata.combining(ch))
     low = no_marks.lower()
     return re.sub(r"[^a-z0-9\u3040-\u30ff\u4e00-\u9fff]+", " ", low).strip()
+
+
+def as_text(value: Any) -> str:
+    """
+    Convert BeautifulSoup attribute values (str/list/None/other) to plain text.
+    """
+
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(v) for v in value if v is not None)
+    return str(value)
 
 def build_query_variants(
     base_query: str,
@@ -271,25 +303,34 @@ def build_driver(headless: bool = True, user_data_dir: str = ""):
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_experimental_option(
+        "prefs",
+        {
+            "profile.default_content_setting_values.notifications": 2,
+            "profile.default_content_setting_values.popups": 0,
+        },
+    )
     if user_data_dir:
         opts.add_argument(f"--user-data-dir={user_data_dir}")
     opts.add_argument(f"--user-agent={random.choice(user_agents)}")
+    from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebDriver  # type: ignore[import-not-found]
+    from selenium.webdriver.chrome.service import Service as ChromeService  # type: ignore[import-not-found]
+
     driver = None
     try:
-        from selenium.webdriver.chrome.service import Service  # type: ignore[import-not-found]
-
         cached = cached_chromedriver_path()
         if cached:
-            driver = webdriver.Chrome(service=Service(cached), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(cached), options=opts)
         else:
             from webdriver_manager.chrome import ChromeDriverManager  # type: ignore[import-not-found]
 
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
+            driver = ChromeWebDriver(
+                service=ChromeService(ChromeDriverManager().install()),
                 options=opts,
             )
     except Exception:
-        driver = webdriver.Chrome(options=opts)
+        driver = ChromeWebDriver(options=opts)
+    enforce_single_window(driver)
     driver.execute_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
     return driver
 
@@ -302,6 +343,7 @@ def search_amazon_one(query: str, session, driver=None) -> BeautifulSoup | None:
         url = f"{search_base_url.format(query=quote(query))}{suffix}"
         if driver is not None:
             try:
+                enforce_single_window(driver)
                 driver.get(url)
                 try:
                     WebDriverWait(driver, browser_wait_seconds).until(
@@ -309,6 +351,7 @@ def search_amazon_one(query: str, session, driver=None) -> BeautifulSoup | None:
                     )
                 except TimeoutException:
                     pass
+                enforce_single_window(driver)
                 page_html = driver.page_source
                 if is_blocked(page_html):
                     continue
@@ -329,7 +372,7 @@ def pick_asin_from_soup(soup: BeautifulSoup, brand_kw: str, gender_kw: list[str]
     norm_gender = [normalize_text(k) for k in gender_kw if normalize_text(k)]
 
     for el in soup.select("div[data-asin]"):
-        asin = el.get("data-asin", "").strip()
+        asin = as_text(el.get("data-asin")).strip()
         if len(asin) != 10:
             continue
         title_raw = ""
@@ -404,7 +447,7 @@ def ddg_fallback(query: str, session) -> str | None:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
         for a in soup.select("a.result__a, a[href*='amazon.co.jp']"):
-            href = unquote(a.get("href", ""))
+            href = unquote(as_text(a.get("href")))
             m = re.search(r"https?://(?:www\.)?amazon\.co\.jp/dp/[A-Z0-9]{10}", href)
             if m:
                 url = m.group(0)
@@ -513,73 +556,120 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
     cache_key = f"{product['pair_code']}|{product['gender_label']}"
     url = url_cache.get(cache_key)
 
-    if not url and not skip_search:
-        url = search_amazon_jp(
-            product["search_query"],
-            session,
-            driver=driver,
-            brand_kw=product["brand_kw"],
-            gender_kw=product["gender_kw"],
-            brand_query=product["brand_query"],
-            gender_hint=product["gender_hint"],
-            category_kw=product["category_kw"],
-        )
-        time.sleep(random.uniform(*search_delay))
+    for attempt in range(2):
+        if not url and not skip_search:
+            url = search_amazon_jp(
+                product["search_query"],
+                session,
+                driver=driver,
+                brand_kw=product["brand_kw"],
+                gender_kw=product["gender_kw"],
+                brand_query=product["brand_query"],
+                gender_hint=product["gender_hint"],
+                category_kw=product["category_kw"],
+            )
+            time.sleep(random.uniform(*search_delay))
 
-    if not url:
-        row["scrape_status"] = "URL_NOT_FOUND"
-        log.warning(f"  ✗ No URL: {product['product_name']}")
-        return row
+        if not url:
+            row["scrape_status"] = "URL_NOT_FOUND"
+            log.warning(f"  ✗ No URL: {product['product_name']}")
+            return row
 
-    row["source_url"] = url
-    url_cache[cache_key] = url
+        row["source_url"] = url
+        url_cache[cache_key] = url
 
-    if driver is not None:
-        try:
-            driver.get(url)
+        soup: BeautifulSoup | None = None
+        if driver is not None:
             try:
-                WebDriverWait(driver, browser_wait_seconds).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
-                )
-            except TimeoutException:
-                pass
-            page_html = driver.page_source
-            if is_blocked(page_html):
+                enforce_single_window(driver)
+                driver.get(url)
+                try:
+                    WebDriverWait(driver, browser_wait_seconds).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
+                    )
+                except TimeoutException:
+                    pass
+                enforce_single_window(driver)
+                page_html = driver.page_source
+                if is_blocked(page_html):
+                    # Try plain HTTP before treating this as hard blocked.
+                    resp = safe_get(session, url, delay_range=product_delay)
+                    if resp and resp.status_code == 200 and not is_blocked(resp.text):
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                    elif attempt == 0 and not skip_search:
+                        url_cache.pop(cache_key, None)
+                        url = ""
+                        continue
+                    else:
+                        row["scrape_status"] = "BLOCKED"
+                        return row
+                else:
+                    soup = BeautifulSoup(page_html, "html.parser")
+            except WebDriverException:
+                resp = safe_get(session, url, delay_range=product_delay)
+                if resp and resp.status_code == 200 and not is_blocked(resp.text):
+                    soup = BeautifulSoup(resp.text, "html.parser")
+                elif attempt == 0 and not skip_search:
+                    url_cache.pop(cache_key, None)
+                    url = ""
+                    continue
+                else:
+                    row["scrape_status"] = "REQUEST_ERROR"
+                    return row
+        else:
+            resp = safe_get(session, url, delay_range=product_delay)
+            if resp is None:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(cache_key, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = "REQUEST_ERROR"
+                return row
+            if resp.status_code != 200:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(cache_key, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = f"HTTP_{resp.status_code}"
+                return row
+            if is_blocked(resp.text):
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(cache_key, None)
+                    url = ""
+                    continue
                 row["scrape_status"] = "BLOCKED"
                 return row
-            soup = BeautifulSoup(page_html, "html.parser")
-        except WebDriverException:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-    else:
-        resp = safe_get(session, url, delay_range=product_delay)
-        if resp is None:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-        if resp.status_code != 200:
-            row["scrape_status"] = f"HTTP_{resp.status_code}"
-            return row
-        if is_blocked(resp.text):
-            row["scrape_status"] = "BLOCKED"
-            return row
-        soup = BeautifulSoup(resp.text, "html.parser")
-    price, orig, promo = extract_price_jp(soup)
+            soup = BeautifulSoup(resp.text, "html.parser")
 
-    if price is None:
+        if soup is None:
+            row["scrape_status"] = "REQUEST_ERROR"
+            return row
+
+        price, orig, promo = extract_price_jp(soup)
+        if price is not None:
+            row.update({
+                "price_local":          price,
+                "original_price_local": orig,
+                "on_promotion":         promo,
+                "confidence":           "HIGH",
+                "scrape_status":        "OK",
+            })
+            log.info(f"  ✓ {product['gender_label']:<6} {product['product_name'][:52]:<52} ¥{price:.0f}"
+                     + ("  🏷" if promo else ""))
+            return row
+
+        if attempt == 0 and not skip_search:
+            url_cache.pop(cache_key, None)
+            url = ""
+            continue
+
         row["scrape_status"] = "PRICE_NOT_FOUND"
         title = soup.find("span", id="productTitle")
-        log.warning(f"  ✗ No price: {product['product_name']}"
-                    + (f"  (page: {title.get_text(strip=True)[:60]})" if title else ""))
-    else:
-        row.update({
-            "price_local":          price,
-            "original_price_local": orig,
-            "on_promotion":         promo,
-            "confidence":           "HIGH",
-            "scrape_status":        "OK",
-        })
-        log.info(f"  ✓ {product['gender_label']:<6} {product['product_name'][:52]:<52} ¥{price:.0f}"
-                 + ("  🏷" if promo else ""))
+        log.warning(
+            f"  ✗ No price: {product['product_name']}"
+            + (f"  (page: {title.get_text(strip=True)[:60]})" if title else "")
+        )
+        return row
 
     return row
 
@@ -627,7 +717,7 @@ def main(
 
     session = requests.Session()
     driver = None
-    if browser_mode:
+    if browser_mode and not dry_run:
         if not selenium_ok:
             log.error("Selenium not installed. Run: pip install selenium webdriver-manager")
             return

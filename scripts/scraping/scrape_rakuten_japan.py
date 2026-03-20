@@ -14,6 +14,7 @@ import csv, json, time, random, re, argparse, logging, sys, unicodedata
 from html import unescape
 from datetime import date
 from pathlib import Path
+from typing import Any
 from urllib.parse import quote, urljoin, urlparse, parse_qs
 
 import requests  # type: ignore[import-not-found,import-untyped]
@@ -41,12 +42,13 @@ if str(src) not in sys.path:
 from pink_tax.scraping_config import (
     cfg_delay,
     cfg_float,
+    cfg_int,
     cfg_list,
     cfg_path,
     cfg_str,
     load_scraping_source_config,
 )
-from pink_tax.utils import select_diverse_pair_codes
+from pink_tax.utils import enforce_single_window, select_diverse_pair_codes
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s  %(levelname)s  %(message)s",
@@ -78,6 +80,8 @@ search_base_url = cfg_str(
 )
 referer_url = cfg_str(scraper_config, "referer_url", "https://www.rakuten.co.jp")
 browser_wait_seconds = cfg_float(scraper_config, "browser_wait_seconds", 10.0)
+driver_get_retries = cfg_int(scraper_config, "driver_get_retries", 2)
+driver_get_retry_pause = cfg_delay(scraper_config, "driver_get_retry_pause", 2.0, 4.0)
 enable_ddg_fallback = cfg_str(scraper_config, "enable_ddg_fallback", "false").strip().lower() in {
     "1", "true", "yes", "on"
 }
@@ -196,6 +200,20 @@ def normalize_text(text: str) -> str:
     low = no_marks.lower()
     return re.sub(r"[^a-z0-9\u3040-\u30ff\u4e00-\u9fff]+", " ", low).strip()
 
+
+def as_text(value: Any) -> str:
+    """
+    Convert BeautifulSoup attribute values (str/list/None/other) to plain text.
+    """
+
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(v) for v in value if v is not None)
+    return str(value)
+
 def build_query_variants(
     base_query: str,
     brand_query: str,
@@ -313,31 +331,58 @@ def build_driver(headless: bool = True, user_data_dir: str = ""):
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_experimental_option(
+        "prefs",
+        {
+            "profile.default_content_setting_values.notifications": 2,
+            "profile.default_content_setting_values.popups": 0,
+        },
+    )
     if user_data_dir:
         opts.add_argument(f"--user-data-dir={user_data_dir}")
     opts.add_argument(f"--user-agent={random.choice(user_agents)}")
+    from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebDriver  # type: ignore[import-not-found]
+    from selenium.webdriver.chrome.service import Service as ChromeService  # type: ignore[import-not-found]
+
     driver = None
     try:
-        from selenium.webdriver.chrome.service import Service  # type: ignore[import-not-found]
-
         cached = cached_chromedriver_path()
         if cached:
-            driver = webdriver.Chrome(service=Service(cached), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(cached), options=opts)
         else:
             from webdriver_manager.chrome import ChromeDriverManager  # type: ignore[import-not-found]
 
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
+            driver = ChromeWebDriver(
+                service=ChromeService(ChromeDriverManager().install()),
                 options=opts,
             )
     except Exception:
-        driver = webdriver.Chrome(options=opts)
+        driver = ChromeWebDriver(options=opts)
     try:
         driver.set_page_load_timeout(page_load_timeout_seconds)
     except Exception:
         pass
+    enforce_single_window(driver)
     driver.execute_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
     return driver
+
+def safe_driver_get(driver, url: str, retries: int | None = None) -> bool:
+    """
+    Navigate with retries to reduce transient browser timeouts.
+    """
+
+    total_retries = retries if retries is not None else max(driver_get_retries, 1)
+    for attempt in range(total_retries):
+        try:
+            enforce_single_window(driver)
+            driver.get(url)
+            enforce_single_window(driver)
+            return True
+        except Exception as exc:
+            log.warning(f"  Browser GET error ({attempt+1}/{total_retries}): {exc}")
+            if attempt < total_retries - 1:
+                time.sleep(random.uniform(*driver_get_retry_pause))
+    return False
 
 def search_rakuten(query: str, session, brand_kw: str = "",
                    gender_kw: list[str] | None = None, driver=None,
@@ -399,7 +444,8 @@ def search_rakuten(query: str, session, brand_kw: str = "",
         log.info(f"  🔍 {current} [{idx}/{len(variants)}]")
         if driver is not None:
             try:
-                driver.get(search_url)
+                if not safe_driver_get(driver, search_url):
+                    continue
                 try:
                     WebDriverWait(driver, browser_wait_seconds).until(
                         EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
@@ -428,15 +474,15 @@ def search_rakuten(query: str, session, brand_kw: str = "",
             if not cards:
                 continue
             for card in cards:
-                href_raw = card.get("href", "")
+                href_raw = as_text(card.get("href"))
                 href = normalize_item_url(href_raw, search_url)
                 if not href or href in seen_urls:
                     continue
                 seen_urls.add(href)
                 title_raw = (
                     card.get_text(" ", strip=True)
-                    or card.get("title", "")
-                    or card.get("aria-label", "")
+                    or as_text(card.get("title"))
+                    or as_text(card.get("aria-label"))
                 )
                 title = normalize_text(title_raw)
                 has_brand = not brand_kw or brand_kw in title or brand_kw in normalize_text(href)
@@ -488,7 +534,7 @@ def ddg_fallback(query: str, session) -> str | None:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
         for a in soup.select("a.result__a, a[href*='rakuten.co.jp']"):
-            href = a.get("href", "")
+            href = as_text(a.get("href")).strip()
             if "rakuten.co.jp" in href and ("/item" in href or "item_" in href):
                 if not href.startswith("http"):
                     href = "https://" + href.lstrip("/")
@@ -630,7 +676,9 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
 
     if driver is not None:
         try:
-            driver.get(url)
+            if not safe_driver_get(driver, url):
+                row["scrape_status"] = "REQUEST_ERROR"
+                return row
             try:
                 WebDriverWait(driver, browser_wait_seconds).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
@@ -707,7 +755,7 @@ def main(
 
     session = requests.Session()
     driver = None
-    if browser_mode:
+    if browser_mode and not dry_run:
         if not selenium_ok:
             log.error("Selenium not installed. Run: pip install selenium webdriver-manager")
             return

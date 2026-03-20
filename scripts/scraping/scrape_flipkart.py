@@ -8,14 +8,15 @@ Flipkart specifics:
   • Gender validation: we require that the returned product title contains
     a gender-confirming keyword before accepting the URL. This prevents
     the top result for a women's search from being a men's product.
-  • DuckDuckGo site:flipkart.com fallback when native search returns nothing.
+  • Native Flipkart search only by default.
   • Price from structured JSON-LD (most stable) then CSS classes.
 """
 
 import csv, json, time, random, re, argparse, logging, sys, unicodedata
 from datetime import date
 from pathlib import Path
-from urllib.parse import quote_plus
+from typing import Any
+from urllib.parse import quote_plus, urlsplit, urlunsplit
 import requests  # type: ignore[import-not-found,import-untyped]
 from bs4 import BeautifulSoup  # type: ignore[import-not-found]
 
@@ -33,7 +34,7 @@ from pink_tax.scraping_config import (
     cfg_str,
     load_scraping_source_config,
 )
-from pink_tax.utils import select_diverse_pair_codes
+from pink_tax.utils import enforce_single_window, select_diverse_pair_codes
 
 # Optional Selenium browser mode.
 selenium_ok = False
@@ -62,6 +63,7 @@ output_path = cfg_path(root, scraper_config, "output_path", "data/raw/flipkart_r
 found_urls_path = cfg_path(
     root, scraper_config, "found_urls_path", "data/raw/flipkart_found_urls.json"
 )
+debug_dir = root / "data" / "raw" / "debug"
 
 city = cfg_str(scraper_config, "city", "Hyderabad")
 currency = cfg_str(scraper_config, "currency", "INR")
@@ -85,6 +87,16 @@ search_base_url = cfg_str(
 )
 referer_url = cfg_str(scraper_config, "referer_url", "https://www.flipkart.com")
 browser_wait_seconds = cfg_float(scraper_config, "browser_wait_seconds", 10.0)
+enable_ddg_fallback = str(scraper_config.get("enable_ddg_fallback", "false")).strip().lower() in {
+    "1",
+    "true",
+    "yes",
+}
+allowed_brands = {
+    b.strip().lower()
+    for b in cfg_list(scraper_config, "allowed_brands", [])
+    if b.strip()
+}
 default_user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
@@ -118,6 +130,7 @@ def load_hyd_products() -> list[dict]:
             f"{root / 'data' / 'clean' / 'pink_tax_pairs.csv'}"
         )
     products, seen = [], set()
+    skipped_brand = 0
     with open(pairs_csv, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             if row["city"] != city:
@@ -128,6 +141,9 @@ def load_hyd_products() -> list[dict]:
             seen.add(pc)
             brand = row["brand"]
             brand_query = brand.split("/")[0].strip()
+            if allowed_brands and brand_query.lower() not in allowed_brands:
+                skipped_brand += 1
+                continue
             for gender, name_col, size_col in [
                 ("female", "female_product", "female_size"),
                 ("male",   "male_product",   "male_size"),
@@ -150,11 +166,19 @@ def load_hyd_products() -> list[dict]:
                     "gender_hint":  gkw,
                     "category_kw":  normalize_text(row["category"]),
                 })
+    if skipped_brand:
+        log.info(f"Brand filter active: skipped {skipped_brand} pairs outside allowed_brands")
     log.info(f"Loaded {len(products)} products from {len(seen)} pairs ({city})")
     return products
 
 def build_query(name: str, gender_kw: str, size: str) -> str:
-    words = name.split()[:7]
+    cleaned_name = re.sub(
+        r"\b(japan|japanese|tokyo|jp)\b|[日本東京女性用男性用]+",
+        " ",
+        str(name),
+        flags=re.IGNORECASE,
+    )
+    words = cleaned_name.split()[:7]
     q = " ".join(words)
     try:
         sz = float(size)
@@ -175,6 +199,35 @@ def normalize_text(text: str) -> str:
     no_marks = "".join(ch for ch in folded if not unicodedata.combining(ch))
     low = no_marks.lower()
     return re.sub(r"[^a-z0-9]+", " ", low).strip()
+
+
+def as_text(value: Any) -> str:
+    """
+    Convert BeautifulSoup attribute values to plain text.
+    """
+
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(v) for v in value if v is not None)
+    return str(value)
+
+def canonicalize_flipkart_url(url: str) -> str:
+    """
+    Strip tracking query params from Flipkart product URLs.
+    """
+
+    raw = str(url or "").strip()
+    if not raw:
+        return raw
+    try:
+        parsed = urlsplit(raw)
+        scheme = parsed.scheme or "https"
+        return urlunsplit((scheme, parsed.netloc, parsed.path, "", ""))
+    except Exception:
+        return raw
 
 def build_query_variants(
     base_query: str,
@@ -216,9 +269,14 @@ def _headers(referer: str = referer_url) -> dict:
     }
 
 def is_blocked(html: str) -> bool:
-    sigs = ["captcha", "robot", "unusual traffic", "access denied",
-            "too many requests", "flipkart.com/blocked"]
-    low = html.lower()
+    low = BeautifulSoup(html, "html.parser").get_text(" ", strip=True).lower()
+    sigs = [
+        "please verify you are a human",
+        "sorry, you have been blocked",
+        "unusual activity from your computer network",
+        "enter the characters shown",
+        "too many requests",
+    ]
     return any(s in low for s in sigs)
 
 def safe_get(session, url, retries: int | None = None, delay_range=search_delay):
@@ -269,22 +327,31 @@ def build_driver(headless: bool = True, user_data_dir: str = ""):
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_experimental_option(
+        "prefs",
+        {
+            "profile.default_content_setting_values.notifications": 2,
+            "profile.default_content_setting_values.popups": 0,
+        },
+    )
     if user_data_dir:
         opts.add_argument(f"--user-data-dir={user_data_dir}")
     opts.add_argument(f"--user-agent={random.choice(user_agents)}")
+    from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebDriver  # type: ignore[import-not-found]
+    from selenium.webdriver.chrome.service import Service as ChromeService  # type: ignore[import-not-found]
+
     driver = None
     try:
-        from selenium.webdriver.chrome.service import Service  # type: ignore[import-not-found]
-
         cached = cached_chromedriver_path()
         if cached:
-            driver = webdriver.Chrome(service=Service(cached), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(cached), options=opts)
         else:
             from webdriver_manager.chrome import ChromeDriverManager  # type: ignore[import-not-found]
 
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(ChromeDriverManager().install()), options=opts)
     except Exception:
-        driver = webdriver.Chrome(options=opts)
+        driver = ChromeWebDriver(options=opts)
+    enforce_single_window(driver)
     driver.execute_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
     return driver
 
@@ -292,6 +359,8 @@ fk_card_selectors = [
     "a._1fQZEK",       # classic product link
     "a.IRpwTa",        # 2024 variant
     "a.s1Q9rs",        # 2023/24 variant
+    "a[href*='/p/']",
+    "a[href*='/itm/']",
     "div[data-id] a",  # generic data-id container
 ]
 
@@ -314,6 +383,7 @@ def fetch_search_soup(query: str, session, driver=None) -> BeautifulSoup | None:
         url = f"{url}{joiner}marketplace=FLIPKART"
     if driver is not None:
         try:
+            enforce_single_window(driver)
             driver.get(url)
             try:
                 WebDriverWait(driver, browser_wait_seconds).until(
@@ -321,6 +391,7 @@ def fetch_search_soup(query: str, session, driver=None) -> BeautifulSoup | None:
                 )
             except TimeoutException:
                 pass
+            enforce_single_window(driver)
             page_html = driver.page_source
             if is_blocked(page_html):
                 return None
@@ -346,19 +417,21 @@ def pick_candidate_url(
     norm_gender = [normalize_text(k) for k in (gender_kw or []) if normalize_text(k)]
 
     for card in cards:
-        href  = card.get("href", "")
-        title_raw = card.get_text(" ", strip=True)
+        href = as_text(card.get("href"))
+        title_raw = card.get_text(" ", strip=True) or as_text(card.get("title"))
         title = normalize_text(title_raw)
 
-        if not href or len(title) < 5:
+        if not href:
             continue
 
         # Must contain brand
-        if brand_kw and brand_kw not in title:
+        href_norm = normalize_text(href)
+        if brand_kw and brand_kw not in title and brand_kw not in href_norm:
             continue
 
         if not href.startswith("http"):
             href = "https://www.flipkart.com" + href
+        href = canonicalize_flipkart_url(href)
 
         has_gender = any(k in title for k in norm_gender) if norm_gender else False
         if has_gender:
@@ -369,12 +442,12 @@ def pick_candidate_url(
     if strict:
         href, title = random.choice(strict[:5])
         log.info(f"  ✓ FK native strict: {title[:65].lower()}")
-        return href
+        return canonicalize_flipkart_url(href)
 
     if loose:
         href, title = random.choice(loose[:5])
         log.info(f"  ✓ FK native loose-brand: {title[:65].lower()}")
-        return href
+        return canonicalize_flipkart_url(href)
 
     return None
 
@@ -406,11 +479,14 @@ def search_flipkart(query: str, session,
         if match:
             return match
 
-    log.warning(f"  No FK native result, trying DDG fallback")
-    for current_query in query_variants:
-        ddg_match = ddg_fallback(current_query, "flipkart.com", session)
-        if ddg_match:
-            return ddg_match
+    if enable_ddg_fallback:
+        log.warning("  No FK native result, trying DDG fallback")
+        for current_query in query_variants:
+            ddg_match = ddg_fallback(current_query, "flipkart.com", session)
+            if ddg_match:
+                return ddg_match
+    else:
+        log.warning("  No FK native result")
     return None
 
 def ddg_fallback(query: str, site: str, session) -> str | None:
@@ -433,10 +509,11 @@ def ddg_fallback(query: str, site: str, session) -> str | None:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
         for a in soup.select("a.result__url, a[href*='flipkart.com'], a[href*='rakuten.co.jp']"):
-            href = a.get("href", "")
+            href = as_text(a.get("href")).strip()
             if site in href and ("/p/" in href or "/dp/" in href or "item_" in href):
                 if not href.startswith("http"):
                     href = "https://" + href.lstrip("/")
+                href = canonicalize_flipkart_url(href)
                 log.info(f"  ✓ DDG fallback: {href[:70]}")
                 return href
     except Exception as e:
@@ -461,6 +538,15 @@ def extract_price_flipkart(soup) -> tuple:
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or "")
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict) and ("offers" in item or "Offers" in item):
+                        data = item
+                        break
+                else:
+                    continue
+            if not isinstance(data, dict):
+                continue
             offers = data.get("offers") or data.get("Offers")
             if isinstance(offers, dict):
                 p = offers.get("price") or offers.get("lowPrice")
@@ -533,57 +619,96 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
         return row
 
     ck  = f"{product['pair_code']}|{product['gender_label']}"
-    url = url_cache.get(ck)
+    url = canonicalize_flipkart_url(str(url_cache.get(ck, "") or ""))
 
-    if not url and not skip_search:
-        url = search_flipkart(product["search_query"], session,
-                              brand_kw=product["brand_kw"],
-                              gender_kw=product["gender_kw"],
-                              brand_query=product["brand_query"],
-                              gender_hint=product["gender_hint"],
-                              category_kw=product["category_kw"],
-                              driver=driver)
-        time.sleep(random.uniform(*search_delay))
+    soup: BeautifulSoup | None = None
+    blocked_seen = False
+    blocked_on_page = False
+    for attempt in range(2):
+        if not url and not skip_search:
+            url = search_flipkart(
+                product["search_query"],
+                session,
+                brand_kw=product["brand_kw"],
+                gender_kw=product["gender_kw"],
+                brand_query=product["brand_query"],
+                gender_hint=product["gender_hint"],
+                category_kw=product["category_kw"],
+                driver=driver,
+            )
+            url = canonicalize_flipkart_url(url or "")
+            time.sleep(random.uniform(*search_delay))
 
-    if not url:
-        row["scrape_status"] = "URL_NOT_FOUND"
-        log.warning(f"  ✗ No URL: {product['product_name']}")
-        return row
+        if not url:
+            row["scrape_status"] = "URL_NOT_FOUND"
+            log.warning(f"  ✗ No URL: {product['product_name']}")
+            return row
 
-    row["source_url"] = url
-    url_cache[ck]     = url
+        row["source_url"] = url
+        url_cache[ck] = url
 
-    if driver is not None:
-        try:
-            driver.get(url)
+        if driver is not None:
             try:
-                WebDriverWait(driver, browser_wait_seconds).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
-                )
-            except TimeoutException:
-                pass
-            page_html = driver.page_source
-            if is_blocked(page_html):
-                row["scrape_status"] = "BLOCKED"
+                enforce_single_window(driver)
+                driver.get(url)
+                try:
+                    WebDriverWait(driver, browser_wait_seconds).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
+                    )
+                except TimeoutException:
+                    pass
+                enforce_single_window(driver)
+                page_html = driver.page_source
+                soup = BeautifulSoup(page_html, "html.parser")
+                blocked_on_page = is_blocked(page_html) or "/blocked" in str(driver.current_url or "")
+                break
+            except WebDriverException:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = "REQUEST_ERROR"
                 return row
-            soup = BeautifulSoup(page_html, "html.parser")
-        except WebDriverException:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-    else:
-        resp = safe_get(session, url, delay_range=product_delay)
-        if resp is None:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-        if resp.status_code != 200:
-            row["scrape_status"] = f"HTTP_{resp.status_code}"
-            return row
-        soup = BeautifulSoup(resp.text, "html.parser")
+        else:
+            resp = safe_get(session, url, delay_range=product_delay)
+            if resp is None:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = "REQUEST_ERROR"
+                return row
+            if resp.status_code != 200:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = f"HTTP_{resp.status_code}"
+                return row
+            soup = BeautifulSoup(resp.text, "html.parser")
+            blocked_on_page = is_blocked(resp.text)
+            break
+
+    if soup is None:
+        row["scrape_status"] = "BLOCKED" if blocked_seen else "REQUEST_ERROR"
+        return row
     price, orig, promo = extract_price_flipkart(soup)
 
     if price is None:
-        row["scrape_status"] = "PRICE_NOT_FOUND"
-        log.warning(f"  ✗ No price: {product['product_name']}")
+        if blocked_on_page:
+            blocked_seen = True
+            debug_dir.mkdir(parents=True, exist_ok=True)
+            snap = debug_dir / f"{product['pair_code']}_{product['gender_label']}_Flipkart_BLOCKED.png"
+            if driver is not None:
+                try:
+                    driver.save_screenshot(str(snap))
+                except Exception:
+                    pass
+            row["scrape_status"] = "BLOCKED"
+            log.warning(f"  ✗ BLOCKED: {product['product_name']}")
+        else:
+            row["scrape_status"] = "PRICE_NOT_FOUND"
+            log.warning(f"  ✗ No price: {product['product_name']}")
     else:
         row.update({
             "price_local": price, "original_price_local": orig,
@@ -643,6 +768,11 @@ def main(
     if found_urls_path.exists():
         try:
             url_cache = json.loads(found_urls_path.read_text(encoding="utf-8"))
+            if isinstance(url_cache, dict):
+                url_cache = {
+                    str(key): canonicalize_flipkart_url(str(value))
+                    for key, value in url_cache.items()
+                }
             log.info(f"URL cache: {len(url_cache)} entries")
         except Exception:
             pass
@@ -658,7 +788,7 @@ def main(
 
     session = requests.Session()
     driver = None
-    if browser_mode:
+    if browser_mode and not dry_run:
         if not selenium_ok:
             log.error("Selenium not installed. Run: pip install selenium webdriver-manager")
             return

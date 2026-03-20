@@ -16,6 +16,7 @@ Features:
 import csv, json, time, random, re, argparse, logging, sys, unicodedata
 from datetime import date
 from pathlib import Path
+from typing import Any
 from urllib.parse import quote
 import requests  # type: ignore[import-not-found,import-untyped]
 from bs4 import BeautifulSoup  # type: ignore[import-not-found]
@@ -42,12 +43,13 @@ if str(src) not in sys.path:
 from pink_tax.scraping_config import (
     cfg_delay,
     cfg_float,
+    cfg_int,
     cfg_list,
     cfg_path,
     cfg_str,
     load_scraping_source_config,
 )
-from pink_tax.utils import select_diverse_pair_codes
+from pink_tax.utils import enforce_single_window, select_diverse_pair_codes
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s  %(levelname)s  %(message)s",
@@ -79,6 +81,8 @@ search_base_url = cfg_str(
 referer_url = cfg_str(scraper_config, "referer_url", "https://www.matsukiyococokara-online.com/store/")
 site_base_url = cfg_str(scraper_config, "site_base_url", "https://www.matsukiyococokara-online.com")
 browser_wait_seconds = cfg_float(scraper_config, "browser_wait_seconds", 10.0)
+driver_get_retries = cfg_int(scraper_config, "driver_get_retries", 2)
+driver_get_retry_pause = cfg_delay(scraper_config, "driver_get_retry_pause", 2.0, 4.0)
 enable_ddg_fallback = cfg_str(scraper_config, "enable_ddg_fallback", "false").strip().lower() in {
     "1", "true", "yes", "on"
 }
@@ -211,6 +215,20 @@ def normalize_text(text: str) -> str:
     low = no_marks.lower()
     return re.sub(r"[^a-z0-9\u3040-\u30ff\u4e00-\u9fff]+", " ", low).strip()
 
+
+def as_text(value: Any) -> str:
+    """
+    Convert BeautifulSoup attribute values (str/list/None/other) to plain text.
+    """
+
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(v) for v in value if v is not None)
+    return str(value)
+
 def build_query_variants(
     base_query: str,
     brand_query: str,
@@ -302,31 +320,58 @@ def build_driver(headless: bool = True, user_data_dir: str = ""):
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_experimental_option(
+        "prefs",
+        {
+            "profile.default_content_setting_values.notifications": 2,
+            "profile.default_content_setting_values.popups": 0,
+        },
+    )
     if user_data_dir:
         opts.add_argument(f"--user-data-dir={user_data_dir}")
     opts.add_argument(f"--user-agent={random.choice(user_agents)}")
+    from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebDriver  # type: ignore[import-not-found]
+    from selenium.webdriver.chrome.service import Service as ChromeService  # type: ignore[import-not-found]
+
     driver = None
     try:
-        from selenium.webdriver.chrome.service import Service  # type: ignore[import-not-found]
-
         cached = cached_chromedriver_path()
         if cached:
-            driver = webdriver.Chrome(service=Service(cached), options=opts)
+            driver = ChromeWebDriver(service=ChromeService(cached), options=opts)
         else:
             from webdriver_manager.chrome import ChromeDriverManager  # type: ignore[import-not-found]
 
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
+            driver = ChromeWebDriver(
+                service=ChromeService(ChromeDriverManager().install()),
                 options=opts,
             )
     except Exception:
-        driver = webdriver.Chrome(options=opts)
+        driver = ChromeWebDriver(options=opts)
     try:
         driver.set_page_load_timeout(page_load_timeout_seconds)
     except Exception:
         pass
+    enforce_single_window(driver)
     driver.execute_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
     return driver
+
+def safe_driver_get(driver, url: str, retries: int | None = None) -> bool:
+    """
+    Navigate with retries to reduce transient browser timeouts.
+    """
+
+    total_retries = retries if retries is not None else max(driver_get_retries, 1)
+    for attempt in range(total_retries):
+        try:
+            enforce_single_window(driver)
+            driver.get(url)
+            enforce_single_window(driver)
+            return True
+        except Exception as exc:
+            log.warning(f"  Browser GET error ({attempt+1}/{total_retries}): {exc}")
+            if attempt < total_retries - 1:
+                time.sleep(random.uniform(*driver_get_retry_pause))
+    return False
 
 def search_matsumoto(query: str, session,
                      brand_kw: str = "", brand_terms: list[str] | None = None, gender_kw: list[str] | None = None,
@@ -338,6 +383,8 @@ def search_matsumoto(query: str, session,
     # Product card selectors for Matsukiyo Cocokara store
     selectors = [
         "a[href*='/store/catalog/product/view/id/']",
+        "a[href*='/shop/g/g']",
+        "a[href*='/store/g/g']",
         "div.product-item-info a",
         "ol.products li a",
         "ul.products li a",
@@ -349,7 +396,8 @@ def search_matsumoto(query: str, session,
         log.info(f"  🔍 {current} [{idx}/{len(variants)}]")
         if driver is not None:
             try:
-                driver.get(search_url)
+                if not safe_driver_get(driver, search_url):
+                    continue
                 try:
                     WebDriverWait(driver, browser_wait_seconds).until(
                         EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
@@ -373,11 +421,11 @@ def search_matsumoto(query: str, session,
             terms.append(brand_kw)
         for sel in selectors:
             for card in soup.select(sel):
-                href = card.get("href", "")
+                href = as_text(card.get("href"))
                 title_raw = (
                     card.get_text(" ", strip=True)
-                    or card.get("title", "")
-                    or card.get("aria-label", "")
+                    or as_text(card.get("title"))
+                    or as_text(card.get("aria-label"))
                 )
                 title = normalize_text(title_raw)
                 if not href:
@@ -385,7 +433,10 @@ def search_matsumoto(query: str, session,
                 href_norm = href.lower()
                 if (
                     "/store/catalog/product/view/id/" not in href_norm
+                    and "/shop/g/g" not in href_norm
+                    and "/store/g/g" not in href_norm
                     and "matsukiyococokara-online.com/store/catalog/product/view/id/" not in href_norm
+                    and "matsukiyo.co.jp/shop/g/g" not in href_norm
                 ):
                     continue
                 has_brand = not terms or any(
@@ -393,7 +444,10 @@ def search_matsumoto(query: str, session,
                     for term in terms
                 )
                 if not href.startswith("http"):
-                    href = f"{site_base_url}{href}"
+                    if href.startswith("/shop/"):
+                        href = f"https://www.matsukiyo.co.jp{href}"
+                    else:
+                        href = f"{site_base_url}{href}"
                 has_gender = any(g in title for g in norm_gender) if norm_gender else False
                 if has_brand and has_gender:
                     strict.append((href, title_raw))
@@ -416,6 +470,31 @@ def search_matsumoto(query: str, session,
             href, title = random.choice(fallback[:5])
             log.info(f"  ✓ MK native unfiltered: {title[:60].lower()}")
             return href
+
+        # Regex fallback for newer Matsukiyo templates.
+        html = str(soup)
+        regex_hits = re.findall(
+            r"(https?://(?:www\.)?matsukiyo\.co\.jp/shop/g/g[0-9A-Za-z]+/?|/shop/g/g[0-9A-Za-z]+/?|/store/catalog/product/view/id/\d+/?|https?://(?:www\.)?matsukiyococokara-online\.com/store/catalog/product/view/id/\d+/?)+",
+            html,
+        )
+        candidate_urls: list[str] = []
+        for hit in regex_hits:
+            href = hit.strip().split("?")[0]
+            if href.startswith("/shop/"):
+                href = f"https://www.matsukiyo.co.jp{href}"
+            elif href.startswith("/store/"):
+                href = f"{site_base_url}{href}"
+            if href not in candidate_urls:
+                candidate_urls.append(href)
+
+        if candidate_urls:
+            if brand_kw:
+                filtered = [href for href in candidate_urls if brand_kw in normalize_text(href)]
+                if filtered:
+                    candidate_urls = filtered
+            pick = candidate_urls[0]
+            log.info(f"  ✓ MK regex fallback: {pick[:70]}")
+            return pick
 
     if enable_ddg_fallback:
         log.warning("  No MK native result, trying DDG")
@@ -443,7 +522,7 @@ def ddg_fallback(query: str, session) -> str | None:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
         for a in soup.select("a.result__a, a[href]"):
-            href = a.get("href", "")
+            href = as_text(a.get("href")).strip()
             if "matsukiyococokara-online.com/store/catalog/product/view/id/" in href:
                 if not href.startswith("http"):
                     href = "https://" + href.lstrip("/")
@@ -465,6 +544,30 @@ def parse_jpy(text: str) -> float | None:
         except ValueError:
             pass
     return None
+
+def scroll_page(driver, steps: int = 6, pause_seconds: float = 0.5) -> None:
+    """
+    Scroll through page to trigger lazy-rendered price content.
+    """
+
+    try:
+        total_height = int(driver.execute_script("return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);") or 0)
+    except Exception:
+        total_height = 0
+    if total_height <= 0:
+        return
+
+    for idx in range(1, steps + 1):
+        try:
+            y = int(total_height * idx / steps)
+            driver.execute_script("window.scrollTo(0, arguments[0]);", y)
+            time.sleep(pause_seconds)
+        except Exception:
+            break
+    try:
+        driver.execute_script("window.scrollTo(0, 0);")
+    except Exception:
+        pass
 
 def extract_price_matsumoto(soup) -> tuple:
     price = orig = None
@@ -532,6 +635,100 @@ def extract_price_matsumoto(soup) -> tuple:
 
     return price, orig, promo
 
+def extract_price_matsumoto_from_driver(driver) -> tuple:
+    """
+    Extract Matsumoto price directly from rendered browser page after scrolling.
+    """
+
+    try:
+        WebDriverWait(driver, browser_wait_seconds).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
+        )
+        time.sleep(0.8)
+        scroll_page(driver)
+    except Exception:
+        pass
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    price, orig, promo = extract_price_matsumoto(soup)
+    if price is not None:
+        return price, orig, promo
+
+    page_text = soup.get_text(" ", strip=True)
+    patterns = [
+        r"[¥￥]\s*([\d,]+(?:\.\d+)?)",
+        r"([\d,]+)\s*円",
+        r"税込\s*([\d,]+)\s*円",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, page_text)
+        if not match:
+            continue
+        parsed = parse_jpy(match.group(1) if match.groups() else match.group(0))
+        if parsed:
+            return parsed, orig, promo
+    return None, orig, promo
+
+def search_matsumoto_listing_price(
+    query: str,
+    session,
+    brand_kw: str = "",
+    brand_query: str = "",
+    category_kw: str = "",
+    gender_hint: str = "",
+    driver=None,
+) -> tuple[str | None, float | None]:
+    """
+    Extract (url, price) from Matsumoto listing/search pages when product URL lookup fails.
+    """
+
+    variants = build_query_variants(query, brand_query or brand_kw, category_kw, gender_hint)
+    for current in variants:
+        search_url = search_base_url.format(query=quote(current))
+        if driver is not None:
+            try:
+                if not safe_driver_get(driver, search_url):
+                    continue
+                WebDriverWait(driver, browser_wait_seconds).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
+                )
+                time.sleep(0.8)
+                scroll_page(driver, steps=4, pause_seconds=0.35)
+                soup = BeautifulSoup(driver.page_source, "html.parser")
+            except Exception:
+                continue
+        else:
+            resp = safe_get(session, search_url, delay_range=search_delay)
+            if resp is None:
+                continue
+            soup = BeautifulSoup(resp.text, "html.parser")
+
+        for anchor in soup.select("a[href*='/shop/g/g'], a[href*='/store/catalog/product/view/id/']"):
+            href = as_text(anchor.get("href")).strip()
+            if not href:
+                continue
+            if href.startswith("/shop/"):
+                href = f"https://www.matsukiyo.co.jp{href}"
+            elif href.startswith("/store/"):
+                href = f"{site_base_url}{href}"
+            title = normalize_text(anchor.get_text(" ", strip=True))
+            if brand_kw and brand_kw not in title and brand_kw not in normalize_text(href):
+                continue
+
+            context_parts = [anchor.get_text(" ", strip=True)]
+            node = anchor
+            for _ in range(4):
+                node = node.parent
+                if node is None:
+                    break
+                context_parts.append(node.get_text(" ", strip=True))
+            context = " ".join(context_parts)
+            hits = [parse_jpy(match) for match in re.findall(r"(?:[¥￥]\s*[\d,]+(?:\.\d+)?)|(?:[\d,]+\s*円)", context)]
+            values = [value for value in hits if value and 100 <= value <= 100000]
+            if values:
+                return href, min(values)
+    return None, None
+
 def scrape_product(product, session, url_cache, dry_run=False, skip_search=False, driver=None):
     row = {
         "pair_code":            product["pair_code"],
@@ -561,49 +758,110 @@ def scrape_product(product, session, url_cache, dry_run=False, skip_search=False
 
     ck  = f"{product['pair_code']}|{product['gender_label']}"
     url = url_cache.get(ck)
+    price = orig = None
+    promo = False
 
-    if not url and not skip_search:
-        url = search_matsumoto(product["search_query"], session,
-                               brand_kw=product["brand_kw"],
-                               brand_terms=product.get("brand_terms"),
-                               gender_kw=product["gender_kw"],
-                               driver=driver,
-                               brand_query=product["brand_query"],
-                               gender_hint=product["gender_hint"],
-                               category_kw=product["category_kw"])
-        time.sleep(random.uniform(*search_delay))
-
-    if not url:
-        row["scrape_status"] = "URL_NOT_FOUND"
-        log.warning(f"  ✗ No URL: {product['product_name']}")
-        return row
-
-    row["source_url"] = url
-    url_cache[ck]     = url
-
-    if driver is not None:
-        try:
-            driver.get(url)
-            try:
-                WebDriverWait(driver, browser_wait_seconds).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "body"))
-                )
-            except TimeoutException:
-                pass
-            soup = BeautifulSoup(driver.page_source, "html.parser")
-        except WebDriverException:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-    else:
-        resp = safe_get(session, url, delay_range=product_delay)
-        if resp is None:
-            row["scrape_status"] = "REQUEST_ERROR"
-            return row
-        if resp.status_code != 200:
-            row["scrape_status"] = f"HTTP_{resp.status_code}"
-            return row
+    def fetch_via_http(target_url: str) -> tuple[float | None, float | None, bool] | None:
+        resp = safe_get(session, target_url, delay_range=product_delay)
+        if resp is None or resp.status_code != 200:
+            return None
         soup = BeautifulSoup(resp.text, "html.parser")
-    price, orig, promo = extract_price_matsumoto(soup)
+        return extract_price_matsumoto(soup)
+
+    for attempt in range(2):
+        if not url and not skip_search:
+            url = search_matsumoto(product["search_query"], session,
+                                   brand_kw=product["brand_kw"],
+                                   brand_terms=product.get("brand_terms"),
+                                   gender_kw=product["gender_kw"],
+                                   driver=driver,
+                                   brand_query=product["brand_query"],
+                                   gender_hint=product["gender_hint"],
+                                   category_kw=product["category_kw"])
+            time.sleep(random.uniform(*search_delay))
+
+        if not url:
+            fallback_url, fallback_price = search_matsumoto_listing_price(
+                product["search_query"],
+                session,
+                brand_kw=product["brand_kw"],
+                brand_query=product.get("brand_query", ""),
+                category_kw=product.get("category_kw", ""),
+                gender_hint=product.get("gender_hint", ""),
+                driver=driver,
+            )
+            if fallback_price is not None:
+                row.update({
+                    "source_url": fallback_url or "",
+                    "price_local": fallback_price,
+                    "original_price_local": None,
+                    "on_promotion": False,
+                    "confidence": "MED",
+                    "scrape_status": "OK",
+                })
+                log.info(f"  ✓ {product['gender_label']:<6} {product['product_name'][:52]:<52} ¥{fallback_price:.0f}  (listing)")
+                return row
+
+            row["scrape_status"] = "URL_NOT_FOUND"
+            log.warning(f"  ✗ No URL: {product['product_name']}")
+            return row
+
+        row["source_url"] = url
+        url_cache[ck] = url
+
+        if driver is not None:
+            try:
+                if not safe_driver_get(driver, url):
+                    http_price = fetch_via_http(url)
+                    if http_price is not None:
+                        price, orig, promo = http_price
+                        if price is not None:
+                            break
+                    if attempt == 0 and not skip_search:
+                        url_cache.pop(ck, None)
+                        url = ""
+                        continue
+                    row["scrape_status"] = "REQUEST_ERROR"
+                    return row
+                price, orig, promo = extract_price_matsumoto_from_driver(driver)
+            except WebDriverException:
+                http_price = fetch_via_http(url)
+                if http_price is not None:
+                    price, orig, promo = http_price
+                    if price is not None:
+                        break
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = "REQUEST_ERROR"
+                return row
+        else:
+            resp = safe_get(session, url, delay_range=product_delay)
+            if resp is None:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = "REQUEST_ERROR"
+                return row
+            if resp.status_code != 200:
+                if attempt == 0 and not skip_search:
+                    url_cache.pop(ck, None)
+                    url = ""
+                    continue
+                row["scrape_status"] = f"HTTP_{resp.status_code}"
+                return row
+            soup = BeautifulSoup(resp.text, "html.parser")
+            price, orig, promo = extract_price_matsumoto(soup)
+
+        if price is not None:
+            break
+        if attempt == 0 and not skip_search:
+            url_cache.pop(ck, None)
+            url = ""
+            continue
+        break
 
     if price is None:
         row["scrape_status"] = "PRICE_NOT_FOUND"
@@ -660,7 +918,7 @@ def main(
 
     session = requests.Session()
     driver = None
-    if browser_mode:
+    if browser_mode and not dry_run:
         if not selenium_ok:
             log.error("Selenium not installed. Run: pip install selenium webdriver-manager")
             return
