@@ -1,0 +1,2654 @@
+{
+  "meta": {
+    "source_csv": "data/clean/pink_tax_final_dataset_cleaned.csv",
+    "n_rows": 278
+  },
+  "hypothesis_tests": {
+    "paired_ppu_ttest_rel": {
+      "description": "H0: mean female PPU = mean male PPU (paired by row)",
+      "n": 278,
+      "statistic": -1.2834213084968917,
+      "p_value": 0.20041716095834186
+    },
+    "paired_ppu_wilcoxon": {
+      "description": "Wilcoxon signed-rank on paired female vs male PPU",
+      "n": 278,
+      "statistic": 11826.5,
+      "p_value": 0.42569689655620924
+    },
+    "pink_tax_one_sample_t": {
+      "description": "H0: mean pink_tax_pct = 0",
+      "n": 278,
+      "mean_pink_tax_pct": 12.930335251798558,
+      "statistic": 2.9542414712198264,
+      "p_value": 0.0034035792151826086
+    },
+    "pink_tax_wilcoxon_vs_zero": {
+      "description": "Wilcoxon signed-rank of pink_tax_pct vs 0",
+      "n": 278,
+      "statistic": 11677.5,
+      "p_value": 0.34210099947977124
+    },
+    "city_pink_tax_ttest_ind": {
+      "description": "Welch t-test: pink_tax_pct Hyderabad vs Tokyo (independent)",
+      "n_hyderabad": 140,
+      "n_tokyo": 138,
+      "mean_hyderabad": 7.841447142857144,
+      "mean_tokyo": 18.09297536231884,
+      "statistic": -1.17230479155555,
+      "p_value": 0.24208704885359233
+    },
+    "city_pink_tax_mann_whitney": {
+      "description": "Mann\u2013Whitney U on pink_tax_pct by city",
+      "statistic": 8693.0,
+      "p_value": 0.14778924733304125
+    }
+  },
+  "descriptive": {
+    "distribution_overall": {
+      "n": 278,
+      "mean": 12.930335251798558,
+      "median": 0.0,
+      "std": 72.97703137395007,
+      "min": -88.5733,
+      "max": 315.0,
+      "q1": -31.887375,
+      "q3": 28.546125,
+      "iqr": 60.433499999999995,
+      "p10": -65.26508,
+      "p90": 100.60036000000002
+    },
+    "direction_overall": {
+      "n": 278,
+      "share_women_pay_more": 0.39928057553956836,
+      "share_men_pay_more": 0.4064748201438849,
+      "share_parity": 0.19424460431654678
+    },
+    "by_city": {
+      "Hyderabad": {
+        "distribution": {
+          "n": 140,
+          "mean": 7.841447142857144,
+          "median": 0.0,
+          "std": 74.80269081233618,
+          "min": -85.8515,
+          "max": 315.0,
+          "q1": -37.125,
+          "q3": 18.057025,
+          "iqr": 55.182024999999996,
+          "p10": -66.46675,
+          "p90": 94.34548000000001
+        },
+        "one_sample_t_vs_zero": {
+          "statistic": 1.24034647439316,
+          "p_value": 0.2169368880696218,
+          "ci_lower": -4.658233340452477,
+          "ci_upper": 20.341127626166767
+        },
+        "direction": {
+          "n": 140,
+          "share_women_pay_more": 0.4,
+          "share_men_pay_more": 0.45,
+          "share_parity": 0.15
+        }
+      },
+      "Tokyo": {
+        "distribution": {
+          "n": 138,
+          "mean": 18.09297536231884,
+          "median": 0.0,
+          "std": 70.9751725336421,
+          "min": -88.5733,
+          "max": 291.0761,
+          "q1": -19.166674999999998,
+          "q3": 41.801899999999996,
+          "iqr": 60.968574999999994,
+          "p10": -55.99787,
+          "p90": 111.46501999999998
+        },
+        "one_sample_t_vs_zero": {
+          "statistic": 2.994629359218293,
+          "p_value": 0.0032615977924131912,
+          "ci_lower": 6.1457158143009,
+          "ci_upper": 30.04023491033678
+        },
+        "direction": {
+          "n": 138,
+          "share_women_pay_more": 0.39855072463768115,
+          "share_men_pay_more": 0.36231884057971014,
+          "share_parity": 0.2391304347826087
+        }
+      }
+    },
+    "category_table": [
+      {
+        "category": "Hand Wash",
+        "n": 7,
+        "mean_pink_tax_pct": 68.45975714285714,
+        "std_pink_tax_pct": 121.42933108742518,
+        "t_stat": 1.4916288395385449,
+        "p_value": 0.18639405723276775
+      },
+      {
+        "category": "Toothpaste",
+        "n": 15,
+        "mean_pink_tax_pct": 50.769313333333336,
+        "std_pink_tax_pct": 90.02611918201346,
+        "t_stat": 2.1841295262416587,
+        "p_value": 0.04646073151135622
+      },
+      {
+        "category": "Deodorant Spray",
+        "n": 18,
+        "mean_pink_tax_pct": 48.030833333333334,
+        "std_pink_tax_pct": 98.63233866269098,
+        "t_stat": 2.0660319982185196,
+        "p_value": 0.05441257945037411
+      },
+      {
+        "category": "Shampoo",
+        "n": 33,
+        "mean_pink_tax_pct": 41.557948484848474,
+        "std_pink_tax_pct": 93.3794848025388,
+        "t_stat": 2.5565812344931844,
+        "p_value": 0.015517356452634874
+      },
+      {
+        "category": "Face Moisturizer",
+        "n": 12,
+        "mean_pink_tax_pct": 20.253249999999998,
+        "std_pink_tax_pct": 59.9931851630818,
+        "t_stat": 1.169454761337841,
+        "p_value": 0.2669369988690276
+      },
+      {
+        "category": "Bar Soap",
+        "n": 34,
+        "mean_pink_tax_pct": 11.71700882352941,
+        "std_pink_tax_pct": 76.93360113332429,
+        "t_stat": 0.8880555933301307,
+        "p_value": 0.3809381810520477
+      },
+      {
+        "category": "Deodorant Roll-On",
+        "n": 20,
+        "mean_pink_tax_pct": 9.932025000000003,
+        "std_pink_tax_pct": 54.048890717911235,
+        "t_stat": 0.8217997727330834,
+        "p_value": 0.42138418024349467
+      },
+      {
+        "category": "Sunscreen",
+        "n": 11,
+        "mean_pink_tax_pct": 6.263272727272726,
+        "std_pink_tax_pct": 43.16101046787693,
+        "t_stat": 0.48128913968522785,
+        "p_value": 0.6406688463717374
+      },
+      {
+        "category": "Conditioner",
+        "n": 24,
+        "mean_pink_tax_pct": 5.4864500000000005,
+        "std_pink_tax_pct": 38.789433652623806,
+        "t_stat": 0.692920815480054,
+        "p_value": 0.4952971839606065
+      },
+      {
+        "category": "Body Wash",
+        "n": 22,
+        "mean_pink_tax_pct": 5.422863636363638,
+        "std_pink_tax_pct": 78.29185039391633,
+        "t_stat": 0.32488036667159753,
+        "p_value": 0.7484859100590051
+      },
+      {
+        "category": "Face Toner",
+        "n": 15,
+        "mean_pink_tax_pct": 4.677993333333336,
+        "std_pink_tax_pct": 56.209605253645634,
+        "t_stat": 0.32232552055672464,
+        "p_value": 0.7519690357985037
+      },
+      {
+        "category": "Hair Colour",
+        "n": 3,
+        "mean_pink_tax_pct": 1.4756999999999991,
+        "std_pink_tax_pct": 22.68328604126836,
+        "t_stat": 0.11268153000756631,
+        "p_value": 0.9205738481192731
+      },
+      {
+        "category": "Hand Cream",
+        "n": 12,
+        "mean_pink_tax_pct": -3.3772999999999995,
+        "std_pink_tax_pct": 48.9702223643753,
+        "t_stat": -0.23890662161492884,
+        "p_value": 0.8155706357016616
+      },
+      {
+        "category": "Facial Cleanser",
+        "n": 24,
+        "mean_pink_tax_pct": -8.131316666666669,
+        "std_pink_tax_pct": 45.60084180405928,
+        "t_stat": -0.873561802034492,
+        "p_value": 0.391386741409672
+      },
+      {
+        "category": "Body Lotion",
+        "n": 14,
+        "mean_pink_tax_pct": -8.891528571428571,
+        "std_pink_tax_pct": 61.3975494904182,
+        "t_stat": -0.5418628892377747,
+        "p_value": 0.5970785134751018
+      },
+      {
+        "category": "Hair Gel / Serum",
+        "n": 2,
+        "mean_pink_tax_pct": -28.66785,
+        "std_pink_tax_pct": 36.11908509368697,
+        "t_stat": -1.122466479118091,
+        "p_value": 0.46330767397959555
+      },
+      {
+        "category": "Hair Oil",
+        "n": 2,
+        "mean_pink_tax_pct": -31.17645,
+        "std_pink_tax_pct": 29.94802279291573,
+        "t_stat": -1.472222681327607,
+        "p_value": 0.3798457131291238
+      },
+      {
+        "category": "Razor (3-blade starter kit)",
+        "n": 8,
+        "mean_pink_tax_pct": -62.76871249999999,
+        "std_pink_tax_pct": 13.564414575060256,
+        "t_stat": -13.088418083801201,
+        "p_value": 3.5434848046942074e-06
+      },
+      {
+        "category": "Razor Cartridges",
+        "n": 2,
+        "mean_pink_tax_pct": -67.3109,
+        "std_pink_tax_pct": 17.70114547479908,
+        "t_stat": -5.377730374063244,
+        "p_value": 0.11704391761618
+      }
+    ],
+    "city_category_diff": [
+      {
+        "category": "Body Wash",
+        "n_hyderabad": 7,
+        "n_tokyo": 15,
+        "mean_hyderabad": -25.96635714285714,
+        "mean_tokyo": 20.071166666666667,
+        "diff_tokyo_minus_hyd": 46.037523809523805
+      },
+      {
+        "category": "Deodorant Spray",
+        "n_hyderabad": 13,
+        "n_tokyo": 5,
+        "mean_hyderabad": 35.266392307692314,
+        "mean_tokyo": 81.21838,
+        "diff_tokyo_minus_hyd": 45.95198769230768
+      },
+      {
+        "category": "Bar Soap",
+        "n_hyderabad": 17,
+        "n_tokyo": 17,
+        "mean_hyderabad": -3.859023529411765,
+        "mean_tokyo": 27.293041176470588,
+        "diff_tokyo_minus_hyd": 31.152064705882353
+      },
+      {
+        "category": "Toothpaste",
+        "n_hyderabad": 8,
+        "n_tokyo": 7,
+        "mean_hyderabad": 38.359975,
+        "mean_tokyo": 64.95141428571428,
+        "diff_tokyo_minus_hyd": 26.59143928571428
+      },
+      {
+        "category": "Body Lotion",
+        "n_hyderabad": 7,
+        "n_tokyo": 7,
+        "mean_hyderabad": -20.145442857142857,
+        "mean_tokyo": 2.362385714285712,
+        "diff_tokyo_minus_hyd": 22.50782857142857
+      },
+      {
+        "category": "Conditioner",
+        "n_hyderabad": 11,
+        "n_tokyo": 13,
+        "mean_hyderabad": -6.02710909090909,
+        "mean_tokyo": 15.22869230769231,
+        "diff_tokyo_minus_hyd": 21.2558013986014
+      },
+      {
+        "category": "Shampoo",
+        "n_hyderabad": 15,
+        "n_tokyo": 18,
+        "mean_hyderabad": 30.302186666666667,
+        "mean_tokyo": 50.93775000000001,
+        "diff_tokyo_minus_hyd": 20.63556333333334
+      },
+      {
+        "category": "Deodorant Roll-On",
+        "n_hyderabad": 13,
+        "n_tokyo": 7,
+        "mean_hyderabad": 6.594323076923075,
+        "mean_tokyo": 16.13061428571429,
+        "diff_tokyo_minus_hyd": 9.536291208791216
+      },
+      {
+        "category": "Facial Cleanser",
+        "n_hyderabad": 10,
+        "n_tokyo": 14,
+        "mean_hyderabad": -8.09829,
+        "mean_tokyo": -8.154907142857143,
+        "diff_tokyo_minus_hyd": -0.056617142857142255
+      },
+      {
+        "category": "Razor (3-blade starter kit)",
+        "n_hyderabad": 4,
+        "n_tokyo": 4,
+        "mean_hyderabad": -62.5588,
+        "mean_tokyo": -62.978624999999994,
+        "diff_tokyo_minus_hyd": -0.4198249999999959
+      },
+      {
+        "category": "Hand Wash",
+        "n_hyderabad": 4,
+        "n_tokyo": 3,
+        "mean_hyderabad": 71.78405,
+        "mean_tokyo": 64.02736666666668,
+        "diff_tokyo_minus_hyd": -7.756683333333314
+      },
+      {
+        "category": "Hand Cream",
+        "n_hyderabad": 8,
+        "n_tokyo": 4,
+        "mean_hyderabad": -0.3942499999999991,
+        "mean_tokyo": -9.343399999999999,
+        "diff_tokyo_minus_hyd": -8.94915
+      },
+      {
+        "category": "Face Moisturizer",
+        "n_hyderabad": 7,
+        "n_tokyo": 5,
+        "mean_hyderabad": 27.632657142857145,
+        "mean_tokyo": 9.92208,
+        "diff_tokyo_minus_hyd": -17.710577142857147
+      },
+      {
+        "category": "Face Toner",
+        "n_hyderabad": 7,
+        "n_tokyo": 8,
+        "mean_hyderabad": 16.643057142857145,
+        "mean_tokyo": -5.791437499999999,
+        "diff_tokyo_minus_hyd": -22.434494642857146
+      },
+      {
+        "category": "Sunscreen",
+        "n_hyderabad": 5,
+        "n_tokyo": 6,
+        "mean_hyderabad": 19.603460000000002,
+        "mean_tokyo": -4.853549999999999,
+        "diff_tokyo_minus_hyd": -24.45701
+      }
+    ],
+    "retailer_summary": [
+      {
+        "retailer": "Amazon.co.jp",
+        "n": 94,
+        "mean": 24.197581914893618,
+        "median": 5.4535,
+        "p90": 131.43903000000003,
+        "p10": -63.09739999999999,
+        "share_women_pay_more": 0.5106382978723404,
+        "share_men_pay_more": 0.39361702127659576,
+        "share_parity": 0.09574468085106383
+      },
+      {
+        "retailer": "Blinkit",
+        "n": 37,
+        "mean": 20.494448648648646,
+        "median": 0.0,
+        "p90": 76.35716,
+        "p10": -30.7353,
+        "share_women_pay_more": 0.43243243243243246,
+        "share_men_pay_more": 0.2972972972972973,
+        "share_parity": 0.2702702702702703
+      },
+      {
+        "retailer": "Rakuten Japan",
+        "n": 18,
+        "mean": 14.508155555555554,
+        "median": -1.8697,
+        "p90": 116.15321000000007,
+        "p10": -60.79259,
+        "share_women_pay_more": 0.3888888888888889,
+        "share_men_pay_more": 0.5555555555555556,
+        "share_parity": 0.05555555555555555
+      },
+      {
+        "retailer": "Amazon.in",
+        "n": 74,
+        "mean": 7.26057972972973,
+        "median": -5.88035,
+        "p90": 140.25497000000004,
+        "p10": -71.61472,
+        "share_women_pay_more": 0.35135135135135137,
+        "share_men_pay_more": 0.5135135135135135,
+        "share_parity": 0.13513513513513514
+      },
+      {
+        "retailer": "Matsumoto Kiyoshi",
+        "n": 26,
+        "mean": -1.495726923076923,
+        "median": 0.0,
+        "p90": 0.0,
+        "p10": -1.11115,
+        "share_women_pay_more": 0.0,
+        "share_men_pay_more": 0.11538461538461539,
+        "share_parity": 0.8846153846153846
+      },
+      {
+        "retailer": "Flipkart",
+        "n": 29,
+        "mean": -6.8198241379310325,
+        "median": 0.0,
+        "p90": 50.650879999999994,
+        "p10": -63.99384,
+        "share_women_pay_more": 0.4827586206896552,
+        "share_men_pay_more": 0.4827586206896552,
+        "share_parity": 0.034482758620689655
+      }
+    ],
+    "brand_summary": [
+      {
+        "brand": "Olay",
+        "n": 5,
+        "mean": 66.17314,
+        "median": 58.7879,
+        "std": 63.52967338112955
+      },
+      {
+        "brand": "Kao/Merit",
+        "n": 7,
+        "mean": 62.88018571428571,
+        "median": 65.3,
+        "std": 73.64499595024381
+      },
+      {
+        "brand": "Fiama",
+        "n": 5,
+        "mean": 37.85588,
+        "median": 6.25,
+        "std": 129.05120606934287
+      },
+      {
+        "brand": "Lion",
+        "n": 18,
+        "mean": 36.20933888888888,
+        "median": 0.0,
+        "std": 94.20507642142245
+      },
+      {
+        "brand": "Kao",
+        "n": 13,
+        "mean": 32.14691538461538,
+        "median": 0.0,
+        "std": 92.08647070652168
+      },
+      {
+        "brand": "Himalaya",
+        "n": 17,
+        "mean": 29.408429411764708,
+        "median": 0.0,
+        "std": 98.17785008354586
+      },
+      {
+        "brand": "Garnier",
+        "n": 5,
+        "mean": 24.8645,
+        "median": -26.2255,
+        "std": 111.3030161344696
+      },
+      {
+        "brand": "Mandom",
+        "n": 6,
+        "mean": 17.800216666666667,
+        "median": 0.0,
+        "std": 42.57886880993512
+      },
+      {
+        "brand": "Nivea",
+        "n": 16,
+        "mean": 16.79118125,
+        "median": 0.0,
+        "std": 75.45529676875988
+      },
+      {
+        "brand": "Mamaearth",
+        "n": 13,
+        "mean": 14.273653846153847,
+        "median": 7.5472,
+        "std": 26.61968686998451
+      },
+      {
+        "brand": "Fogg",
+        "n": 6,
+        "mean": 11.5602,
+        "median": 4.7291,
+        "std": 39.717040977545146
+      },
+      {
+        "brand": "Curel",
+        "n": 14,
+        "mean": 11.515550000000001,
+        "median": 0.0,
+        "std": 57.20792134167261
+      },
+      {
+        "brand": "Neutrogena",
+        "n": 5,
+        "mean": 7.071000000000001,
+        "median": 5.6438,
+        "std": 57.07318603508131
+      },
+      {
+        "brand": "Dove",
+        "n": 29,
+        "mean": 1.8344482758620684,
+        "median": 0.0,
+        "std": 67.2293795114671
+      },
+      {
+        "brand": "Head & Shoulders",
+        "n": 10,
+        "mean": -3.09172,
+        "median": 2.5128999999999992,
+        "std": 50.76903081362802
+      },
+      {
+        "brand": "Biotique",
+        "n": 14,
+        "mean": -11.371635714285718,
+        "median": 0.0,
+        "std": 37.13867014438241
+      },
+      {
+        "brand": "DHC",
+        "n": 7,
+        "mean": -11.462171428571427,
+        "median": 0.0,
+        "std": 33.142109209519454
+      },
+      {
+        "brand": "Bior\u00e9",
+        "n": 17,
+        "mean": -12.410176470588233,
+        "median": -9.4316,
+        "std": 60.98839557531139
+      },
+      {
+        "brand": "Pola",
+        "n": 8,
+        "mean": -14.5916375,
+        "median": -8.3333,
+        "std": 29.863746444330285
+      },
+      {
+        "brand": "Lux",
+        "n": 8,
+        "mean": -23.967925,
+        "median": -49.531800000000004,
+        "std": 55.11618190308152
+      },
+      {
+        "brand": "Gillette/Venus",
+        "n": 10,
+        "mean": -63.67715,
+        "median": -64.01045,
+        "std": 13.47546865037436
+      }
+    ],
+    "ingredient_overlap_buckets": [
+      {
+        "bucket": "0\u201350%",
+        "lo": 0.0,
+        "hi": 50.0,
+        "n": 3,
+        "mean_pink_tax_pct": -42.99266666666667,
+        "median_pink_tax_pct": -54.7943
+      },
+      {
+        "bucket": "50\u201375%",
+        "lo": 50.0,
+        "hi": 75.0,
+        "n": 41,
+        "mean_pink_tax_pct": 7.317580487804877,
+        "median_pink_tax_pct": 0.0
+      },
+      {
+        "bucket": "75\u201390%",
+        "lo": 75.0,
+        "hi": 90.0,
+        "n": 73,
+        "mean_pink_tax_pct": 0.08080000000000014,
+        "median_pink_tax_pct": 0.0
+      },
+      {
+        "bucket": "90\u2013100%",
+        "lo": 90.0,
+        "hi": 100.0001,
+        "n": 156,
+        "mean_pink_tax_pct": 22.197291025641025,
+        "median_pink_tax_pct": 0.0
+      }
+    ],
+    "size_ratio_breakdown": {
+      "n": 278,
+      "share_exact_match": 0.9172661870503597,
+      "share_within_10pct": 0.014388489208633094,
+      "share_outside_10pct": 0.0683453237410072
+    },
+    "top_categories_by_mean_pink_tax_pct": [
+      {
+        "category": "Hand Wash",
+        "mean_pink_tax_pct": 68.45975714285714,
+        "n": 7
+      },
+      {
+        "category": "Toothpaste",
+        "mean_pink_tax_pct": 50.769313333333336,
+        "n": 15
+      },
+      {
+        "category": "Deodorant Spray",
+        "mean_pink_tax_pct": 48.030833333333334,
+        "n": 18
+      },
+      {
+        "category": "Shampoo",
+        "mean_pink_tax_pct": 41.55794848484848,
+        "n": 33
+      },
+      {
+        "category": "Face Moisturizer",
+        "mean_pink_tax_pct": 20.253249999999998,
+        "n": 12
+      }
+    ],
+    "cleaning_funnel": [
+      {
+        "step": 1,
+        "operation": "Deduplication by composite key",
+        "n_in": 325,
+        "n_out": 318,
+        "removed": 7
+      },
+      {
+        "step": 2,
+        "operation": "Drop rows missing required fields",
+        "n_in": 318,
+        "n_out": 312,
+        "removed": 6
+      },
+      {
+        "step": 3,
+        "operation": "Drop invalid / non-positive values",
+        "n_in": 312,
+        "n_out": 308,
+        "removed": 4
+      },
+      {
+        "step": 4,
+        "operation": "Match quality filter (MQ \u2265 3)",
+        "n_in": 308,
+        "n_out": 278,
+        "removed": 30
+      }
+    ]
+  },
+  "models": {
+    "m1_city_hc3": {
+      "formula": "pink_tax_pct ~ C(city)",
+      "cov": "HC3",
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 7.8414471428571355,
+          "std_err": 6.344681425729714,
+          "p_value": 0.2164924928054528,
+          "ci_lower": -4.593899944953345,
+          "ci_upper": 20.276794230667615
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 10.251528219461703,
+          "std_err": 8.776381586563991,
+          "p_value": 0.24277392628559635,
+          "ci_lower": -6.949863604784218,
+          "ci_upper": 27.45292004370762
+        }
+      ],
+      "nobs": 278.0,
+      "rsquared": 0.004950936938247108,
+      "rsquared_adj": 0.001345686709762428,
+      "fvalue": 1.3644141913358785,
+      "f_pvalue": 0.24378193925507796,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 10.251528219461703,
+        "std_err": 8.776381586563991,
+        "p_value": 0.24277392628559635,
+        "ci_lower": -6.949863604784218,
+        "ci_upper": 27.45292004370762
+      }
+    },
+    "m2_city_category_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category)",
+      "cov": "HC3",
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 4.270824380087393,
+          "std_err": 14.070691934240838,
+          "p_value": 0.7614888446128304,
+          "ci_lower": -23.30722504858288,
+          "ci_upper": 31.848873808757666
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 14.892368886884105,
+          "std_err": 8.915219786734047,
+          "p_value": 0.09483169481762284,
+          "ci_lower": -2.5811408093734887,
+          "ci_upper": 32.3658785831417
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -20.608537394957946,
+          "std_err": 21.405471054337074,
+          "p_value": 0.33566314597052005,
+          "ci_lower": -62.56248973357323,
+          "ci_upper": 21.345414943657335
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -9.00184862114478,
+          "std_err": 21.211447950192735,
+          "p_value": 0.671284086045441,
+          "ci_lower": -50.5755226634685,
+          "ci_upper": 32.571825421178936
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -6.85107419381631,
+          "std_err": 15.38249154957179,
+          "p_value": 0.6560442186068403,
+          "ci_lower": -37.00020362346875,
+          "ci_upper": 23.298055235836127
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 0.44887150950325294,
+          "std_err": 18.293840275786945,
+          "p_value": 0.980424464858863,
+          "ci_lower": -35.40639656996745,
+          "ci_upper": 36.30413958897396
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 39.6232398180005,
+          "std_err": 27.373465038069988,
+          "p_value": 0.14775541124157957,
+          "ci_lower": -14.027765788683013,
+          "ci_upper": 93.27424542468401
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 9.777271917044224,
+          "std_err": 22.809488192907537,
+          "p_value": 0.66817843763211,
+          "ci_lower": -34.92850344684615,
+          "ci_upper": 54.4830472809346
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -7.535427786425503,
+          "std_err": 20.4923716905235,
+          "p_value": 0.713083013354076,
+          "ci_lower": -47.69973825765974,
+          "ci_upper": 32.62888268480874
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -21.089356230769777,
+          "std_err": 16.439523375638927,
+          "p_value": 0.1995464731273856,
+          "ci_lower": -53.31022997002641,
+          "ci_upper": 11.131517508486855
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -7.759247342382098,
+          "std_err": 19.913205409403396,
+          "p_value": 0.6967928910554149,
+          "ci_lower": -46.788412761560934,
+          "ci_upper": 31.269918076796742
+        },
+        {
+          "name": "C(category)[T.Hair Gel / Serum]",
+          "coef": -40.384858823529505,
+          "std_err": 28.9829252677282,
+          "p_value": 0.16349833646651368,
+          "ci_lower": -97.19034851489268,
+          "ci_upper": 16.420630867833665
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -42.89345882352942,
+          "std_err": 23.62249457334422,
+          "p_value": 0.06940279062586426,
+          "ci_lower": -89.19269741227697,
+          "ci_upper": 3.4057797652181208
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -12.612247342382,
+          "std_err": 20.293834472214172,
+          "p_value": 0.5342827121959153,
+          "ci_lower": -52.38743201613919,
+          "ci_upper": 27.162937331375197
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 57.8064889541052,
+          "std_err": 51.57955370842462,
+          "p_value": 0.26240498988190597,
+          "ci_lower": -43.287578653056435,
+          "ci_upper": 158.90055656126682
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -74.48572132352945,
+          "std_err": 14.538532723570077,
+          "p_value": 3.001840543034318e-07,
+          "ci_lower": -102.98072184978382,
+          "ci_upper": -45.990720797275074
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -86.4740932669716,
+          "std_err": 22.483448460970802,
+          "p_value": 0.00012000186534801267,
+          "ci_lower": -130.54084249873688,
+          "ci_upper": -42.407344035206314
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 29.164013802824364,
+          "std_err": 21.189408027916137,
+          "p_value": 0.16871370790614504,
+          "ci_lower": -12.366462785615155,
+          "ci_upper": 70.69449039126388
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": -6.130661954751407,
+          "std_err": 19.763852586544854,
+          "p_value": 0.756412145394047,
+          "ci_lower": -44.86710122013811,
+          "ci_upper": 32.605777310635304
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 39.54871680603345,
+          "std_err": 27.378129227088014,
+          "p_value": 0.1485880192533392,
+          "ci_lower": -14.111430443142488,
+          "ci_upper": 93.20886405520938
+        }
+      ],
+      "nobs": 278.0,
+      "rsquared": 0.13480064430910854,
+      "rsquared_adj": 0.07108441268846155,
+      "fvalue": 7.1255280355609925,
+      "f_pvalue": 3.0398820643287405e-15,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 14.892368886884105,
+        "std_err": 8.915219786734047,
+        "p_value": 0.09483169481762284,
+        "ci_lower": -2.5811408093734887,
+        "ci_upper": 32.3658785831417
+      }
+    },
+    "m3_city_category_retailer_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + C(retailer)",
+      "cov": "HC3",
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 6.433888297158479,
+          "std_err": 10.801499074150327,
+          "p_value": 0.5514105903400455,
+          "ci_lower": -14.736660867218902,
+          "ci_upper": 27.60443746153586
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 21.103506907144357,
+          "std_err": 7.775613034303874,
+          "p_value": 0.006646344088142282,
+          "ci_lower": 5.863585402188557,
+          "ci_upper": 36.34342841210016
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -22.42125504769801,
+          "std_err": 21.77773929165802,
+          "p_value": 0.303221651455565,
+          "ci_lower": -65.10483972405055,
+          "ci_upper": 20.262329628654534
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -7.615655022582534,
+          "std_err": 20.547408958808248,
+          "p_value": 0.7109070131547374,
+          "ci_lower": -47.88783655746236,
+          "ci_upper": 32.65652651229728
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -6.137076109158742,
+          "std_err": 15.243200364992301,
+          "p_value": 0.6872346108539416,
+          "ci_lower": -36.01319983367146,
+          "ci_upper": 23.739047615353975
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 1.4423804717775304,
+          "std_err": 18.423637932542476,
+          "p_value": 0.937597637071862,
+          "ci_lower": -34.6672863402117,
+          "ci_upper": 37.55204728376677
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 40.052751509880714,
+          "std_err": 27.431788245267086,
+          "p_value": 0.14426662471442886,
+          "ci_lower": -13.712565482371978,
+          "ci_upper": 93.8180685021334
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 10.057095487109661,
+          "std_err": 23.16790835877648,
+          "p_value": 0.6642187570093124,
+          "ci_lower": -35.351170493216706,
+          "ci_upper": 55.46536146743603
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -6.3936142348771146,
+          "std_err": 20.017583282833293,
+          "p_value": 0.7494232814902033,
+          "ci_lower": -45.62735652676143,
+          "ci_upper": 32.840128057007206
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -23.745542983087653,
+          "std_err": 16.641393003043603,
+          "p_value": 0.15360977225832223,
+          "ci_lower": -56.36207392162997,
+          "ci_upper": 8.870987955454666
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -13.423668043441687,
+          "std_err": 20.27659631579003,
+          "p_value": 0.5079534814716108,
+          "ci_lower": -53.165066551447694,
+          "ci_upper": 26.31773046456432
+        },
+        {
+          "name": "C(category)[T.Hair Gel / Serum]",
+          "coef": -46.72672483365669,
+          "std_err": 26.733476365414873,
+          "p_value": 0.0804859997203804,
+          "ci_lower": -99.12337569142258,
+          "ci_upper": 5.669926024109209
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -49.235324833656705,
+          "std_err": 21.5924501859522,
+          "p_value": 0.022595225564361204,
+          "ci_lower": -91.5557495360982,
+          "ci_upper": -6.914900131215205
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -11.993701117782724,
+          "std_err": 21.336798631841997,
+          "p_value": 0.574038736973491,
+          "ci_lower": -53.813057981576534,
+          "ci_upper": 29.82565574601109
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 59.51018321934427,
+          "std_err": 50.49556906808757,
+          "p_value": 0.23858821847229483,
+          "ci_lower": -39.45931353296214,
+          "ci_upper": 158.47967997165068
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -80.82758733365671,
+          "std_err": 15.09882004089571,
+          "p_value": 8.639377339952896e-08,
+          "ci_lower": -110.42073082286389,
+          "ci_upper": -51.23444384444953
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -94.84829520430286,
+          "std_err": 23.067687097745093,
+          "p_value": 3.9269107541536284e-05,
+          "ci_lower": -140.06013112252253,
+          "ci_upper": -49.63645928608319
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 27.613235237053868,
+          "std_err": 20.705204567667167,
+          "p_value": 0.18232271886849727,
+          "ci_lower": -12.968220008108002,
+          "ci_upper": 68.19469048221573
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": -3.486754674373619,
+          "std_err": 20.400923200428675,
+          "p_value": 0.8642932658037717,
+          "ci_lower": -43.47182939858144,
+          "ci_upper": 36.4983200498342
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 41.47466380640655,
+          "std_err": 27.407402918417812,
+          "p_value": 0.13021235718741075,
+          "ci_lower": -12.242858823470335,
+          "ci_upper": 95.19218643628344
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": 2.1464661658522304,
+          "std_err": 8.888627584833301,
+          "p_value": 0.8091795953395997,
+          "ci_lower": -15.274923772410284,
+          "ci_upper": 19.567856104114746
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 6.436662392371281,
+          "std_err": 11.382531850507164,
+          "p_value": 0.5717432449064366,
+          "ci_lower": -15.872690087502814,
+          "ci_upper": 28.74601487224538
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": -23.25274716820961,
+          "std_err": 9.235595186308784,
+          "p_value": 0.011811338572703904,
+          "ci_lower": -41.35418110916632,
+          "ci_upper": -5.151313227252903
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -33.17756889281927,
+          "std_err": 9.5181297029269,
+          "p_value": 0.0004908079304796068,
+          "ci_lower": -51.832760310736916,
+          "ci_upper": -14.522377474901617
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -13.411687229579526,
+          "std_err": 22.115563934391318,
+          "p_value": 0.5442248757838904,
+          "ci_lower": -56.75739603877945,
+          "ci_upper": 29.934021579620392
+        }
+      ],
+      "nobs": 278.0,
+      "rsquared": 0.16109118608296946,
+      "rsquared_adj": 0.08512700214560054,
+      "fvalue": 6.153840179412605,
+      "f_pvalue": 5.85625764895449e-15,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 21.103506907144357,
+        "std_err": 7.775613034303874,
+        "p_value": 0.006646344088142282,
+        "ci_lower": 5.863585402188557,
+        "ci_upper": 36.34342841210016
+      }
+    },
+    "m4_city_category_retailer_cluster_brand": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + C(retailer)",
+      "cov": "cluster (brand)",
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 6.433888297158479,
+          "std_err": 8.065093114061877,
+          "p_value": 0.42501844161650737,
+          "ci_lower": -9.373403738364791,
+          "ci_upper": 22.24118033268175
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 21.103506907144357,
+          "std_err": 6.66171287572633,
+          "p_value": 0.001535548939826029,
+          "ci_lower": 8.046789595373998,
+          "ci_upper": 34.16022421891472
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -22.42125504769801,
+          "std_err": 17.973108984039044,
+          "p_value": 0.21221826550040013,
+          "ci_lower": -57.64790134662782,
+          "ci_upper": 12.805391251231796
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -7.615655022582534,
+          "std_err": 14.864840179932841,
+          "p_value": 0.6084223579010204,
+          "ci_lower": -36.7502064111948,
+          "ci_upper": 21.518896366029733
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -6.137076109158742,
+          "std_err": 13.263382789079976,
+          "p_value": 0.6435735326397289,
+          "ci_lower": -32.13282868892391,
+          "ci_upper": 19.858676470606426
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 1.4423804717775304,
+          "std_err": 10.575940186205798,
+          "p_value": 0.8915183610506637,
+          "ci_lower": -19.28608139583567,
+          "ci_upper": 22.170842339390727
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 40.052751509880714,
+          "std_err": 23.24602515143378,
+          "p_value": 0.08488969058392833,
+          "ci_lower": -5.508620570641753,
+          "ci_upper": 85.61412359040318
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 10.057095487109661,
+          "std_err": 21.8832188421313,
+          "p_value": 0.6458175281106265,
+          "ci_lower": -32.83322530927599,
+          "ci_upper": 52.947416283495315
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -6.3936142348771146,
+          "std_err": 10.937506639754194,
+          "p_value": 0.5588445108936366,
+          "ci_lower": -27.830733329463044,
+          "ci_upper": 15.043504859708813
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -23.745542983087653,
+          "std_err": 13.374674039670353,
+          "p_value": 0.07583005433045477,
+          "ci_lower": -49.959422405804375,
+          "ci_upper": 2.4683364396290735
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -13.423668043441687,
+          "std_err": 15.076079281469237,
+          "p_value": 0.37325373963456554,
+          "ci_lower": -42.97224046319189,
+          "ci_upper": 16.124904376308514
+        },
+        {
+          "name": "C(category)[T.Hair Gel / Serum]",
+          "coef": -46.72672483365669,
+          "std_err": 10.096653321558497,
+          "p_value": 3.6931760817127787e-06,
+          "ci_lower": -66.51580170829806,
+          "ci_upper": -26.937647959015326
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -49.235324833656705,
+          "std_err": 10.096653321558483,
+          "p_value": 1.0803917062916814e-06,
+          "ci_lower": -69.02440170829804,
+          "ci_upper": -29.44624795901537
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -11.993701117782724,
+          "std_err": 12.450620143143885,
+          "p_value": 0.335396238428304,
+          "ci_lower": -36.39646818353367,
+          "ci_upper": 12.409065947968223
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 59.51018321934427,
+          "std_err": 34.53544226256794,
+          "p_value": 0.08485912109745147,
+          "ci_lower": -8.178039805451377,
+          "ci_upper": 127.19840624413992
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -80.82758733365671,
+          "std_err": 10.09665332155846,
+          "p_value": 1.1909441284675616e-15,
+          "ci_lower": -100.616664208298,
+          "ci_upper": -61.03851045901542
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -94.84829520430286,
+          "std_err": 11.460396783155135,
+          "p_value": 1.271907537009747e-16,
+          "ci_lower": -117.31026014782562,
+          "ci_upper": -72.3863302607801
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 27.613235237053868,
+          "std_err": 20.82854645016073,
+          "p_value": 0.18492586390417187,
+          "ci_lower": -13.209965655580756,
+          "ci_upper": 68.43643612968849
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": -3.486754674373619,
+          "std_err": 13.28208013780528,
+          "p_value": 0.7929238764746891,
+          "ci_lower": -29.519153384246767,
+          "ci_upper": 22.54564403549953
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 41.47466380640655,
+          "std_err": 20.06993227015885,
+          "p_value": 0.03878059321517284,
+          "ci_lower": 2.138319384736988,
+          "ci_upper": 80.8110082280761
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": 2.1464661658522304,
+          "std_err": 10.873115223442515,
+          "p_value": 0.8435063816370878,
+          "ci_lower": -19.16444807184928,
+          "ci_upper": 23.457380403553742
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 6.436662392371281,
+          "std_err": 11.80974116204087,
+          "p_value": 0.5857329332644403,
+          "ci_lower": -16.71000495196903,
+          "ci_upper": 29.583329736711594
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": -23.25274716820961,
+          "std_err": 8.338158786867705,
+          "p_value": 0.005291763577042813,
+          "ci_lower": -39.5952380878465,
+          "ci_upper": -6.910256248572718
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -33.17756889281927,
+          "std_err": 10.839258008059307,
+          "p_value": 0.0022069426548656,
+          "ci_lower": -54.42212420775287,
+          "ci_upper": -11.933013577885657
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -13.411687229579526,
+          "std_err": 16.166933933330654,
+          "p_value": 0.40677901097793145,
+          "ci_lower": -45.098295479346085,
+          "ci_upper": 18.27492102018703
+        }
+      ],
+      "nobs": 278.0,
+      "rsquared": 0.16109118608296946,
+      "rsquared_adj": 0.08512700214560054,
+      "fvalue": 146.17295113071765,
+      "f_pvalue": 3.5917582515271833e-31,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 21.103506907144357,
+        "std_err": 6.66171287572633,
+        "p_value": 0.001535548939826029,
+        "ci_lower": 8.046789595373998,
+        "ci_upper": 34.16022421891472
+      }
+    },
+    "m4_paper_city_category_retailer_overlap_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + C(retailer) + ingredient_overlap_pct",
+      "cov": "HC3",
+      "nobs_subset": 273,
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": -7.703473929977427,
+          "std_err": 32.55994010330082,
+          "p_value": 0.8129720741593391,
+          "ci_lower": -71.5197838712284,
+          "ci_upper": 56.112836011273544
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 17.230734996269454,
+          "std_err": 10.48317502159137,
+          "p_value": 0.10024725042650173,
+          "ci_lower": -3.315910489679535,
+          "ci_upper": 37.77738048221845
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -22.47621450289238,
+          "std_err": 21.872623152841744,
+          "p_value": 0.30414002616451274,
+          "ci_lower": -65.34576812987912,
+          "ci_upper": 20.393339124094364
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -8.538704145459917,
+          "std_err": 20.259954467208242,
+          "p_value": 0.6734212415244527,
+          "ci_lower": -48.24748522960945,
+          "ci_upper": 31.17007693868962
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -7.256363090433852,
+          "std_err": 15.164839852298423,
+          "p_value": 0.6322949739062531,
+          "ci_lower": -36.978903032256476,
+          "ci_upper": 22.46617685138877
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 0.08073579236932282,
+          "std_err": 18.56404812691095,
+          "p_value": 0.9965299788748807,
+          "ci_lower": -36.30412994364439,
+          "ci_upper": 36.46560152838304
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 37.742398389674605,
+          "std_err": 27.483387607293324,
+          "p_value": 0.16966518362773986,
+          "ci_lower": -16.124051493774758,
+          "ci_upper": 91.60884827312397
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 7.862907469473965,
+          "std_err": 22.30298946557945,
+          "p_value": 0.7244262131967509,
+          "ci_lower": -35.85014863063798,
+          "ci_upper": 51.575963569585916
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -9.347039841621964,
+          "std_err": 21.95279713689413,
+          "p_value": 0.6702688961204097,
+          "ci_lower": -52.373731589848475,
+          "ci_upper": 33.67965190660455
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -22.84545714115619,
+          "std_err": 17.21804903486018,
+          "p_value": 0.18456428735426322,
+          "ci_lower": -56.592213133526776,
+          "ci_upper": 10.9012988512144
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -37.836962712560386,
+          "std_err": 50.654126213353294,
+          "p_value": 0.4550834567898412,
+          "ci_lower": -137.1172257590791,
+          "ci_upper": 61.44330033395834
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -44.80196207963225,
+          "std_err": 24.367354108614876,
+          "p_value": 0.0659731665277491,
+          "ci_lower": -92.56109853105151,
+          "ci_upper": 2.957174371787019
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -11.044154732618951,
+          "std_err": 21.81105713677657,
+          "p_value": 0.6126069152126836,
+          "ci_lower": -53.793041185446334,
+          "ci_upper": 31.704731720208436
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 55.178491194787455,
+          "std_err": 50.988482413442625,
+          "p_value": 0.2791745114118921,
+          "ci_lower": -44.75709796191403,
+          "ci_upper": 155.11408035148895
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -85.20622534045603,
+          "std_err": 16.96167153314335,
+          "p_value": 5.074962638272798e-07,
+          "ci_lower": -118.45049066301527,
+          "ci_upper": -51.961960017896786
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -76.83816106629214,
+          "std_err": 44.16549633527591,
+          "p_value": 0.08189799825962911,
+          "ci_lower": -163.40094324276868,
+          "ci_upper": 9.724621110184387
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 26.63971719245281,
+          "std_err": 20.453570965407213,
+          "p_value": 0.19276320625060528,
+          "ci_lower": -13.448545254979468,
+          "ci_upper": 66.72797963988509
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": -4.5862050604467495,
+          "std_err": 20.419839551004788,
+          "p_value": 0.8222939283526274,
+          "ci_lower": -44.60835515050268,
+          "ci_upper": 35.43594502960918
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 39.35932041243535,
+          "std_err": 27.498665840047313,
+          "p_value": 0.15233925350066413,
+          "ci_lower": -14.53707425695925,
+          "ci_upper": 93.25571508182995
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": -1.008765259522097,
+          "std_err": 10.891081096822743,
+          "p_value": 0.9262030231480134,
+          "ci_lower": -22.354891961999662,
+          "ci_upper": 20.33736144295547
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 2.8067308437218434,
+          "std_err": 15.193850804755987,
+          "p_value": 0.8534423227832062,
+          "ci_lower": -26.972669520074806,
+          "ci_upper": 32.58613120751849
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": -26.732174510446313,
+          "std_err": 11.780427290077466,
+          "p_value": 0.023256017137334686,
+          "ci_lower": -49.821387721490936,
+          "ci_upper": -3.642961299401694
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -33.066064971129,
+          "std_err": 9.63162914423012,
+          "p_value": 0.000596786192545293,
+          "ci_lower": -51.94371120626638,
+          "ci_upper": -14.188418735991625
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -13.300089574765233,
+          "std_err": 22.208501893128354,
+          "p_value": 0.5492570544750701,
+          "ci_lower": -56.827953435886414,
+          "ci_upper": 30.227774286355952
+        },
+        {
+          "name": "ingredient_overlap_pct",
+          "coef": 0.22030001902059704,
+          "std_err": 0.4477512413152625,
+          "p_value": 0.6227092258693298,
+          "ci_lower": -0.6572762879904201,
+          "ci_upper": 1.0978763260316142
+        }
+      ],
+      "nobs": 273.0,
+      "rsquared": 0.15959303600129748,
+      "rsquared_adj": 0.08196508350342535,
+      "fvalue": 6.175985188812395,
+      "f_pvalue": 5.953446265723723e-15,
+      "label": "Report Table 5 \u2014 M4 (M3 + ingredient overlap, n=273)",
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 17.230734996269454,
+        "std_err": 10.48317502159137,
+        "p_value": 0.10024725042650173,
+        "ci_lower": -3.315910489679535,
+        "ci_upper": 37.77738048221845
+      },
+      "ingredient_overlap_pct": {
+        "name": "ingredient_overlap_pct",
+        "coef": 0.22030001902059704,
+        "std_err": 0.4477512413152625,
+        "p_value": 0.6227092258693298,
+        "ci_lower": -0.6572762879904201,
+        "ci_upper": 1.0978763260316142
+      }
+    },
+    "m5_overlap_controls_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + ingredient_overlap_pct + jaccard_similarity",
+      "cov": "HC3",
+      "nobs_subset": 273,
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 25.198424570440494,
+          "std_err": 489.65164776591246,
+          "p_value": 0.9589574277378874,
+          "ci_lower": -934.5011700214403,
+          "ci_upper": 984.8980191623212
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 14.087387209199235,
+          "std_err": 9.446746446832043,
+          "p_value": 0.13589791084683023,
+          "ci_lower": -4.427895597673292,
+          "ci_upper": 32.60267001607176
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -19.67669099827744,
+          "std_err": 23.097384066849543,
+          "p_value": 0.39426888763107004,
+          "ci_lower": -64.94673190639183,
+          "ci_upper": 25.59334990983695
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -10.441697267406335,
+          "std_err": 21.22554469629097,
+          "p_value": 0.6227616664037106,
+          "ci_lower": -52.043000424381795,
+          "ci_upper": 31.15960588956913
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -8.639180782261992,
+          "std_err": 16.325198062095485,
+          "p_value": 0.5966715617296727,
+          "ci_lower": -40.63598102445223,
+          "ci_upper": 23.357619459928245
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": -1.9651734073969838,
+          "std_err": 19.461579753855997,
+          "p_value": 0.9195686582775409,
+          "ci_lower": -40.109168807208626,
+          "ci_upper": 36.17882199241466
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 34.68523034925993,
+          "std_err": 27.976426813043968,
+          "p_value": 0.21504863256910978,
+          "ci_lower": -20.147558620426928,
+          "ci_upper": 89.51801931894678
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": -1.9787890389876939,
+          "std_err": 35.894535914638524,
+          "p_value": 0.9560365988574605,
+          "ci_lower": -72.33078667345869,
+          "ci_upper": 68.37320859548329
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -20.029504775075395,
+          "std_err": 43.454106466172995,
+          "p_value": 0.6448454677279105,
+          "ci_lower": -105.19798842914355,
+          "ci_upper": 65.13897887899276
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -19.37503622936719,
+          "std_err": 17.65520217115337,
+          "p_value": 0.2724611938285243,
+          "ci_lower": -53.97859662460116,
+          "ci_upper": 15.22852416586678
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -42.70347636981866,
+          "std_err": 39.492601703321945,
+          "p_value": 0.27956226703197595,
+          "ci_lower": -120.10755336411486,
+          "ci_upper": 34.700600624477545
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -38.32344868463836,
+          "std_err": 51.93643955589863,
+          "p_value": 0.460580485298386,
+          "ci_lower": -140.11699969944112,
+          "ci_upper": 63.4701023301644
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -10.276811689264417,
+          "std_err": 21.24618347282953,
+          "p_value": 0.6285976993071211,
+          "ci_lower": -51.918566104940425,
+          "ci_upper": 31.364942726411588
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 44.238029111953,
+          "std_err": 63.561953920632384,
+          "p_value": 0.4864395772526924,
+          "ci_lower": -80.34111135948096,
+          "ci_upper": 168.81716958338694
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -87.99668247441859,
+          "std_err": 40.42449680553266,
+          "p_value": 0.02949431532308304,
+          "ci_lower": -167.22724030641706,
+          "ci_upper": -8.76612464242011
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -106.59671177963969,
+          "std_err": 492.15635304689727,
+          "p_value": 0.828526981260179,
+          "ci_lower": -1071.205438514138,
+          "ci_upper": 858.0120149548586
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 27.10521514905366,
+          "std_err": 20.84689733400759,
+          "p_value": 0.19353112830361197,
+          "ci_lower": -13.753952815005288,
+          "ci_upper": 67.9643831131126
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": -7.804599404603644,
+          "std_err": 20.723075048460846,
+          "p_value": 0.7064605101511289,
+          "ci_lower": -48.421080148507535,
+          "ci_upper": 32.81188133930025
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 35.2775733436968,
+          "std_err": 27.991052873754768,
+          "p_value": 0.20755537039152927,
+          "ci_lower": -19.58388217821892,
+          "ci_upper": 90.13902886561252
+        },
+        {
+          "name": "ingredient_overlap_pct",
+          "coef": -1.2887313635714948,
+          "std_err": 14.64461820372008,
+          "p_value": 0.9298764068624099,
+          "ci_lower": -29.99165561020251,
+          "ci_upper": 27.414192883059524
+        },
+        {
+          "name": "jaccard_similarity",
+          "coef": 121.85898815652764,
+          "std_err": 1011.5369896426192,
+          "p_value": 0.9041115266913413,
+          "ci_lower": -1860.7170805730718,
+          "ci_upper": 2104.4350568861273
+        }
+      ],
+      "nobs": 273.0,
+      "rsquared": 0.13400508069283845,
+      "rsquared_adj": 0.06527532519227008,
+      "fvalue": 7.13789966278758,
+      "f_pvalue": 1.035492884727095e-15,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 14.087387209199235,
+        "std_err": 9.446746446832043,
+        "p_value": 0.13589791084683023,
+        "ci_lower": -4.427895597673292,
+        "ci_upper": 32.60267001607176
+      },
+      "ingredient_overlap_pct": {
+        "name": "ingredient_overlap_pct",
+        "coef": -1.2887313635714948,
+        "std_err": 14.64461820372008,
+        "p_value": 0.9298764068624099,
+        "ci_lower": -29.99165561020251,
+        "ci_upper": 27.414192883059524
+      },
+      "jaccard_similarity": {
+        "name": "jaccard_similarity",
+        "coef": 121.85898815652764,
+        "std_err": 1011.5369896426192,
+        "p_value": 0.9041115266913413,
+        "ci_lower": -1860.7170805730718,
+        "ci_upper": 2104.4350568861273
+      }
+    },
+    "m6_controls_price_match_size_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + C(retailer) + match_quality + log_mean_ppu + size_ratio",
+      "cov": "HC3",
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 73.67716768333692,
+          "std_err": 64.26176163942525,
+          "p_value": 0.2515815191840961,
+          "ci_lower": -52.273570713034175,
+          "ci_upper": 199.627906079708
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 46.82739541722775,
+          "std_err": 20.025779454886596,
+          "p_value": 0.01936880409167613,
+          "ci_lower": 7.577588923307864,
+          "ci_upper": 86.07720191114763
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -23.353988466455068,
+          "std_err": 21.697480202496696,
+          "p_value": 0.2817726989342616,
+          "ci_lower": -65.88026821861943,
+          "ci_upper": 19.172291285709296
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -10.681805606400902,
+          "std_err": 21.003342271585726,
+          "p_value": 0.611049127708083,
+          "ci_lower": -51.84760001367661,
+          "ci_upper": 30.483988800874812
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -13.401022579430993,
+          "std_err": 15.780558152697239,
+          "p_value": 0.395763928378422,
+          "ci_lower": -44.330348214657505,
+          "ci_upper": 17.528303055795522
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 2.438673841297148,
+          "std_err": 19.56381647678794,
+          "p_value": 0.900798857427747,
+          "ci_lower": -35.90570185335851,
+          "ci_upper": 40.7830495359528
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 38.18111440316437,
+          "std_err": 27.163833131085788,
+          "p_value": 0.15984697700735306,
+          "ci_lower": -15.059020215819658,
+          "ci_upper": 91.4212490221484
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 16.747826059584522,
+          "std_err": 23.19420196889325,
+          "p_value": 0.47025174254226854,
+          "ci_lower": -28.711974449594255,
+          "ci_upper": 62.2076265687633
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": 1.3720473514641114,
+          "std_err": 19.733985464193264,
+          "p_value": 0.9445700391434858,
+          "ci_lower": -37.305853429791625,
+          "ci_upper": 40.04994813271985
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -18.937092855562113,
+          "std_err": 17.2744921919759,
+          "p_value": 0.27297113676601725,
+          "ci_lower": -52.79447540305325,
+          "ci_upper": 14.920289691929021
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -4.3001766093669564,
+          "std_err": 22.846094931541952,
+          "p_value": 0.8507012914884944,
+          "ci_lower": -49.07769986257225,
+          "ci_upper": 40.47734664383834
+        },
+        {
+          "name": "C(category)[T.Hair Gel / Serum]",
+          "coef": -41.2670179131325,
+          "std_err": 30.085485800017533,
+          "p_value": 0.17016971539138248,
+          "ci_lower": -100.23348653855808,
+          "ci_upper": 17.69945071229308
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -25.83076886185372,
+          "std_err": 21.19608276073112,
+          "p_value": 0.2229741500046455,
+          "ci_lower": -67.37432768621704,
+          "ci_upper": 15.712789962509596
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -1.6938975710354631,
+          "std_err": 23.14871673275988,
+          "p_value": 0.9416671962046265,
+          "ci_lower": -47.064548655564536,
+          "ci_upper": 43.67675351349361
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 52.62222961247278,
+          "std_err": 50.893598863323696,
+          "p_value": 0.30115225331748674,
+          "ci_lower": -47.12739120327029,
+          "ci_upper": 152.37185042821585
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -76.4044832625202,
+          "std_err": 16.136914010921053,
+          "p_value": 2.193098868456095e-06,
+          "ci_lower": -108.03225354554526,
+          "ci_upper": -44.776712979495144
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -87.62025908340456,
+          "std_err": 23.932573622417845,
+          "p_value": 0.00025110547049605076,
+          "ci_lower": -134.52724144069683,
+          "ci_upper": -40.71327672611229
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 24.133287021781996,
+          "std_err": 20.587927173725802,
+          "p_value": 0.24111445247032193,
+          "ci_lower": -16.218308755054082,
+          "ci_upper": 64.48488279861807
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": 4.019880617259108,
+          "std_err": 20.66102195947287,
+          "p_value": 0.8457346845842382,
+          "ci_lower": -36.474978307098894,
+          "ci_upper": 44.514739541617104
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 43.728571168037575,
+          "std_err": 27.255171505105455,
+          "p_value": 0.10862288824934173,
+          "ci_lower": -9.690583374431455,
+          "ci_upper": 97.1477257105066
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": 19.335103085101697,
+          "std_err": 17.89375785472655,
+          "p_value": 0.27989725857871184,
+          "ci_lower": -15.736017858243049,
+          "ci_upper": 54.406224028446445
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 18.270689411150286,
+          "std_err": 18.75719885883305,
+          "p_value": 0.33002536472737887,
+          "ci_lower": -18.49274480301829,
+          "ci_upper": 55.03412362531886
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": -10.756020230142212,
+          "std_err": 18.262704558000983,
+          "p_value": 0.5558874546553012,
+          "ci_lower": -46.55026342411963,
+          "ci_upper": 25.038222963835203
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -43.493505380403356,
+          "std_err": 11.933525723032284,
+          "p_value": 0.0002677576060697063,
+          "ci_lower": -66.88278600612894,
+          "ci_upper": -20.10422475467777
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -12.041901924160873,
+          "std_err": 21.9067849520988,
+          "p_value": 0.5825332286503138,
+          "ci_lower": -54.97841144733854,
+          "ci_upper": 30.894607599016787
+        },
+        {
+          "name": "match_quality",
+          "coef": 9.05030027908446,
+          "std_err": 10.842980677313044,
+          "p_value": 0.403904077655042,
+          "ci_lower": -12.201551333512828,
+          "ci_upper": 30.30215189168175
+        },
+        {
+          "name": "log_mean_ppu",
+          "coef": -6.723649522589726,
+          "std_err": 4.073499530435295,
+          "p_value": 0.09882373007600309,
+          "ci_lower": -14.707561893283724,
+          "ci_upper": 1.260262848104273
+        },
+        {
+          "name": "size_ratio",
+          "coef": -102.57468109776894,
+          "std_err": 73.71760614008376,
+          "p_value": 0.16408770419129026,
+          "ci_lower": -247.05853415884187,
+          "ci_upper": 41.909171963303976
+        }
+      ],
+      "nobs": 278.0,
+      "rsquared": 0.1701649360906512,
+      "rsquared_adj": 0.08420592548649564,
+      "fvalue": 6.11471608164076,
+      "f_pvalue": 6.078044960892457e-16,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 46.82739541722775,
+        "std_err": 20.025779454886596,
+        "p_value": 0.01936880409167613,
+        "ci_lower": 7.577588923307864,
+        "ci_upper": 86.07720191114763
+      },
+      "match_quality": {
+        "name": "match_quality",
+        "coef": 9.05030027908446,
+        "std_err": 10.842980677313044,
+        "p_value": 0.403904077655042,
+        "ci_lower": -12.201551333512828,
+        "ci_upper": 30.30215189168175
+      },
+      "log_mean_ppu": {
+        "name": "log_mean_ppu",
+        "coef": -6.723649522589726,
+        "std_err": 4.073499530435295,
+        "p_value": 0.09882373007600309,
+        "ci_lower": -14.707561893283724,
+        "ci_upper": 1.260262848104273
+      },
+      "size_ratio": {
+        "name": "size_ratio",
+        "coef": -102.57468109776894,
+        "std_err": 73.71760614008376,
+        "p_value": 0.16408770419129026,
+        "ci_lower": -247.05853415884187,
+        "ci_upper": 41.909171963303976
+      }
+    },
+    "m7_full_with_ingredients_hc3": {
+      "formula": "pink_tax_pct ~ C(city) + C(category) + C(retailer) + match_quality + log_mean_ppu + size_ratio + ingredient_overlap_pct + jaccard_similarity",
+      "cov": "HC3",
+      "nobs_subset": 273,
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 89.0006912906658,
+          "std_err": 352.2235530312354,
+          "p_value": 0.8005136525257568,
+          "ci_lower": -601.3447871572893,
+          "ci_upper": 779.3461697386209
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 50.031114067872835,
+          "std_err": 89.71964649905797,
+          "p_value": 0.5770913753837078,
+          "ci_lower": -125.81616177594594,
+          "ci_upper": 225.8783899116916
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -22.92899306793106,
+          "std_err": 23.094466179266135,
+          "p_value": 0.3207903969611662,
+          "ci_lower": -68.19331502147102,
+          "ci_upper": 22.33532888560891
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -11.332959165066086,
+          "std_err": 20.965880352668478,
+          "p_value": 0.5888226379623762,
+          "ci_lower": -52.42532956047223,
+          "ci_upper": 29.759411230340056
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -14.73266879162815,
+          "std_err": 16.455438940892797,
+          "p_value": 0.3706230279678112,
+          "ci_lower": -46.98473646557596,
+          "ci_upper": 17.519398882319663
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 1.0701294458841686,
+          "std_err": 20.56247382510771,
+          "p_value": 0.9584945617251711,
+          "ci_lower": -39.231578684374504,
+          "ci_upper": 41.371837576142845
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 34.92484878303772,
+          "std_err": 27.608351882232277,
+          "p_value": 0.2058676448991692,
+          "ci_lower": -19.18652657864616,
+          "ci_upper": 89.03622414472159
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 10.579577443048427,
+          "std_err": 34.65577315932555,
+          "p_value": 0.7601559173232355,
+          "ci_lower": -57.344489805619524,
+          "ci_upper": 78.50364469171637
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": -3.6122901806617134,
+          "std_err": 40.133513865655914,
+          "p_value": 0.9282817908530052,
+          "ci_lower": -82.2725319303862,
+          "ci_upper": 75.04795156906276
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -17.235277206705195,
+          "std_err": 18.450058066835574,
+          "p_value": 0.35022217735374694,
+          "ci_lower": -53.39672653037562,
+          "ci_upper": 18.926172116965223
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": -39.459156550831764,
+          "std_err": 275.11398473394723,
+          "p_value": 0.8859518609094885,
+          "ci_lower": -578.6726582726706,
+          "ci_upper": 499.75434517100706
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -20.560840012153236,
+          "std_err": 47.32197633244298,
+          "p_value": 0.6639339664755379,
+          "ci_lower": -113.31020930099831,
+          "ci_upper": 72.18852927669184
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": -0.24355877882573518,
+          "std_err": 23.836931574629777,
+          "p_value": 0.9918475913187565,
+          "ci_lower": -46.96308616704574,
+          "ci_upper": 46.475968609394265
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": 44.54048297486956,
+          "std_err": 61.19064030518144,
+          "p_value": 0.46667664508038365,
+          "ci_lower": -75.39096821423108,
+          "ci_upper": 164.47193416397022
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -84.15311010209047,
+          "std_err": 37.803839968141446,
+          "p_value": 0.026011059018089023,
+          "ci_lower": -158.24727491696353,
+          "ci_upper": -10.058945287217412
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -90.4693883177114,
+          "std_err": 433.4746379867322,
+          "p_value": 0.8346766203853494,
+          "ci_lower": -940.0640669832445,
+          "ci_upper": 759.1252903478218
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 22.966042279411973,
+          "std_err": 20.176536188193104,
+          "p_value": 0.2550140375515282,
+          "ci_lower": -16.579241982215578,
+          "ci_upper": 62.51132654103952
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": 2.7827158433105814,
+          "std_err": 21.16204821573284,
+          "p_value": 0.8953832813998439,
+          "ci_lower": -38.694136498625895,
+          "ci_upper": 44.25956818524706
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 40.899130302592425,
+          "std_err": 27.777502393834013,
+          "p_value": 0.14091740353362234,
+          "ci_lower": -13.543773969797378,
+          "ci_upper": 95.34203457498222
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": 23.945624637594477,
+          "std_err": 88.48231848196299,
+          "p_value": 0.786678620910131,
+          "ci_lower": -149.47653285565576,
+          "ci_upper": 197.36778213084472
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 21.90763845334595,
+          "std_err": 88.1367901275768,
+          "p_value": 0.8036980114670164,
+          "ci_lower": -150.83729590966996,
+          "ci_upper": 194.65257281636187
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": -6.883685868147333,
+          "std_err": 88.04906152770447,
+          "p_value": 0.9376847785137553,
+          "ci_lower": -179.45667533499935,
+          "ci_upper": 165.6893035987047
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -42.88285387389115,
+          "std_err": 12.108807639731024,
+          "p_value": 0.0003979196890093818,
+          "ci_lower": -66.61568074348742,
+          "ci_upper": -19.150027004294884
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -11.447755211057258,
+          "std_err": 22.022158370522067,
+          "p_value": 0.6031828076422836,
+          "ci_lower": -54.61039247911779,
+          "ci_upper": 31.71488205700328
+        },
+        {
+          "name": "match_quality",
+          "coef": 8.537167498256938,
+          "std_err": 10.975212018775743,
+          "p_value": 0.43665213837455064,
+          "ci_lower": -12.973852781234658,
+          "ci_upper": 30.048187777748534
+        },
+        {
+          "name": "log_mean_ppu",
+          "coef": -6.769980382246168,
+          "std_err": 4.11099193454046,
+          "p_value": 0.09959921817118533,
+          "ci_lower": -14.827376514680115,
+          "ci_upper": 1.287415750187777
+        },
+        {
+          "name": "size_ratio",
+          "coef": -116.54270256335778,
+          "std_err": 79.58520044092754,
+          "p_value": 0.14309108724385983,
+          "ci_lower": -272.526829129977,
+          "ci_upper": 39.44142400326143
+        },
+        {
+          "name": "ingredient_overlap_pct",
+          "coef": -0.5348785792833657,
+          "std_err": 12.918565521024771,
+          "p_value": 0.9669739293669362,
+          "ci_lower": -25.854801732412835,
+          "ci_upper": 24.785044573846104
+        },
+        {
+          "name": "jaccard_similarity",
+          "coef": 57.92296697204978,
+          "std_err": 894.5781921980997,
+          "p_value": 0.9483739162819349,
+          "ci_lower": -1695.418071091176,
+          "ci_upper": 1811.2640050352757
+        }
+      ],
+      "nobs": 273.0,
+      "rsquared": 0.1692301545142907,
+      "rsquared_adj": 0.07767592664443701,
+      "fvalue": 5.727353575544876,
+      "f_pvalue": 5.172786169657729e-15,
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 50.031114067872835,
+        "std_err": 89.71964649905797,
+        "p_value": 0.5770913753837078,
+        "ci_lower": -125.81616177594594,
+        "ci_upper": 225.8783899116916
+      },
+      "match_quality": {
+        "name": "match_quality",
+        "coef": 8.537167498256938,
+        "std_err": 10.975212018775743,
+        "p_value": 0.43665213837455064,
+        "ci_lower": -12.973852781234658,
+        "ci_upper": 30.048187777748534
+      },
+      "log_mean_ppu": {
+        "name": "log_mean_ppu",
+        "coef": -6.769980382246168,
+        "std_err": 4.11099193454046,
+        "p_value": 0.09959921817118533,
+        "ci_lower": -14.827376514680115,
+        "ci_upper": 1.287415750187777
+      },
+      "size_ratio": {
+        "name": "size_ratio",
+        "coef": -116.54270256335778,
+        "std_err": 79.58520044092754,
+        "p_value": 0.14309108724385983,
+        "ci_lower": -272.526829129977,
+        "ci_upper": 39.44142400326143
+      },
+      "ingredient_overlap_pct": {
+        "name": "ingredient_overlap_pct",
+        "coef": -0.5348785792833657,
+        "std_err": 12.918565521024771,
+        "p_value": 0.9669739293669362,
+        "ci_lower": -25.854801732412835,
+        "ci_upper": 24.785044573846104
+      },
+      "jaccard_similarity": {
+        "name": "jaccard_similarity",
+        "coef": 57.92296697204978,
+        "std_err": 894.5781921980997,
+        "p_value": 0.9483739162819349,
+        "ci_lower": -1695.418071091176,
+        "ci_upper": 1811.2640050352757
+      }
+    },
+    "m8_logit_pink_positive": {
+      "formula": "pink_pos ~ C(city) + C(category) + C(retailer) + match_quality + log_mean_ppu + size_ratio",
+      "nobs": 278.0,
+      "pseudo_rsquared": 0.18011957885400753,
+      "llf": -153.33063435866072,
+      "terms": [
+        {
+          "name": "Intercept",
+          "coef": 4.288945350674025,
+          "std_err": null,
+          "p_value": null,
+          "ci_lower": null,
+          "ci_upper": null
+        },
+        {
+          "name": "C(city)[T.Tokyo]",
+          "coef": 1.9557865043308085,
+          "std_err": null,
+          "p_value": null,
+          "ci_lower": null,
+          "ci_upper": null
+        },
+        {
+          "name": "C(category)[T.Body Lotion]",
+          "coef": -0.28320727014612596,
+          "std_err": 0.6470599899051879,
+          "p_value": 0.6616159684192655,
+          "ci_lower": -1.551421546197145,
+          "ci_upper": 0.9850070059048932
+        },
+        {
+          "name": "C(category)[T.Body Wash]",
+          "coef": -0.5870733155579576,
+          "std_err": 0.6179372908800567,
+          "p_value": 0.3420852091173705,
+          "ci_lower": -1.79820815038712,
+          "ci_upper": 0.6240615192712046
+        },
+        {
+          "name": "C(category)[T.Conditioner]",
+          "coef": -0.14995945146216857,
+          "std_err": 0.6029751405818478,
+          "p_value": 0.8035934466950251,
+          "ci_lower": -1.331769010575566,
+          "ci_upper": 1.031850107651229
+        },
+        {
+          "name": "C(category)[T.Deodorant Roll-On]",
+          "coef": 0.5410393229490358,
+          "std_err": 0.673994506401052,
+          "p_value": 0.42212762456807906,
+          "ci_lower": -0.779965635374877,
+          "ci_upper": 1.8620442812729485
+        },
+        {
+          "name": "C(category)[T.Deodorant Spray]",
+          "coef": 1.161471543396292,
+          "std_err": 0.6293928733400926,
+          "p_value": 0.06498169774143316,
+          "ci_lower": -0.07211582047646936,
+          "ci_upper": 2.3950589072690533
+        },
+        {
+          "name": "C(category)[T.Face Moisturizer]",
+          "coef": 0.7506612076242372,
+          "std_err": 0.8172823010255417,
+          "p_value": 0.358365217550055,
+          "ci_lower": -0.8511826675878473,
+          "ci_upper": 2.3525050828363216
+        },
+        {
+          "name": "C(category)[T.Face Toner]",
+          "coef": 0.8231930228702442,
+          "std_err": 0.7874508733548533,
+          "p_value": 0.29584290069997043,
+          "ci_lower": -0.7201823284998796,
+          "ci_upper": 2.366568374240368
+        },
+        {
+          "name": "C(category)[T.Facial Cleanser]",
+          "coef": -0.6651453156750811,
+          "std_err": 0.6486086807203474,
+          "p_value": 0.3051294241221236,
+          "ci_lower": -1.9363949699470009,
+          "ci_upper": 0.6061043385968388
+        },
+        {
+          "name": "C(category)[T.Hair Colour]",
+          "coef": 1.4864159206914207,
+          "std_err": 1.3941861689789126,
+          "p_value": 0.286354434422482,
+          "ci_lower": -1.2461387582511219,
+          "ci_upper": 4.2189705996339635
+        },
+        {
+          "name": "C(category)[T.Hair Gel / Serum]",
+          "coef": -7.014749665994814,
+          "std_err": 0.8542206403947862,
+          "p_value": 2.1776824832505572e-16,
+          "ci_lower": -8.688991356019336,
+          "ci_upper": -5.340507975970292
+        },
+        {
+          "name": "C(category)[T.Hair Oil]",
+          "coef": -6.364635601674357,
+          "std_err": 46.22477318781014,
+          "p_value": 0.8904863363212517,
+          "ci_lower": -96.96352624331497,
+          "ci_upper": 84.23425503996627
+        },
+        {
+          "name": "C(category)[T.Hand Cream]",
+          "coef": 0.058819369824508486,
+          "std_err": 0.8172427942573874,
+          "p_value": 0.9426234395957785,
+          "ci_lower": -1.542947073544848,
+          "ci_upper": 1.6605858131938651
+        },
+        {
+          "name": "C(category)[T.Hand Wash]",
+          "coef": -0.06606870730347798,
+          "std_err": 0.8749011673294678,
+          "p_value": 0.9398044671365356,
+          "ci_lower": -1.7808434853012862,
+          "ci_upper": 1.6487060706943302
+        },
+        {
+          "name": "C(category)[T.Razor (3-blade starter kit)]",
+          "coef": -11.692998202404134,
+          "std_err": 0.5643100535369876,
+          "p_value": 2.2456618773367713e-95,
+          "ci_lower": -12.799025583450499,
+          "ci_upper": -10.586970821357768
+        },
+        {
+          "name": "C(category)[T.Razor Cartridges]",
+          "coef": -7.898967143990082,
+          "std_err": 0.8364706546331815,
+          "p_value": 3.615342825136482e-21,
+          "ci_lower": -9.53841950119576,
+          "ci_upper": -6.259514786784404
+        },
+        {
+          "name": "C(category)[T.Shampoo]",
+          "coef": 0.08720349978107181,
+          "std_err": 0.5042613304993878,
+          "p_value": 0.8627039750855628,
+          "ci_lower": -0.9011305467939774,
+          "ci_upper": 1.075537546356121
+        },
+        {
+          "name": "C(category)[T.Sunscreen]",
+          "coef": 0.3247282121973373,
+          "std_err": 0.8172513970189541,
+          "p_value": 0.6911153629934081,
+          "ci_lower": -1.2770550922748578,
+          "ci_upper": 1.9265115166695321
+        },
+        {
+          "name": "C(category)[T.Toothpaste]",
+          "coef": 0.18427477205836026,
+          "std_err": 0.6696991978210286,
+          "p_value": 0.7831929256273089,
+          "ci_lower": -1.1283115361462208,
+          "ci_upper": 1.4968610802629412
+        },
+        {
+          "name": "C(retailer)[T.Amazon.in]",
+          "coef": 0.7154016272129389,
+          "std_err": null,
+          "p_value": null,
+          "ci_lower": null,
+          "ci_upper": null
+        },
+        {
+          "name": "C(retailer)[T.Blinkit]",
+          "coef": 0.6795368351851558,
+          "std_err": null,
+          "p_value": null,
+          "ci_lower": null,
+          "ci_upper": null
+        },
+        {
+          "name": "C(retailer)[T.Flipkart]",
+          "coef": 0.9382203839451455,
+          "std_err": null,
+          "p_value": null,
+          "ci_lower": null,
+          "ci_upper": null
+        },
+        {
+          "name": "C(retailer)[T.Matsumoto Kiyoshi]",
+          "coef": -20.986452880510136,
+          "std_err": 0.43044288929502633,
+          "p_value": 0.0,
+          "ci_lower": -21.83010544092975,
+          "ci_upper": -20.142800320090522
+        },
+        {
+          "name": "C(retailer)[T.Rakuten Japan]",
+          "coef": -0.6878957345007483,
+          "std_err": 0.5601579627979355,
+          "p_value": 0.21943238831895695,
+          "ci_lower": -1.7857851672380294,
+          "ci_upper": 0.40999369823653276
+        },
+        {
+          "name": "match_quality",
+          "coef": -0.029228853338392972,
+          "std_err": 0.4632395367847846,
+          "p_value": 0.9496895583666018,
+          "ci_lower": -0.9371616616515883,
+          "ci_upper": 0.8787039549748024
+        },
+        {
+          "name": "log_mean_ppu",
+          "coef": -0.2694983711104676,
+          "std_err": 0.17347065415608515,
+          "p_value": 0.12028761580620544,
+          "ci_lower": -0.609494605630998,
+          "ci_upper": 0.07049786341006276
+        },
+        {
+          "name": "size_ratio",
+          "coef": -5.1840512038729205,
+          "std_err": 3.480787558419414,
+          "p_value": 0.13639974530052645,
+          "ci_lower": -12.006269456210081,
+          "ci_upper": 1.6381670484642408
+        }
+      ],
+      "city_tokyo": {
+        "name": "C(city)[T.Tokyo]",
+        "coef": 1.9557865043308085,
+        "std_err": null,
+        "p_value": null,
+        "ci_lower": null,
+        "ci_upper": null
+      },
+      "match_quality": {
+        "name": "match_quality",
+        "coef": -0.029228853338392972,
+        "std_err": 0.4632395367847846,
+        "p_value": 0.9496895583666018,
+        "ci_lower": 0.39173814429438936,
+        "ci_upper": 2.407777095805528,
+        "odds_ratio": 0.9711941780022116
+      },
+      "log_mean_ppu": {
+        "name": "log_mean_ppu",
+        "coef": -0.2694983711104676,
+        "std_err": 0.17347065415608515,
+        "p_value": 0.12028761580620544,
+        "ci_lower": 0.5436255449480958,
+        "ci_upper": 1.073042276776933,
+        "odds_ratio": 0.7637625236061308
+      },
+      "size_ratio": {
+        "name": "size_ratio",
+        "coef": -5.1840512038729205,
+        "std_err": 3.480787558419414,
+        "p_value": 0.13639974530052645,
+        "ci_lower": 6.105811983532611e-06,
+        "ci_upper": 5.145728991012186,
+        "odds_ratio": 0.005605252334849284
+      }
+    }
+  },
+  "conclusions": {
+    "summary": "Hypothesis tests on paired PPUs and on pink_tax_pct, together with OLS and logit models, show where unadjusted and adjusted comparisons disagree: pooled city gaps can be small while fixed-effect models highlight channel/category confounding. Use the written conclusions for assignment-ready wording.",
+    "bullets": [
+      "Paired PPU test (same row): female vs male price-per-unit t-test p=0.2004 (n=278). This asks whether women\u2019s SKUs are priced higher per unit on average.",
+      "City comparison (unadjusted): Hyderabad mean pink tax 7.84%, Tokyo 18.09%, Welch t-test p=0.2421.",
+      "City-only OLS (HC3): Tokyo vs Hyderabad p=0.2428 (coef 10.25 pp)\u2014matches pooled city means.",
+      "OLS with category + retailer FE (HC3): Tokyo coef 21.10 pp, p=0.0066 (significant at \u03b1=0.05). Interprets as conditional association, not raw city ranking.",
+      "Same FE model, SEs clustered by brand: Tokyo p=0.0015.",
+      "With category FE only + overlap: ingredient_overlap p=0.9299, jaccard p=0.9041.",
+      "Rich OLS (price level, match quality, size ratio controls): among continuous terms, largest |t| is log_mean_ppu (coef -6.7236, p=0.0988).",
+      "Full OLS including ingredients (n=273): ingredient_overlap_pct p=0.9670\u2014even controlling for similarity, city/retailer/category structure remains in this sample.",
+      "Logit P(pink tax > 0): Tokyo coefficient (log-odds) \u2248 1.956 (OR\u22487.069); HC0 SE for the city term is not finite (quasi-separation). Use OLS on pink_tax_pct for a stable city contrast; interpret logit for the continuous controls."
+    ],
+    "written_conclusions": [
+      "Dataset size: 278 matched rows after cleaning. Pink tax % is defined from female vs male price per unit within each pair.",
+      "On average, the female SKU carries a 12.93% higher price per unit than the male SKU when averaged at the pair level (mean of pink_tax_pct); the two-sided t-test against 0 has p=0.003404.",
+      "By raw category means, the largest average pink-tax values in this sample appear in categories such as Hand Wash (mean 68.5%, n=7); use charts for the full distribution.",
+      "In an OLS model with category and retailer fixed effects (HC3 robust SEs), Tokyo (vs Hyderabad) is associated with about 21.1 percentage points additional pink tax on average (p=0.006646), holding those factors constant.",
+      "In the richer OLS that adds log mean PPU, size ratio, and match quality, the strongest continuous predictor by |t| is log_mean_ppu (p=0.09882). Ingredient overlap is added in the extended specification when non-missing."
+    ],
+    "limitations": [
+      "Pairs are observational; promos and pack-size quirks affect pink_tax_pct.",
+      "City effects are confounded with retailer/currency context in places.",
+      "Logit and OLS can diverge because they target different estimands (level vs probability).",
+      "Ingredient fields are incomplete for some SKUs."
+    ]
+  }
+}

@@ -5,8 +5,9 @@ __pycache__/
 # Notebook artifacts
 .ipynb_checkpoints/
 writing/
-scripts/analysis/
+scripts/analysis/*
 !scripts/analysis/run_eda.py
+!scripts/analysis/run_regression.py
 
 # Local virtual environments
 .venv/
@@ -28,6 +29,7 @@ frontend/**/coverage/
 frontend/**/public/data/*.json
 !frontend/**/public/data/.gitkeep
 !frontend/public/data/eda_summary.json
+!frontend/public/data/regression_summary.json
 frontend/**/public/charts/
 frontend/**/public/charts/*.png
 npm-debug.log*
@@ -60,6 +62,7 @@ data/logs/*
 data/db/*.db
 data/analysis/*
 !data/analysis/.gitkeep
+!data/analysis/regression_summary.json
 data/eda/*
 data/raw/_backups/
 data/spec/_backups/

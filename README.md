@@ -244,18 +244,39 @@ This repo includes a full exploratory analysis pipeline and a deployable fronten
 
 ### EDA pipeline
 
-- Script: `scripts/analysis/run_eda.py`
+- Existing artifact: `frontend/public/data/eda_summary.json` (filter facets + headline metrics consumed by the React app).
+- Statistical aggregations cited in the paper now live alongside the regression output in `data/analysis/regression_summary.json` and are produced by `scripts/analysis/run_regression.py` (see next subsection). The Statistics tab of the React app loads from that JSON.
+
+### Regression confirmation (OLS)
+
+- Script: `scripts/analysis/run_regression.py`
 - Input: `data/clean/pink_tax_final_dataset_cleaned.csv`
-- Outputs:
-  - `data/analysis/eda_summary.json`
-  - chart PNGs in `data/analysis/charts/`
-  - summary tables (`city_summary.csv`, `retailer_summary.csv`, `category_summary.csv`, etc.)
+- Output: `data/analysis/regression_summary.json` (also copy to `frontend/public/data/` and `website/data/` for static sites)
 
 Run:
 
 ```bash
-python scripts/analysis/run_eda.py
+python scripts/analysis/run_regression.py
+cp data/analysis/regression_summary.json frontend/public/data/regression_summary.json
+cp data/analysis/regression_summary.json website/data/regression_summary.json
 ```
+
+The script runs hypothesis tests (paired and city comparisons), several OLS specifications on `pink_tax_pct` (including price level, match quality, size ratio, and ingredient controls on the OBF subset), a logit for P(pink tax > 0), and writes narrative conclusions into the JSON. Use the **Statistics & conclusions** tab in the React app to read them, or open `data/analysis/regression_summary.json`.
+
+The same script also emits the descriptive aggregations cited in the paper (`Gendered at a Price`, Section 5 and Table 5):
+
+- `descriptive.distribution_overall` — mean, median, SD, IQR, P10/P90, min/max
+- `descriptive.direction_overall` — share of pairs with women paying more / men paying more / parity
+- `descriptive.by_city` — per-city distribution, one-sample t-test vs 0 with 95% CI, and direction shares (Section 5.2)
+- `descriptive.category_table` — Table 3: n / mean / SD / t-stat / p for every category
+- `descriptive.city_category_diff` — Tokyo − Hyderabad mean per category (Figure 3)
+- `descriptive.retailer_summary` — Section 5.5 retailer means, medians, P90s, direction shares
+- `descriptive.brand_summary` — Section 5.4 brand-level means (n ≥ 5)
+- `descriptive.ingredient_overlap_buckets` — Table 4 (the headline finding)
+- `descriptive.size_ratio_breakdown` — Section 4.3 pack-size matching summary
+- `descriptive.cleaning_funnel` — Table 2
+
+Regression `models.m4_paper_city_category_retailer_overlap_hc3` corresponds exactly to **M4 in Table 5** of the paper (M3 + continuous ingredient overlap on n=273 with HC3 robust SEs).
 
 ### EDA notebook
 

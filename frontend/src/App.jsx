@@ -154,6 +154,658 @@ function clamp(v, lo, hi) {
   return Math.max(lo, Math.min(hi, v));
 }
 
+const CATEGORY_BAR_COLORS = ["#9d174d", "#be185d", "#db2777", "#ec4899", "#f9a8d4"];
+
+function fmtPct(v, digits = 2) {
+  if (v === null || v === undefined || !Number.isFinite(Number(v))) return "—";
+  return `${Number(v).toFixed(digits)}%`;
+}
+function fmtNum(v, digits = 2) {
+  if (v === null || v === undefined || !Number.isFinite(Number(v))) return "—";
+  return Number(v).toFixed(digits);
+}
+function fmtP(p) {
+  if (p === null || p === undefined || !Number.isFinite(Number(p))) return "—";
+  const n = Number(p);
+  if (n < 0.001) return "<0.001";
+  return n.toFixed(3);
+}
+function pStars(p) {
+  if (p === null || p === undefined || !Number.isFinite(Number(p))) return "";
+  const n = Number(p);
+  if (n < 0.001) return "***";
+  if (n < 0.05) return "**";
+  if (n < 0.1) return "*";
+  return "";
+}
+function fmtPpt(v, digits = 2) {
+  if (v === null || v === undefined || !Number.isFinite(Number(v))) return "—";
+  const n = Number(v);
+  return `${n >= 0 ? "+" : ""}${n.toFixed(digits)}`;
+}
+
+function StatsHeroCard({ value, label, subtext, variant = "neutral" }) {
+  return (
+    <article className={`stats-hero-card stats-hero-card--${variant}`}>
+      <div className="stats-hero-value">{value}</div>
+      <div className="stats-hero-label">{label}</div>
+      {subtext ? <div className="stats-hero-subtext">{subtext}</div> : null}
+    </article>
+  );
+}
+
+function CategoryBarChart({ data, valueKey = "mean", labelKey = "category", colors = CATEGORY_BAR_COLORS, suffix = "%" }) {
+  if (!data?.length) return null;
+  const vals = data.map((d) => Number(d[valueKey]) || 0);
+  const minV = Math.min(0, ...vals);
+  const maxV = Math.max(0, ...vals);
+  const pad = Math.max(8, (maxV - minV) * 0.08);
+  const xMin = Math.floor((minV - pad) / 10) * 10;
+  const xMax = Math.ceil((maxV + pad) / 10) * 10;
+  const height = Math.max(260, data.length * 32 + 60);
+  return (
+    <div className="stats-chart">
+      <ResponsiveContainer width="100%" height={height}>
+        <BarChart
+          data={data}
+          layout="vertical"
+          margin={{ top: 12, right: 72, left: 16, bottom: 12 }}
+          barCategoryGap={6}
+        >
+          <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#e2e8f0" />
+          <XAxis
+            type="number"
+            domain={[xMin, xMax]}
+            tick={{ fontSize: 12, fill: "#475569" }}
+            tickFormatter={(v) => `${v}${suffix}`}
+          />
+          <YAxis
+            type="category"
+            dataKey={labelKey}
+            width={150}
+            tick={{ fontSize: 12, fill: "#0f172a", fontWeight: 500 }}
+            tickLine={false}
+            axisLine={false}
+          />
+          <Tooltip
+            cursor={{ fill: "rgba(236, 72, 153, 0.08)" }}
+            formatter={(value, _name, item) => [
+              `${Number(value).toFixed(1)}${suffix}`,
+              `n = ${item?.payload?.n ?? "—"}`
+            ]}
+          />
+          {minV < 0 && <ReferenceLine x={0} stroke="#94a3b8" />}
+          <Bar dataKey={valueKey} radius={[0, 6, 6, 0]} isAnimationActive={false}>
+            {data.map((entry, i) => {
+              const v = Number(entry[valueKey]);
+              const fill = v < 0
+                ? "#1d4ed8"
+                : colors[i % colors.length];
+              return <Cell key={`${entry[labelKey]}-${i}`} fill={fill} />;
+            })}
+            <LabelList
+              dataKey={valueKey}
+              position="right"
+              formatter={(v) => `${Number(v).toFixed(1)}${suffix}`}
+              style={{ fill: "#0f172a", fontSize: 11, fontWeight: 600 }}
+            />
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+function StatisticsPanel({ data }) {
+  const desc = data?.descriptive ?? {};
+  const models = data?.models ?? {};
+  const hyp = data?.hypothesis_tests ?? {};
+
+  const dist = desc.distribution_overall ?? {};
+  const direction = desc.direction_overall ?? {};
+  const byCity = desc.by_city ?? {};
+  const hyd = byCity.Hyderabad ?? {};
+  const tok = byCity.Tokyo ?? {};
+  const catTable = desc.category_table ?? [];
+  const cityCatDiff = desc.city_category_diff ?? [];
+  const retailerSummary = desc.retailer_summary ?? [];
+  const brandSummary = desc.brand_summary ?? [];
+  const overlapBuckets = desc.ingredient_overlap_buckets ?? [];
+  const sizeRatio = desc.size_ratio_breakdown ?? {};
+  const cleaningFunnel = desc.cleaning_funnel ?? [];
+
+  const m1 = models.m1_city_hc3;
+  const m2 = models.m2_city_category_hc3;
+  const m3 = models.m3_city_category_retailer_hc3;
+  const m4Paper = models.m4_paper_city_category_retailer_overlap_hc3;
+  const m6 = models.m6_controls_price_match_size_hc3;
+
+  const meanOverall = dist.mean;
+  const oneSampleP = hyp.pink_tax_one_sample_t?.p_value;
+
+  const topCat = catTable[0];
+  const topCatLabel = topCat ? `${topCat.category}` : "—";
+  const topCatSubtext = topCat ? `${fmtPct(topCat.mean_pink_tax_pct, 1)} mean (n=${topCat.n})` : "";
+
+  const cityCardScale = Math.max(
+    Math.abs(Number(hyd.distribution?.mean) || 0),
+    Math.abs(Number(tok.distribution?.mean) || 0),
+    1
+  );
+
+  const top5Cats = catTable.slice(0, 5).map((c) => ({
+    category: c.category,
+    mean: Number(c.mean_pink_tax_pct),
+    n: c.n,
+  }));
+
+  const cityDiffTop = [...cityCatDiff]
+    .sort((a, b) => b.diff_tokyo_minus_hyd - a.diff_tokyo_minus_hyd)
+    .map((d) => ({
+      category: d.category,
+      mean: Number(d.diff_tokyo_minus_hyd),
+      n: `${d.n_hyderabad} vs ${d.n_tokyo}`,
+    }));
+
+  const overlapBars = overlapBuckets.map((b) => ({
+    category: b.bucket,
+    mean: Number(b.mean_pink_tax_pct ?? 0),
+    n: b.n,
+  }));
+
+  const cityP = hyp.city_pink_tax_ttest_ind?.p_value;
+
+  return (
+    <div className="stats-v2">
+      {/* Hero metrics */}
+      <section className="stats-hero-grid" aria-label="Headline findings">
+        <StatsHeroCard
+          variant="rose"
+          value={fmtPct(meanOverall, 2)}
+          label="Average Pink Tax"
+          subtext="Mean female-vs-male unit price gap, averaged across pairs"
+        />
+        <StatsHeroCard
+          variant="rose"
+          value={String(data?.meta?.n_rows ?? dist.n ?? "—")}
+          label="Matched Product Pairs"
+          subtext={`${hyd.distribution?.n ?? "—"} Hyderabad · ${tok.distribution?.n ?? "—"} Tokyo`}
+        />
+        <StatsHeroCard
+          variant="rose"
+          value={`Tokyo ${fmtPct(tok.distribution?.mean, 2)}`}
+          label={`vs Hyderabad ${fmtPct(hyd.distribution?.mean, 2)}`}
+          subtext="Mean female-vs-male unit price gap by city"
+        />
+        <StatsHeroCard
+          variant="rose"
+          value={topCatLabel}
+          label="Highest Pink Tax Category"
+          subtext={topCatSubtext}
+        />
+      </section>
+
+      {/* Distribution overview */}
+      <section className="panel stats-card">
+        <header className="stats-card-head">
+          <h2>Distribution of pink tax % (all pairs)</h2>
+          <p className="stats-card-sub">
+            Heavily right-skewed: median is exactly zero, but the mean is pulled up by a long
+            right tail of high-premium pairs.
+          </p>
+        </header>
+        <div className="stats-stat-grid">
+          <Stat label="Mean" value={fmtPct(dist.mean, 2)} />
+          <Stat label="Median" value={fmtPct(dist.median, 2)} />
+          <Stat label="Std. dev." value={`${fmtNum(dist.std, 1)} pp`} />
+          <Stat label="Min / Max" value={`${fmtPct(dist.min, 1)} / ${fmtPct(dist.max, 1)}`} />
+          <Stat label="IQR (Q1–Q3)" value={`${fmtPct(dist.q1, 1)} → ${fmtPct(dist.q3, 1)}`} />
+          <Stat label="P10 / P90" value={`${fmtPct(dist.p10, 1)} / ${fmtPct(dist.p90, 1)}`} />
+          <Stat
+            label="Direction split"
+            value={`${fmtPct((direction.share_women_pay_more ?? 0) * 100, 1)} W>M · ${fmtPct(
+              (direction.share_men_pay_more ?? 0) * 100, 1
+            )} M>W · ${fmtPct((direction.share_parity ?? 0) * 100, 1)} parity`}
+          />
+        </div>
+      </section>
+
+      {/* Top-5 category bar chart */}
+      <section className="panel stats-card">
+        <header className="stats-card-head">
+          <h2>Average Pink Tax by Product Category (top 5)</h2>
+          <p className="stats-card-sub">
+            Top five categories by mean female-vs-male price-per-unit gap.
+          </p>
+        </header>
+        <CategoryBarChart data={top5Cats} />
+      </section>
+
+      {/* City comparison enhanced */}
+      <section className="panel stats-card">
+        <header className="stats-card-head">
+          <h2>City comparison</h2>
+          <p className="stats-card-sub">
+            Per-city distribution, one-sample t-test vs zero, and direction breakdown
+            (Section 5.2 of the paper).
+          </p>
+        </header>
+        <div className="stats-city-grid">
+          <CityStatCard
+            name="Hyderabad"
+            color="#1d4ed8"
+            scale={cityCardScale}
+            stats={hyd}
+          />
+          <CityStatCard
+            name="Tokyo"
+            color="#db2777"
+            scale={cityCardScale}
+            stats={tok}
+          />
+        </div>
+        <p className="stats-city-note">
+          Tokyo&apos;s mean pink tax is statistically distinguishable from zero
+          (p = {fmtP(tok.one_sample_t_vs_zero?.p_value)}); Hyderabad&apos;s is not
+          (p = {fmtP(hyd.one_sample_t_vs_zero?.p_value)}). Welch t-test comparing the two cities
+          is not significant (p = {fmtP(cityP)}), reflecting high within-city variance.
+        </p>
+      </section>
+
+      {/* Ingredient overlap buckets — Table 4: the headline finding */}
+      <section className="panel stats-card stats-headline-card">
+        <header className="stats-card-head">
+          <h2>Pink tax by ingredient overlap (Table 4)</h2>
+          <p className="stats-card-sub">
+            The premium is <strong>highest</strong> among the most chemically similar products,
+            contradicting the cost-based prediction of Moshary et al. (2023). This is the central
+            theoretical finding of the paper.
+          </p>
+        </header>
+        <CategoryBarChart data={overlapBars} colors={["#7c3aed", "#a855f7", "#c084fc", "#ec4899"]} />
+        <table className="stats-table">
+          <thead>
+            <tr>
+              <th>Ingredient overlap</th>
+              <th>n</th>
+              <th>Mean pink tax %</th>
+              <th>Median</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overlapBuckets.map((b) => (
+              <tr key={b.bucket}>
+                <td>{b.bucket}</td>
+                <td>{b.n}</td>
+                <td className={Number(b.mean_pink_tax_pct) > 0 ? "pos" : "neg"}>
+                  {fmtPpt(b.mean_pink_tax_pct, 2)}
+                </td>
+                <td>{fmtPpt(b.median_pink_tax_pct, 2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      {/* Cross-city category difference (Figure 3) */}
+      {cityDiffTop.length > 0 && (
+        <section className="panel stats-card">
+          <header className="stats-card-head">
+            <h2>Cross-city category difference (Tokyo − Hyderabad)</h2>
+            <p className="stats-card-sub">
+              Positive bars indicate Tokyo&apos;s premium exceeds Hyderabad&apos;s; negative bars the reverse.
+              Top categories by absolute gap shown.
+            </p>
+          </header>
+          <CategoryBarChart data={cityDiffTop} />
+        </section>
+      )}
+
+      {/* Full Table 3 — pink tax by category */}
+      <section className="panel stats-card">
+        <header className="stats-card-head">
+          <h2>Pink tax by product category (Table 3)</h2>
+          <p className="stats-card-sub">
+            One-sample t-tests against zero for every category. * p&lt;0.1, ** p&lt;0.05, *** p&lt;0.001.
+          </p>
+        </header>
+        <div className="stats-table-scroll">
+          <table className="stats-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>n</th>
+                <th>Mean pink tax %</th>
+                <th>SD (pp)</th>
+                <th>p-value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {catTable.map((c) => (
+                <tr key={c.category}>
+                  <td>{c.category}</td>
+                  <td>{c.n}</td>
+                  <td className={Number(c.mean_pink_tax_pct) > 0 ? "pos" : "neg"}>
+                    {fmtPpt(c.mean_pink_tax_pct, 1)}
+                  </td>
+                  <td>{fmtNum(c.std_pink_tax_pct, 1)}</td>
+                  <td>
+                    {fmtP(c.p_value)}
+                    <span className="stats-stars">{pStars(c.p_value)}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Retailer summary — Section 5.5 */}
+      {retailerSummary.length > 0 && (
+        <section className="panel stats-card">
+          <header className="stats-card-head">
+            <h2>Retailer comparison (Section 5.5)</h2>
+            <p className="stats-card-sub">
+              Mean, median, and P90 of pink tax % by platform. Amazon.co.jp leads; Matsumoto Kiyoshi
+              shows near-zero gaps throughout.
+            </p>
+          </header>
+          <div className="stats-table-scroll">
+            <table className="stats-table">
+              <thead>
+                <tr>
+                  <th>Retailer</th>
+                  <th>n</th>
+                  <th>Mean %</th>
+                  <th>Median %</th>
+                  <th>P90 %</th>
+                  <th>W&gt;M share</th>
+                </tr>
+              </thead>
+              <tbody>
+                {retailerSummary.map((r) => (
+                  <tr key={r.retailer}>
+                    <td>{r.retailer}</td>
+                    <td>{r.n}</td>
+                    <td className={r.mean > 0 ? "pos" : "neg"}>{fmtPpt(r.mean, 2)}</td>
+                    <td>{fmtPpt(r.median, 2)}</td>
+                    <td>{fmtPpt(r.p90, 1)}</td>
+                    <td>{fmtPct((r.share_women_pay_more ?? 0) * 100, 1)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* Brand summary — Section 5.4 */}
+      {brandSummary.length > 0 && (
+        <section className="panel stats-card">
+          <header className="stats-card-head">
+            <h2>Brand-level patterns (Section 5.4, n ≥ 5)</h2>
+            <p className="stats-card-sub">
+              Mean pink tax by brand, ranked. Brand-level pricing strategy is at least as important
+              as market-level dynamics.
+            </p>
+          </header>
+          <div className="stats-table-scroll">
+            <table className="stats-table">
+              <thead>
+                <tr>
+                  <th>Brand</th>
+                  <th>n</th>
+                  <th>Mean %</th>
+                  <th>Median %</th>
+                  <th>SD</th>
+                </tr>
+              </thead>
+              <tbody>
+                {brandSummary.map((b) => (
+                  <tr key={b.brand}>
+                    <td>{b.brand}</td>
+                    <td>{b.n}</td>
+                    <td className={b.mean > 0 ? "pos" : "neg"}>{fmtPpt(b.mean, 2)}</td>
+                    <td>{fmtPpt(b.median, 2)}</td>
+                    <td>{fmtNum(b.std, 1)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* Regression Table 5 — M1–M4 */}
+      <section className="panel stats-card stats-regression-card">
+        <header className="stats-card-head">
+          <h2>OLS regression results (Table 5)</h2>
+          <p className="stats-card-sub">
+            Pink tax % as outcome. HC3 robust SEs in parentheses. * p&lt;0.1, ** p&lt;0.05, *** p&lt;0.001.
+            The Tokyo coefficient grows as controls are added: compositional differences in category and
+            retailer mix had been suppressing the underlying city differential.
+          </p>
+        </header>
+        <div className="stats-table-scroll">
+          <table className="stats-table stats-table-regression">
+            <thead>
+              <tr>
+                <th></th>
+                <th>M1<br />City only</th>
+                <th>M2<br />+ Category</th>
+                <th>M3<br />+ Retailer</th>
+                <th>M4<br />+ Ingredients</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tokyo (vs Hyderabad)</td>
+                <RegCell term={m1?.city_tokyo} />
+                <RegCell term={m2?.city_tokyo} />
+                <RegCell term={m3?.city_tokyo} />
+                <RegCell term={m4Paper?.city_tokyo} />
+              </tr>
+              <tr>
+                <td>Ingredient overlap %</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <RegCell term={m4Paper?.ingredient_overlap_pct} />
+              </tr>
+              <tr className="stats-table-divider">
+                <td>Category FEs</td>
+                <td>No</td><td>Yes</td><td>Yes</td><td>Yes</td>
+              </tr>
+              <tr>
+                <td>Retailer FEs</td>
+                <td>No</td><td>No</td><td>Yes</td><td>Yes</td>
+              </tr>
+              <tr>
+                <td>R²</td>
+                <td>{fmtNum(m1?.rsquared, 3)}</td>
+                <td>{fmtNum(m2?.rsquared, 3)}</td>
+                <td>{fmtNum(m3?.rsquared, 3)}</td>
+                <td>{fmtNum(m4Paper?.rsquared, 3)}</td>
+              </tr>
+              <tr>
+                <td>N</td>
+                <td>{Math.round(m1?.nobs ?? 0)}</td>
+                <td>{Math.round(m2?.nobs ?? 0)}</td>
+                <td>{Math.round(m3?.nobs ?? 0)}</td>
+                <td>{Math.round(m4Paper?.nobs ?? 0)}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Plain-English regression takeaways */}
+      <section className="panel stats-card stats-regression-card">
+        <header className="stats-card-head">
+          <h2>What predicts the pink tax?</h2>
+          <p className="stats-card-sub">
+            Summary of the regressions above (Section 6.3 of the paper).
+          </p>
+        </header>
+        <ul className="stats-finding-list">
+          <li>
+            <span className="stats-finding-label">City effect</span>
+            <span className="stats-finding-text">
+              Tokyo is associated with{" "}
+              <strong>{fmtPpt(m3?.city_tokyo?.coef, 1)} percentage points</strong> more pink tax than
+              Hyderabad, controlling for category and retailer (p = {fmtP(m3?.city_tokyo?.p_value)}).
+            </span>
+          </li>
+          <li>
+            <span className="stats-finding-label">Price level</span>
+            <span className="stats-finding-text">
+              Higher-priced products tend to show a smaller pink tax (log mean PPU coef{" "}
+              {fmtNum(m6?.log_mean_ppu?.coef, 2)}, p = {fmtP(m6?.log_mean_ppu?.p_value)}).
+            </span>
+          </li>
+          <li>
+            <span className="stats-finding-label">Product similarity</span>
+            <span className="stats-finding-text">
+              Ingredient overlap does not significantly predict pink tax size in M4
+              (coef {fmtNum(m4Paper?.ingredient_overlap_pct?.coef, 2)},
+              p = {fmtP(m4Paper?.ingredient_overlap_pct?.p_value)}). The bucketed analysis above
+              tells a stronger story than the linear coefficient.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      {/* Cleaning funnel + size ratio */}
+      <section className="panel stats-card stats-twocol">
+        <div>
+          <header className="stats-card-head">
+            <h2>Cleaning funnel (Table 2)</h2>
+            <p className="stats-card-sub">
+              Sequential filters that produced the 278-pair cleaned dataset.
+            </p>
+          </header>
+          <table className="stats-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Operation</th>
+                <th>In</th>
+                <th>Out</th>
+                <th>Removed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cleaningFunnel.map((s) => (
+                <tr key={s.step}>
+                  <td>{s.step}</td>
+                  <td>{s.operation}</td>
+                  <td>{s.n_in}</td>
+                  <td>{s.n_out}</td>
+                  <td>{s.removed}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <header className="stats-card-head">
+            <h2>Pack-size matching</h2>
+            <p className="stats-card-sub">
+              Most pairs share an exact package size, so unit-price standardisation reduces to a raw
+              price ratio.
+            </p>
+          </header>
+          <div className="stats-stat-grid">
+            <Stat
+              label="Exact size match"
+              value={fmtPct((sizeRatio.share_exact_match ?? 0) * 100, 1)}
+            />
+            <Stat
+              label="Within ±10%"
+              value={fmtPct((sizeRatio.share_within_10pct ?? 0) * 100, 1)}
+            />
+            <Stat
+              label="Outside ±10%"
+              value={fmtPct((sizeRatio.share_outside_10pct ?? 0) * 100, 1)}
+            />
+            <Stat label="Pairs analysed" value={String(sizeRatio.n ?? "—")} />
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion banner */}
+      <section className="stats-banner" role="note">
+        <p>
+          Across <strong>{data?.meta?.n_rows ?? 278}</strong> same-brand product pairs in Hyderabad and Tokyo,
+          female Stock Keeping Units (SKUs) cost <strong>{fmtPct(meanOverall, 2)} more per unit on average</strong> — a gap that is
+          statistically significant (p = {fmtP(oneSampleP)}) and most pronounced in personal-care
+          categories like <strong>{topCat?.category ?? "Hand Wash"}</strong> and{" "}
+          <strong>{catTable[1]?.category ?? "Toothpaste"}</strong>. The pink tax is{" "}
+          <strong>highest among near-identical formulations</strong> (90–100% ingredient overlap),
+          which challenges cost-based explanations and points to branding as the primary driver.
+        </p>
+      </section>
+    </div>
+  );
+}
+
+function Stat({ label, value }) {
+  return (
+    <div className="stats-stat">
+      <div className="stats-stat-value">{value}</div>
+      <div className="stats-stat-label">{label}</div>
+    </div>
+  );
+}
+
+function CityStatCard({ name, color, scale, stats }) {
+  const mean = stats?.distribution?.mean;
+  const t = stats?.one_sample_t_vs_zero ?? {};
+  const dir = stats?.direction ?? {};
+  const widthPct = mean !== undefined && mean !== null
+    ? Math.max(6, Math.min(100, Math.round((Math.abs(Number(mean)) / scale) * 100)))
+    : 0;
+  return (
+    <article className="stats-city-card">
+      <div className="stats-city-dot" style={{ background: color }} aria-hidden="true" />
+      <div className="stats-city-value">{fmtPct(mean, 2)}</div>
+      <div className="stats-city-name">{name}</div>
+      <div className="stats-city-bar-track">
+        <div className="stats-city-bar-fill" style={{ width: `${widthPct}%`, background: color }} />
+      </div>
+      <dl className="stats-city-stats">
+        <dt>One-sample t vs 0</dt>
+        <dd>
+          t = {fmtNum(t.statistic, 2)}, p = {fmtP(t.p_value)}
+        </dd>
+        <dt>95% CI for mean</dt>
+        <dd>
+          [{fmtPct(t.ci_lower, 1)}, {fmtPct(t.ci_upper, 1)}]
+        </dd>
+        <dt>Direction (W&gt;M / M&gt;W / parity)</dt>
+        <dd>
+          {fmtPct((dir.share_women_pay_more ?? 0) * 100, 1)} ·{" "}
+          {fmtPct((dir.share_men_pay_more ?? 0) * 100, 1)} ·{" "}
+          {fmtPct((dir.share_parity ?? 0) * 100, 1)}
+        </dd>
+      </dl>
+    </article>
+  );
+}
+
+function RegCell({ term }) {
+  if (!term) return <td>—</td>;
+  return (
+    <td>
+      <div className="reg-coef">
+        {fmtPpt(term.coef, 2)}
+        <span className="stats-stars">{pStars(term.p_value)}</span>
+      </div>
+      <div className="reg-se">({fmtNum(term.std_err, 2)})</div>
+    </td>
+  );
+}
+
 function niceTicks(minV, maxV, count = 7) {
   if (!Number.isFinite(minV) || !Number.isFinite(maxV)) return [0];
   if (minV === maxV) return [minV];
@@ -431,6 +1083,32 @@ export default function App() {
   const [extremeRowsCount, setExtremeRowsCount] = useState(15);
   const [showValueLabels, setShowValueLabels] = useState(false);
   const [showSidebarHint, setShowSidebarHint] = useState(false);
+  const [mainTab, setMainTab] = useState("explore");
+  const [regressionPayload, setRegressionPayload] = useState(null);
+
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL || "/";
+    const urls = [
+      `${base}data/regression_summary.json`,
+      "/data/regression_summary.json",
+      "./data/regression_summary.json"
+    ];
+    (async () => {
+      for (const url of urls) {
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) continue;
+          const data = await res.json();
+          if (data?.descriptive || data?.models) {
+            setRegressionPayload(data);
+            return;
+          }
+        } catch {
+          /* optional artifact */
+        }
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     const base = import.meta.env.BASE_URL || "/";
@@ -1006,7 +1684,8 @@ export default function App() {
           <h2>Data load error</h2>
           <p>{loadError}</p>
           <p>
-            Run: <code>python scripts/analysis/run_eda.py</code> and restart the React dev server.
+            Run: <code>python scripts/analysis/run_eda.py</code> (and optionally{" "}
+            <code>python scripts/analysis/run_regression.py</code>) then restart the React dev server.
           </p>
         </section>
       </main>
@@ -1022,6 +1701,22 @@ export default function App() {
           <p className="subtitle">
             Academic dashboard for same-brand female vs male pricing patterns across Hyderabad and Tokyo.
           </p>
+          <nav className="hero-tabs" aria-label="Main views">
+            <button
+              type="button"
+              className={mainTab === "explore" ? "is-active" : ""}
+              onClick={() => setMainTab("explore")}
+            >
+              EDA
+            </button>
+            <button
+              type="button"
+              className={mainTab === "stats" ? "is-active" : ""}
+              onClick={() => setMainTab("stats")}
+            >
+              Conclusions
+            </button>
+          </nav>
         </header>
 
       <section className="panel panel-sidebar" id="dashboard-start">
@@ -1144,6 +1839,8 @@ export default function App() {
       </aside>
 
       <div className="content">
+      {mainTab === "explore" && (
+      <>
       <section className="panel read-guide">
         <h2>How To Read This Dashboard</h2>
         <div className="read-guide-grid">
@@ -1820,6 +2517,10 @@ export default function App() {
           </table>
         </div>
       </section>
+
+      </>
+      )}
+      {mainTab === "stats" && <StatisticsPanel data={regressionPayload} />}
 
       </div>
 
